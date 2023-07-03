@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="8mm"
+   height="8mm"
+   viewBox="0 0 8 8"
+   version="1.1"
+   id="svg2143"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2140">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1180">
+      <path
+         d="M 15.3307,451.866 H 267.614 V 15.3307 H 15.3307 Z"
+         id="path1178" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2092">
+      <path
+         d="M -15,-446.1968 H 267.945 V 21.0002 H -15 Z"
+         id="path2094"
+         style="stroke-width:0.999998" />
+    </clipPath>
+  </defs>
+  <g
+     id="layer1">
+    <g
+       id="g1172"
+       transform="matrix(0.35277777,0,0,-0.35277777,54.189465,163.57998)">
+      <g
+         id="g1174">
+        <g
+           id="g1176"
+           clip-path="url(#clipPath1180)">
+          <path
+             d="M 21,21 H 32.339 V 446.197 H 21 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1182" />
+          <path
+             d="m 244.937,21 h 17.008 v 425.197 h -17.008 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1184" />
+          <path
+             d="m 261.945,21 h 17.008 v 425.197 h -17.008 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1186" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g1386"
+       transform="matrix(0.35277777,0,0,-0.35277777,59.481132,6.1716689)"
+       clip-path="url(#clipPath2092)">
+      <path
+         d="m 0,0 h -15 m 267.945,0 h 15 M 0,-425.197 h -15 m 267.945,0 h 15 M 6,6 v 15 m 0,-452.197 v -15 M 246.945,6 v 15 m 0,-452.197 v -15"
+         style="fill:none;stroke:#ffffff;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path1388" />
+    </g>
+    <path
+       d="m 59.481132,6.1716679 h -5.291666 m 94.525034,0 h 5.29167 M 59.481132,156.17172 h -5.291666 m 94.525034,0 h 5.29167 M 61.597799,4.0550009 V -1.236666 m 0,159.525046 v 5.29167 M 146.59783,4.0550009 V -1.236666 m 0,159.525046 v 5.29167"
+       style="fill:none;stroke:#000000;stroke-width:0.0881944;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path1392" />
+    <g
+       id="g10244"
+       transform="rotate(-90,4,4.0000001)">
+      <rect
+         style="fill:#000000;stroke-width:0.340557;stroke-linecap:round"
+         id="rect2327"
+         width="5"
+         height="0.088"
+         x="0"
+         y="7.9120002" />
+      <rect
+         style="fill:#000000;stroke-width:0.340557;stroke-linecap:round"
+         id="rect2327-3"
+         width="5"
+         height="0.088"
+         x="-8.8817842e-16"
+         y="-8"
+         transform="rotate(90)" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,69 @@
+@import "zmienne.less";
+
+@archX: 0.1mm;
+
+body {
+    @page {
+        size: unit(@arkusz_w + 2*@spad + 2*@znaczniki + 6*@archX, mm) unit(@arkusz_h + 2*@spad + 2*@znaczniki + 6*@archX, mm);
+        margin: 0;
+        padding: 0;        
+    }
+    width: unit(@arkusz_w + 2*@spad + 2*@znaczniki, mm);
+    height: unit(@arkusz_h + 2*@spad + 2*@znaczniki, mm);
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: transparent;
+    section {
+        margin: 0;
+        padding: 0;        
+        float: none;
+/*        width: unit(@arkusz_w + 2*@spad + 2*@znaczniki, mm);
+        height: unit(2 * (@arkusz_h + 2*@spad + 2*@znaczniki), mm);*/
+        height: auto;
+        page-break-inside: avoid;
+        &:first-of-type {
+            height: unit(@arkusz_h + 2*@spad + 2*@znaczniki, mm);
+            .article:first-of-type {
+                height: 0;
+            }
+        }
+        &:last-of-type {
+            height: unit(@arkusz_h + 2*@spad + 2*@znaczniki, mm);
+            .article:last-of-type {
+                height: 0;
+            }
+        }
+        article {
+            page-break-before: always;
+            position: relative;
+            top: 0;
+            display: block;
+            height: unit(@arkusz_h + 2*@spad + 2*@znaczniki, mm);
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+            &.wzor_A, &.wzor_B {
+                .paser {
+                    &.L, &.P {
+                        width: unit(@znaczniki + @spad - 3*@archX, mm);
+                        height: unit(@arkusz_h - 4*@archX, mm);                        
+                    }
+                }
+                .tresc {
+                    width: unit(@arkusz_w - 2, mm);
+                    height: unit(@arkusz_h - 4*@archX, mm);                    
+                }
+            }
+            &.prawa {
+                right: 0;
+                margin: 0;
+            }
+            &.lewa {
+                left: 0;
+                margin: 0;
+            }
+        }
+    }        
+} 
