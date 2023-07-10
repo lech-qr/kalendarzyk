@@ -25,24 +25,24 @@
     $_02_ilosc_d = 29;
     
     // Marzec
-    $_03_nr_dnia_roku = $_02_nr_dnia_roku + $_02_ilosc_d;
-    $_03_nr_dnia = 1; // Stała po za miesiącem wielkanocnym
-    $_03_nazwa_d = 6;
-    $_03_przelam = 16;
-    $_03_ilosc_d = 31; // Stała
+    $_03a_nr_dnia_roku = $_02_nr_dnia_roku + $_02_ilosc_d;
+    $_03a_nr_dnia = 1; // Stała po za miesiącem wielkanocnym
+    $_03a_nazwa_d = 6;
+    $_03a_przelam = 17;
+    $_03a_ilosc_d = 17; 
     
-    // Kwiecień
-    $_04a_nr_dnia_roku = $_03_nr_dnia_roku + $_03_ilosc_d;
-    $_04a_nr_dnia = 1; // Stała po za miesiącem wielkanocnym
-    $_04a_nazwa_d = 2;
-    $_04a_przelam = 13;
-    $_04a_ilosc_d = 15; 
-    
-    $_04b_nr_dnia_roku = $_04a_nr_dnia_roku + $_04a_ilosc_d;
-    $_04b_nr_dnia = $_04a_ilosc_d + 1;
-    $_04b_nazwa_d = 3;
-    $_04b_przelam = 30;
-    $_04b_ilosc_d = 30 - $_04a_ilosc_d;
+    $_03b_nr_dnia_roku = $_03a_nr_dnia_roku + $_03a_ilosc_d;
+    $_03b_nr_dnia = $_03a_ilosc_d + 1;
+    $_03b_nazwa_d = 2;
+    $_03b_przelam = 28;
+    $_03b_ilosc_d = 31 - $_03a_ilosc_d;
+
+    // Kwiecień  
+    $_04_nr_dnia_roku = $_03b_nr_dnia_roku + $_03b_ilosc_d;
+    $_04_nr_dnia = 1; // Stała po za miesiącem wielkanocnym
+    $_04_nazwa_d = 2;
+    $_04_przelam = 16;
+    $_04_ilosc_d = 30; // Stała  
     
     // Maj
     $_05_nr_dnia_roku = $_04b_nr_dnia_roku + $_04b_ilosc_d;
@@ -113,9 +113,9 @@
     include('00-zlistopad-grudzien.php');
     include('01-styczen.php');
     include('02-luty.php');
-    include('03-marzec.php');
-    include('04a-kwiecien.php');
-    include('04b-kwiecien.php');
+    include('03a-marzec.php');
+    include('03b-marzec.php');
+    include('04-kwiecien.php');
     include('05-maj.php');
     include('06-czerwiec.php');
     include('07-lipiec.php');

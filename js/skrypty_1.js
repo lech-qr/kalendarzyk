@@ -1,5 +1,5 @@
-$(document).ready(function(){  
-    
+$(document).ready(function () {
+
     // Znaczniki i cięcie
     $('article.wzor_A .tresc').each(function () {
         $(this).before('<div class="znacz LG"><img src="../images/ciecie/ciecie1A.svg" alt="Znacznik cięcia" /></div>');
@@ -9,17 +9,17 @@ $(document).ready(function(){
         $(this).after('<div class="znacz PD"><img src="../images/ciecie/ciecie3A.svg" alt="Znacznik cięcia" /></div>');
         $(this).after('<div class="paser D"><img src="../images/pasery/paser3AB.svg" alt="Paser" /></div>');
         $(this).after('<div class="znacz LD"><img src="../images/ciecie/ciecie4A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).after('<div class="paser P"><img src="../images/pasery/paser2A.svg" alt="Paser" /></div>');        
+        $(this).after('<div class="paser P"><img src="../images/pasery/paser2A.svg" alt="Paser" /></div>');
     });
     $('article.wzor_B .tresc').each(function () {
         $(this).before('<div class="znacz LG"><img src="../images/ciecie/ciecie1A.svg" alt="Znacznik cięcia" /></div>');
         $(this).before('<div class="paser G"><img src="../images/pasery/paser1A.svg" alt="Paser" /></div>');
-        $(this).before('<div class="znacz PG"><img src="../images/ciecie/ciecie2A.svg" alt="Znacznik cięcia" /></div>');     
+        $(this).before('<div class="znacz PG"><img src="../images/ciecie/ciecie2A.svg" alt="Znacznik cięcia" /></div>');
         $(this).before('<div class="paser L"><img src="../images/pasery/paser4A.svg" alt="Paser" /></div>');
         $(this).after('<div class="znacz PD"><img src="../images/ciecie/ciecie3A.svg" alt="Znacznik cięcia" /></div>');
         $(this).after('<div class="paser D"><img src="../images/pasery/paser3AB.svg" alt="Paser" /></div>');
         $(this).after('<div class="znacz LD"><img src="../images/ciecie/ciecie4A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).after('<div class="paser P"><img src="../images/pasery/paser2A.svg" alt="Paser" /></div>');        
+        $(this).after('<div class="paser P"><img src="../images/pasery/paser2A.svg" alt="Paser" /></div>');
     });
 
     // Nagłowek
@@ -48,11 +48,11 @@ $(document).ready(function(){
         niedzielaSigla = values[1];
         // Wstaw nazwę niedzieli
         $(this).html(niedzielaSigla);
-        if ( $(this).closest('.dzien').is(':first-child') ) {
+        if ($(this).closest('.dzien').is(':first-child')) {
             $(this).closest('.dzien').before('<div class="dzien pierwszy"><div class="nr_dnia"></div><div class="nazwad"></div><div class="dane"><p class="niedziela">' + niedzielaNazwa + '</p></div></div>');
         } else {
             $(this).closest('.dzien').prev().find('.dane').append('<p class="odstep">&nbsp;</p>');
-            $(this).closest('.dzien').prev().find('.dane').append('<p class="niedziela">' + niedzielaNazwa + '</p>');            
+            $(this).closest('.dzien').prev().find('.dane').append('<p class="niedziela">' + niedzielaNazwa + '</p>');
         }
     });
     // Jeśli święto
@@ -66,9 +66,9 @@ $(document).ready(function(){
             } else {
                 $(this).closest('.dane').find('p.sigla').empty();
             }
-            
+
         }
-    });   
+    });
     // Jeśli święto Pańskie
     $('div.obchod p').each(function () {
         if ($(this).is(':contains("(święto Pańskie)")')) {
@@ -90,7 +90,7 @@ $(document).ready(function(){
                 $(this).remove();
             }
         }
-    });      
+    });
     // Jeśli uroczystość
     $('div.obchod p').each(function () {
         if ($(this).is(':contains("(ś)")') || $(this).is(':contains("(u)")')) {
@@ -102,7 +102,7 @@ $(document).ready(function(){
             } else {
                 $(this).closest('.dane').find('p.sigla').empty();
             }
-            
+
         }
     });
     // Jeśli niedziala
@@ -110,7 +110,7 @@ $(document).ready(function(){
         $(this).find('div.obchod p.wspomnienie').prepend('*');
         $(this).find('div.obchod p.swieto').prepend('*');
         $(this).find('div.obchod p.swieto').addClass('zniesione');
-    });    
+    });
     // Przenieś nad sigla
     $('.dzien').each(function () {
         if (!$(this).hasClass("N")) {
@@ -137,18 +137,18 @@ $(document).ready(function(){
             // Niedziela jest ważniejsza więc zostaw sigla z dnia
         } else {
             $(this).closest('.dane').find('p.g_czyt').text('gcz: ' + swietoGczyt1);
-        }      
+        }
     });
     // Podziel dane ze zmiennej - prawa - oznaczenie i godzina czytań
     $('article .tresc .g_czyt').each(function () {
-        if ( $(this).is(':contains("|")') ) {
+        if ($(this).is(':contains("|")')) {
             var oznaczenie = $(this).text();
             values = oznaczenie.split('|');
             oznaczenieOznacz = values[0];
             oznaczenieG_czyt = values[1];
             // Wstaw nazwę niedzieli
             $(this).text('gcz: ' + oznaczenieG_czyt);
-            $(this).before('<p class="oznaczenie">' + oznaczenieOznacz.replace('gcz: ','') + '</p>');
+            $(this).before('<p class="oznaczenie">' + oznaczenieOznacz.replace('gcz: ', '') + '</p>');
         }
     });
 });

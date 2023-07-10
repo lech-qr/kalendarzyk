@@ -1,13 +1,12 @@
 $(document).ready(function () {
 
-    var narodzeniePanskie = 29; // który dzień roku
-    var pierSty = 36; // który dzień roku
-    var chrzestPanski = 43; // który dzień roku
-    var popielec = 88; // który dzień roku
-    var wielkanoc = 134; // który dzień roku
+    var narodzeniePanskie = 23; // który dzień roku
+    var chrzestPanski = 36; // który dzień roku
+    var popielec = 74; // który dzień roku
+    var wielkanoc = 120; // który dzień roku
 
     // Długość roku. Przestpnym, czy nie? 365 lub 366
-    var dniRoku = 365;
+    var dniRoku = 366;
 
     // Pierwsze dni roku kościelnego - listopad / grudzień poprzedniego roku kalendarzowego
     // $('.d_roku_1').find('.nr_dnia p').html('27');
@@ -19,7 +18,7 @@ $(document).ready(function () {
     $('.d_roku_4').find('.sigla').before('<p class="swieto">św Andrzeja ap (ś)</p>');
     $('.d_roku_4').find('.g_czyt').html('gcz: 1 Kor 1,18-2,5');
 
-    //// Święta stałe
+    // Święta stałe
     // I Niedziela Adwentu
     $('.d_roku_1').find('.dane .sigla').before('<p class="opis">początek nowego roku liturgicznego - czytania: cykl A, I<br>rozpoczyna się okres Adwentu</p>');
     $('.d_roku_1').find('.dane .oznaczenie').after('<p class="tom">I tom brew.</p>');
@@ -27,7 +26,8 @@ $(document).ready(function () {
     $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .sigla').html('<span>msza rano:</span> 2 Sm 7,1-5.8b-12.14a.16; Ps 89; Łk 1,67-79');
     $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .sigla').after('<p class="opis">kończy się okres Adwentu<br>Wigilia</p>');
     $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .g_czyt').prepend('<br>');
-    $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .niedziela').html('Narodzenie Pańskie (u)');
+    $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane').append('<p class="niedziela" style="background-color: transparent;">Narodzenie Pańskie (u)</p>');
+    $('.d_roku_' + (narodzeniePanskie)).addClass('nakaz');
     $('.d_roku_' + narodzeniePanskie).find('.dane .sigla').before('<p class="opis">rozpoczyna się okres Narodzenia Pańskiego<br><br></p>');
     $('.d_roku_' + narodzeniePanskie).find('.dane .sigla').html('<span>msza wigilii:</span> Iz 62,1-5; Ps 89; Dz 13,16-17.22-25; Mt 1,1-25<br><span>msza w nocy:</span> Iz 9,1-3.5-6; Ps 96; Tt 2,11-14; Łk 2,1-14<br><span>msza o świcie:</span> Iz 62,11-12; Ps 97; Tt 3,4-7; Łk 2,15-20<br><span>msza w dzień:</span> Iz 52,7-10; Ps 98; Hbr 1,1-6; J 1,1-18');
     $('.d_roku_' + (narodzeniePanskie + 1)).addClass('sw_Inne');
@@ -43,23 +43,25 @@ $(document).ready(function () {
     $('.d_roku_' + (narodzeniePanskie + dniRoku)).find('.dane .sigla').html('<span>msza wigilii:</span> Iz 62,1-5; Ps 89; Dz 13,16-17.22-25; Mt 1,1-25<br><span>msza w nocy:</span> Iz 9,1-3.5-6; Ps 96; Tt 2,11-14; Łk 2,1-14<br><span>msza o świcie:</span> Iz 62,11-12; Ps 97; Tt 3,4-7; Łk 2,15-20<br><span>msza w dzień:</span> Iz 52,7-10; Ps 98; Hbr 1,1-6; J 1,1-18');
     $('.d_roku_' + (narodzeniePanskie + dniRoku + 1)).addClass('sw_Inne');
     // Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.
-    $('.d_roku_34').find('.dane .sigla').before('<p class="swieto">Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
-    $('.d_roku_34').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128; Mt 2,13-15.19-23');
-    $('.d_roku_34').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
+    // $('.d_roku_29').find('.dane .sigla').before('<p class="swieto">Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
+    // $('.d_roku_29').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128; Mt 2,13-15.19-23');
+    // $('.d_roku_29').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
     // 1 stycznia
-    $('.d_roku_' + pierSty + ' .obchod').empty();
-    $('.d_roku_' + pierSty).prev('.dzien.pierwszy').find('.dane p.niedziela').html('Świętej Bożej Rodzicielki Maryi (u)');
-    $('.d_roku_' + pierSty).find('.dane .sigla').html('Lb 6,22-27; Ps 67; Ga 4,4-7; Łk 2,16-21');
-    $('.d_roku_' + pierSty).find('.dane .g_czyt').html('gcz: Hbr 2,9-17');
+    $('.d_roku_' + (narodzeniePanskie + 6)).find('.niedziela').html('Świętej Bożej Rodzicielki Maryi (u)');
+    // $('.d_roku_' + (narodzeniePanskie + 8) + ' .obchod').empty();
+    $('.d_roku_' + (narodzeniePanskie + 7)).prev('.dzien.pierwszy').find('.dane p.niedziela').html('Świętej Bożej Rodzicielki Maryi (u)');
+    $('.d_roku_' + (narodzeniePanskie + 7)).find('.dane .sigla').html('Lb 6,22-27; Ps 67; Ga 4,4-7; Łk 2,16-21');
+    $('.d_roku_' + (narodzeniePanskie + 7)).find('.dane .g_czyt').html('gcz: Hbr 2,9-17');
     // 6 stycznia - Objawienie Pańskie - Epifania (u)
-    $('.d_roku_' + (pierSty + 5) + ' .swieto').remove();
-    $('.d_roku_' + (pierSty + 5)).addClass('nakaz');
-    $('.d_roku_' + (pierSty + 4) + ' .dane').append('<p class="odstep">&nbsp;</p><p class="niedziela">Objawienie Pańskie - Epifania (u)</p>');
+    $('.d_roku_' + (narodzeniePanskie + 12) + ' .swieto').remove();
+    $('.d_roku_' + (narodzeniePanskie + 12)).addClass('nakaz');
+    $('.d_roku_' + (narodzeniePanskie + 11) + ' .dane').append('<p class="odstep">&nbsp;</p><p class="niedziela">Objawienie Pańskie - Epifania (u)</p>');
 
-    //// Święta ruchome
+    // Święta ruchome
     // Chrzest Pański (pierwsza niedziela po Objawieniu Pańskim)
     $('.d_roku_' + chrzestPanski).find('.dane').empty();
     $('.d_roku_' + (chrzestPanski - 1)).find('.dane .niedziela').html('Chrzest Pański (ś)');
+    $('.d_roku_' + (chrzestPanski - 1)).find('.dane .niedziela').css('background-color', 'transparent'); // Potrzebne gdy Objawienie Pańsie wypada w sobotę
     $('.d_roku_' + chrzestPanski).find('.dane').html('<p class="sigla">Iz 42,1-4.6-7; Ps 29; Dz 10,34-38; Mt 3,13-17</p><p>&nbsp;</p><p class="opis">kończy się okres Narodzenia Pańskiego</p>');
     $('.d_roku_' + chrzestPanski).find('.dane').append('<div class="prawe"><p class="g_czyt">gcz: Iz 42,1-9;49,1-9</p><p class="kolor">b</p></div>');
     $('.d_roku_' + (chrzestPanski + 1)).find('.sigla').before('<p class="opis">rozpoczyna się okres zwykły - czytania: cykl A, I</p>');
@@ -134,13 +136,13 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 69)).find('.obchod .wspomnienie').prepend('Niepokalanego Serca Najśw Maryi Panny (wo)<br>*');
 
 
-    //// Konflikty
+    // Konflikty
     // św Józefa Oblubieńca Najśw Maryi Panny (u) - Przypadło w niedzielę więc przenosimy na poniedziałek
-    $('.d_roku_112').find('.dane .niedziela').html('IV Niedziela Wielkiego Postu');
-    $('.d_roku_113').find('.dane .g_czyt').html('gcz: Hbr 7,1-11');
-    $('.d_roku_114').find('.dane .sigla').html('2 Sm 7,4-5a.12-14a.16; Ps 89; Rz 4,13.16-18.22;<br>Mt 1,16.18-21.24a lub Łk 2,41-51a');
-    $('.d_roku_114').find('.dane .sigla').before('<p class="uroczystosc">św Józefa Oblubieńca Najśw Maryi Panny (u)</p>');
-    $('.d_roku_114').find('.dane .prawe .g_czyt').html('gcz: Hbr 11,1-16');
+    // $('.d_roku_112').find('.dane .niedziela').html('IV Niedziela Wielkiego Postu');
+    // $('.d_roku_113').find('.dane .g_czyt').html('gcz: Hbr 7,1-11');
+    // $('.d_roku_114').find('.dane .sigla').html('2 Sm 7,4-5a.12-14a.16; Ps 89; Rz 4,13.16-18.22;<br>Mt 1,16.18-21.24a lub Łk 2,41-51a');
+    // $('.d_roku_114').find('.dane .sigla').before('<p class="uroczystosc">św Józefa Oblubieńca Najśw Maryi Panny (u)</p>');
+    // $('.d_roku_114').find('.dane .prawe .g_czyt').html('gcz: Hbr 11,1-16');
     //św Wojciecha bp m - głównego patrona Polski (u) - Przypadło w niedzielę więc przenosimy na poniedziałek
     $('.d_roku_149').find('.dane .sigla').html('Dz 1,3-8; Ps 126; Flp 1,20c-30; J 12,24-26');
     $('.d_roku_149').find('.dane .sigla').before('<p class="uroczystosc">św Wojciecha bp m - głównego patrona Polski (u)</p>');
