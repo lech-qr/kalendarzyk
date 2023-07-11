@@ -85,6 +85,8 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc - 1)).find('.dane .sigla').empty();
     // Wielkanoc
     $('.d_roku_' + wielkanoc).closest('article .tresc').addClass('wielkanoc');
+    $('.d_roku_' + wielkanoc).find('.dane .sigla').before('<p class="opis">rozpoczyna się okres wielkanocny<br><br>Wigilia Paschalna w Wielką Noc:</p>');
+    $('.d_roku_' + wielkanoc).find('.dane .sigla').html('Rdz 1,1-2,2; Ps 104 <span>lub</span> Ps 33;<br>Rdz 22,1-18; Ps 16;<br>Wj 14,15-15,1a; PS: Wj 15,1b-6.17-18;<br>Iz 54,4a.5-14; Ps 30;<br>Iz 55,1-11; PS: Iz 12,2-6;<br>Ba 3,9-15.32-4,4; Ps 19;<br>Ez 36,16-17a.18-28; Ps 42-43<br><span>lub gdy będzie chrzest:</span> PS: Iz 12,2-6 <span>lub</span> Ps 51;<br>Rz 6,3-11; Ps 118; Mt 28,1-10<br><span>msza w dzień:</span><br>Dz 10,34a.37-43; Ps 118; Kol 3,1-4<br><span>lub</span> 1 Kor 5,6b-8; sekwencja; J 20,1-9<br><br><span>kończy się Święte Triduum Paschalne</span>');
     // Poniedziałek Wielkanocny
     $('.d_roku_' + (wielkanoc + 1)).addClass('sw_Inne');
     $('.d_roku_' + (wielkanoc + 1)).find('.dane .sigla').before('<p class="swieto">Poniedziałek Wielkanocny</p>');
@@ -103,12 +105,6 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 49)).find('.oznaczenie').empty();
     $('.d_roku_' + (wielkanoc + 49)).find('.g_czyt').html('gcz: Rz 8,5-27');
     $('.d_roku_' + (wielkanoc + 49)).find('.kolor').html('cz');
-    // Jezusa Chrystusa Najwyższego i Wiecznego Kapłana (ś) - czwartek po Zesłaniu Ducha Świętego
-    $('.d_roku_' + (wielkanoc + 53)).find('.sigla').before('<p class="swieto">Jezusa Chrystusa Najwyższego i Wiecznego Kapłana (ś)</p>');
-    $('.d_roku_' + (wielkanoc + 53)).find('.sigla').html('Rdz 22,9-18 lub Hbr 10,4-10;@Ps 40; Mt 26,36-42');
-    $('.d_roku_' + (wielkanoc + 53)).find('.obchod .wspomnienie').prepend('*');
-    $('.d_roku_' + (wielkanoc + 53)).find('.prawe .g_czyt').html('<br>gcz: Hbr 4,14-16;5,1-10');
-    $('.d_roku_' + (wielkanoc + 53)).find('.prawe .kolor').html('b');
     // Najśw Maryi Panny Matki Kościoła (ś) - poniedziałek po Zesłaniu
     $('.d_roku_' + (wielkanoc + 50)).find('.sigla').before('<p class="opis">ciąg dalszy okresu zwykłego - czytania: cykl A I</p>');
     $('.d_roku_' + (wielkanoc + 50)).find('.sigla').before('<p class="swieto">Najśw Maryi Panny Matki Kościoła (ś)</p>');
@@ -116,6 +112,12 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 50)).find('.obchod .wspomnienie').prepend('*');
     $('.d_roku_' + (wielkanoc + 50)).find('.prawe').prepend('<p class="tom">III tom brew.</p>');
     $('.d_roku_' + (wielkanoc + 50)).find('.prawe .g_czyt').html('gcz: Ga 3,22-4,7');
+    // Jezusa Chrystusa Najwyższego i Wiecznego Kapłana (ś) - czwartek po Zesłaniu Ducha Świętego
+    $('.d_roku_' + (wielkanoc + 53)).find('.sigla').before('<p class="swieto">Jezusa Chrystusa Najwyższego i Wiecznego Kapłana (ś)</p>');
+    $('.d_roku_' + (wielkanoc + 53)).find('.sigla').html('Rdz 22,9-18 lub Hbr 10,4-10;@Ps 40; Mt 26,36-42');
+    $('.d_roku_' + (wielkanoc + 53)).find('.obchod .wspomnienie').prepend('*');
+    $('.d_roku_' + (wielkanoc + 53)).find('.prawe .g_czyt').html('<br>gcz: Hbr 4,14-16;5,1-10');
+    $('.d_roku_' + (wielkanoc + 53)).find('.prawe .kolor').html('b');
     // Najświętszej Trójcy (u) - niedziela po Zesłaniu Ducha Świętego
     $('.d_roku_' + (wielkanoc + 55)).find('.niedziela').html('Najświętszej Trójcy (u)');
     $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Wj 34,4b-6.8-9; PS: Dn 3,52-56;@2 Kor 13,11-13; J 3,16-18');
@@ -144,10 +146,10 @@ $(document).ready(function () {
     // $('.d_roku_114').find('.dane .sigla').before('<p class="uroczystosc">św Józefa Oblubieńca Najśw Maryi Panny (u)</p>');
     // $('.d_roku_114').find('.dane .prawe .g_czyt').html('gcz: Hbr 11,1-16');
     //św Wojciecha bp m - głównego patrona Polski (u) - Przypadło w niedzielę więc przenosimy na poniedziałek
-    $('.d_roku_149').find('.dane .sigla').html('Dz 1,3-8; Ps 126; Flp 1,20c-30; J 12,24-26');
-    $('.d_roku_149').find('.dane .sigla').before('<p class="uroczystosc">św Wojciecha bp m - głównego patrona Polski (u)</p>');
-    $('.d_roku_149').find('.dane .wspomnienie').prepend('*');
-    $('.d_roku_149').find('.dane .prawe .g_czyt').html('gcz: Dz 20,17-36');
+    // $('.d_roku_149').find('.dane .sigla').html('Dz 1,3-8; Ps 126; Flp 1,20c-30; J 12,24-26');
+    // $('.d_roku_149').find('.dane .sigla').before('<p class="uroczystosc">św Wojciecha bp m - głównego patrona Polski (u)</p>');
+    // $('.d_roku_149').find('.dane .wspomnienie').prepend('*');
+    // $('.d_roku_149').find('.dane .prawe .g_czyt').html('gcz: Dz 20,17-36');
     //Przemienienie Pańskie (ś)
     $('article div.dane p.niedziela:contains("Przemienienie Pańskie (ś)")').closest('.dzien').next('.dzien').find('.g_czyt').before('<p class="tom">IV tom brew.</p>');
     $('article div.dane p.niedziela:contains("Przemienienie Pańskie (ś)")').closest('.dzien').next('.dzien').next('.dzien').find('.g_czyt').before('<p class="oznaczenie">18 OZ II</p>');
@@ -167,7 +169,11 @@ $(document).ready(function () {
     for (var i = wielkanoc; i <= (wielkanoc + 7); i++) { // Wielkanoc
         $('.d_roku_' + i).find('.nazwad').addClass('oktawa');
         // Znieś wspomnienia w oktawie Wielkanocy
-        $('.d_roku_' + i).find('.dane .obchod .wspomnienie').prepend('*');
+        if ($('.d_roku_' + i).hasClass('N')) {
+            // Jeśli niedziala - nie znoś bo już jest zniesione
+        } else {
+            $('.d_roku_' + i).find('.dane .obchod .wspomnienie').prepend('*');
+        }
     }
     $('.oktawa').each(function () {
         $(this).append('<img src="../images/oktawa.svg" alt="Oktawa" title="Oktawa">');

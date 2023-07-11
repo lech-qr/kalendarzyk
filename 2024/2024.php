@@ -45,7 +45,7 @@
     $_04_ilosc_d = 30; // Stała  
     
     // Maj
-    $_05_nr_dnia_roku = $_04b_nr_dnia_roku + $_04b_ilosc_d;
+    $_05_nr_dnia_roku = $_04_nr_dnia_roku + $_04_ilosc_d;
     $_05_nr_dnia = 1; // Stała po za miesiącem wielkanocnym
     $_05_nazwa_d = 4;
     $_05_przelam = 16;

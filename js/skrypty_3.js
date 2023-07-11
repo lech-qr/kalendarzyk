@@ -43,7 +43,6 @@ $(document).ready(function () {
             var zlam1 = $(this).html();
             zlam1 = zlam1.replace(/gcz: <br>/g, "<br>gcz: ");;
             $(this).html(zlam1);
-            console.log('XXX: ' + zlam1);
         }
     });
 
@@ -176,7 +175,7 @@ $(document).ready(function () {
         }
     });
 
-// Poprawki - wspólne dla wszystkich lat
+    // Poprawki - wspólne dla wszystkich lat
     $('article div.dane p.swieto:contains("Świętej Bożej Rodzicielki Maryi (u)")').closest('.dzien').addClass('nakaz');
     $('article div.dane p.swieto:contains("Świętej Bożej Rodzicielki Maryi (u)")').closest('.dzien').before('<div class="dzien pierwszy" style="padding: 0px; height: 3mm;"><div class="nr_dnia"></div><div class="nazwad"></div><div class="dane"><p class="niedziela">Świętej Bożej Rodzicielki Maryi (u)</p></div></div>');
     $('article div.dane p.swieto:contains("Świętej Bożej Rodzicielki Maryi (u)")').remove();

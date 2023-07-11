@@ -8,8 +8,8 @@
                 . '<div class="nazwad"><p>' . ($tydzien[$_04_nazwa_d]) . '</p></div>'
                 . '<div class="dane">'
                     . '<p class="sigla">' . ($$sigla[$_04_nr_dnia_roku]) . '</p>';
-                    if (!empty($marzec[$_04_nr_dnia])) {
-                        echo '<div class="obchod">' . ($marzec[$_04_nr_dnia]) . '</div>';
+                    if (!empty($kwiecien[$_04_nr_dnia])) {
+                        echo '<div class="obchod">' . ($kwiecien[$_04_nr_dnia]) . '</div>';
                     }
                     echo '<div class="prawe">'
                         . '<p class="g_czyt">gcz: ' . ($$gcz[$_04_nr_dnia_roku]) . '</p>'
