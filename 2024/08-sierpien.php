@@ -13,7 +13,7 @@
                     }
                     echo '<div class="prawe">'
                         . '<p class="g_czyt">gcz: ' . ($$gcz[$_08_nr_dnia_roku]) . '</p>'
-                        . '<p class="kolor">z</p>'
+                        . '<p class="kolor">KK</p>'
                     . '</div>'
                 . '</div>'
                 . '</div>';
