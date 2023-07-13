@@ -1,156 +1,179 @@
 <?php
     $gcz_II = array (1 =>
     //  Adwent
-        '1 A I|Iz 6,1-13', // niedziela
-        'Iz 7,1-17', // poniedziałek
-        'Iz 8,1-18', // wtorek
-        'GGG', // środa
-        'Iz 10,5-21', // czwartek
-        'Iz 11,10-16', // piątek
-        'Iz 13,1-22a', // sobota
-        '2 A II|Iz 14,1-21', // niedziela
-        'Iz 34,1-17', // poniedziałek
-        'Iz 35,1-10', // wtorek
-        'Rt 1,1-22', // środa
-        'GGG', // czwartek
-        'Rt 2,14-23', // piątek
-        'Rt 3,1-18', // sobota
-        '3 A III|Rt 4,1-22', // niedziela
-        '1 Krn 17,1-15', // poniedziałek
-        'Mi 4,1-7', // wtorek
-        'Mi 4,14-5,7', // środa
-        'Mi 7,7-13', // czwartek
-        'Mi 7,14-20', // piątek
-        'Iz 40,1-11', // sobota
-        '4 A IV|Iz 40,12-18.21-31', // niedziela
-        'Iz 41,8-20', // poniedziałek
-        'Iz 41,21-29', // wtorek
-        'Iz 42,10-25', // środa
-        'Iz 43,1-13', // czwartek
-        'Iz 43,18-28', // piątek
-        'Iz 44,1-8.21-23', // sobota
-    // Boże Narodzenie
-        'Iz 11,1-10', 
-        'GGG', 
-        'GGG', 
-        'GGG', 
-        'Kol 1,1-14', 
-        'GGG', 
-        'Kol 2,4-15', 
-        'GGG', 
-        'Kol 2,16-3,4', 
-        'Kol 3,5-16', 
-        'Kol 3,17-4,1', 
-        'Kol 4,2-18', 
-        'GGG', 
-        'Iz 61,1-11', 
-        'GGG', 
-    // Okres zwykły
-        'Rz 1,1-17', // poniedziałek
-        'Rz 1,18-32', // wtorek
-        'Rz 2,1-16', // środa
-        'Rz 2,17-29', // czwartek
-        'Rz 3,1-20', // piątek
-        'Rz 3,21-31', // sobota
-        '2 OZ II|Rz 4,1-25', // niedziela
-        'Rz 5,1-11', // poniedziałek
-        'Rz 5,12-21', // wtorek
-        'Rz 6,1-11', // środa
-        'Rz 6,12-23', // czwartek
-        'Rz 7,1-13', // piątek
-        'Rz 7,14-25', // sobota
-        '3 OZ III|Rz 8,1-17', // niedziela
-        'Rz 8,18-39', // poniedziałek
-        'Rz 9,1-18', // wtorek
-        'GGG', // środa
-        'Rz 10-1,21', // czwartek
-        'Rz 11,1-12', // piątek
-        'Rz 11,13-21', // sobota
-        '4 OZ IV|Rz 11,25-36', // niedziela
-        'Rz 12,1-21', // poniedziałek
-        'Rz 13,1-14', // wtorek
-        'Rz 14,1-23', // środa
-        'GGG', // czwartek
-        'Rz 15,14-32', // piątek
-        'Rz 16,1-27', // sobota
-        '5 OZ I|1 Kor 1,1-17', // niedziela
-        '1 Kor 1,18-31', // poniedziałek
-        '1 Kor 2,1-16', // wtorek
-        '1 Kor 3,1-23', // środa
-        '1 Kor 4,1-21', // czwartek
-        '1 Kor 5,1-13', // piątek
-        '1 Kor 6,1-11', // sobota
-        '6 OZ II|1 Kor 6,12-20', // niedziela
-        '1 Kor 7,1-24', // poniedziałek
+        '1 A I|Iz 1,1-18', // niedziela
+        'Iz 1,21-27;2,1-5', // poniedziałek
         'GGG', // wtorek
-        '1 Kor 8,1-13', // środa
-        '1 Kor 9,1-18', // czwartek
-        '1 Kor 9,19-27', // piątek
-        '1 Kor 10,1-14', // sobota
-        '7 OZ III|1 Kor 10,14-11,1', // niedziela
-        '1 Kor 11,2-16', // poniedziałek
-        '1 Kor 11,17-34', // wtorek
-//        'GGG', // środa
-//        '1 Kor 12,12-31a', // czwartek
-//        '1 Kor 12,30-31-13,13', // piątek
-//        '1 Kor 14,1-19', // sobota
+        'Iz 5,1-7', // środa
+        'Iz 16,1-5;17,4-8', // czwartek
+        'Iz 19,16-25', // piątek
+        'Iz 21,6-12', // sobota
+        '2 A II|Iz 22,8b-23', // niedziela
+        'Iz 24,1-18', // poniedziałek
+        'Iz 24,19-25,5', // wtorek
+        'GGG', // środa
+        'Iz 26,7-21', // czwartek
+        'Iz 27,1-13', // piątek
+        'Iz 29,1-8', // sobota
+        '3 A III|Iz 29,13-24', // niedziela
+        'Iz 30,18-26', // poniedziałek
+        'Iz 30,27-33;31,4-9', // wtorek
+        'Iz 31,1-3;32,1-8', // środa
+        'Iz 32,15-33,6', // czwartek
+        'Iz 45,1-13', // piątek
+        'Iz 46,1-13', // sobota
+        '4 A IV|Iz 47,1.3b-15', // niedziela
+        'Iz 48,1-11', // poniedziałek
+        'Iz 48,12-21;49,9b-13', // wtorek
+        'Iz 49,14-50,1', // środa
+        'Iz 51,1-11', // czwartek
+        'Iz 51,17-52,2.7-10', // piątek
+        'GGG', // sobota
+        'GGG', // niedziela
+        'GGG', // poniedziałek
+        'GGG', // wtorek
+        'GGG', // środa
+        'GGG', // czwartek
+        'GGG', // piątek
+        'GGG', // sobota
+        'GGG', // niedziela
+    // Okres zwykły
+        'Rdz 1,1-2,4a', // poniedziałek
+        'Rdz 2,4b-25', // wtorek
+        'Rdz 3,1-24', // środa
+        'Rdz 4,1-24', // czwartek
+        'Rdz 6,5-22;7,17-24', // piątek
+        'Rdz 8,1-22', // sobota
+
+        '2 OZ II|Rdz 9,1-17', // niedziela
+        'Rdz 11,1-26', // poniedziałek
+        'Rdz 12,1-9;13,2-18', // wtorek
+        'Rdz 14,1-24', // środa
+        'Rdz 15,1-21', // czwartek
+        'Rdz 16,1-16', // piątek
+        'Rdz 17,1-27', // sobota
+
+        '3 OZ III|Rz 18,1-33', // niedziela
+        'Rdz 19,1-17.23-29', // poniedziałek
+        'GGG', // wtorek
+        'Rdz 22,1-19', // środa
+        'Rdz 24,1-27', // czwartek
+        'Rdz 24,33-41.49-67', // piątek
+        'Rdz 25,7-11.19-34', // sobota
+        
+        '4 OZ IV|Rdz 27,1-29', // niedziela
+        'Rdz 27,30-45', // poniedziałek
+        'Rdz 28,10-29-1', // wtorek
+        'GGG', // środa
+        'Rdz 32,3-30', // czwartek
+        'Rdz 35,1-29', // piątek
+        'Rdz 37,2-4.12-36', // sobota
+        
+        '5 OZ I|Rdz 39,1-23', // niedziela
+        'Rdz 41,1-17a.25-43', // poniedziałek
+        'Rdz 41,56-42,26', // wtorek
+        'Rdz 43,1-11a.13-17.26-34', // środa
+        'Rdz 44,1-20.30-34', // czwartek
+        'Rdz 45,1-15.21-28;46,1-7', // piątek
+        'Rdz 49,1-29.33', // sobota
+        
+        '6 OZ II|1 Tes 1,1-2,12', // niedziela
+        '1 Tes 2,13-3,13', // poniedziałek
+        '1 Tes 4,1-18', // wtorek
+//        '1 Tes 5,1-28', // środa
+//        '2 Tes 1,1-12', // czwartek
+//        '2 Tes 2,1-17', // piątek
+//        '2 Tes 3,1-18', // sobota
+        
+//        '7 OZ III|2 Kor 1,1-14', // niedziela
+//        '2 Kor 1,14b-2,11', // poniedziałek
+//        '2 Kor 2,12-3,6', // wtorek
+//        '2 Kor 3,7-4,4', // środa
+//        '2 Kor 4,5-18', // czwartek
+//        '2 Kor 5,1-21', // piątek
+//        '2 Kor 6,1-7,1', // sobota
 //        '8 OZ IV|1 Kor 14,20-40', // niedziela
 //        '1 Kor 15,1-19', // poniedziałek
 //        '1 Kor 15,20-34', // wtorek
-    // Wielki Post
+    // Wielki Post - środa popielcowa
         'Iz 58,1-12', // środa
-        'Pwt 1,1.6-18', // czwartek
-        'Pwt 4,1-8.32-40', // piątek
-        'Pwt 5,1-22', // sobota
-        '1 WP I|Pwt 6,4-25',// niedziela
-        'Pwt 7,6-14;8,1-6', // poniedziałek
-        'Pwt 9,7-21.25-29', // wtorek
-        'Pwt 10,12-11,9.26-28', // środa
-        'Pwt 12,1-14', // czwartek
-        'Pwt 15,1-18', // piątek
-        'Pwt 16,1-17', // sobota
-        '2 WP II|Pwt 18,1-22', // niedziela
-        'Pwt 24,1-25,4', // poniedziałek
-        'Pwt 25,1-19', // wtorek
-        'Pwt 29,1-5.9-28', // środa
-        'Pwt 30,1-20', // czwartek
-        'Pwt 31,1-15.23', // piątek
-        'Pwt 32,48-52;34,1-12', // sobota
-        '3 WP III|Hbr 1,1-2,4', // niedziela
-        'Hbr 2,5-18', // poniedziałek
-        'Hbr 3,1-19', // wtorek
-        'Hbr 4,1-13', // środa
-        'Hbr 4,14-5,10', // czwartek
-        'Hbr 5,11-6,8', // piątek
-        'Hbr 6,9-20', // sobota
-        '4 WP IV|Hbr 7,1-11', // niedziela
-        'Hbr 7,11-28', // poniedziałek
-        'Hbr 8,1-13', // wtorek
-        'Hbr 9,1-10', // środa
-        'Hbr 9,11-28', // czwartek
-        'Hbr 10,1-10', // piątek
-        'Hbr 10,11-25', // sobota
-        '5 WP I|Hbr 10,26-39', // niedziela
-        'Hbr 11,1-19', // poniedziałek
-        'Hbr 11,20-31', // wtorek
-        'Hbr 11,32-40', // środa
-        'Hbr 12,1-13', // czwartek
-        'Hbr 12,14-29', // piątek
-        'Hbr 13,1-25', // sobota
-        'II|Iz 50,4-51,3', // niedziela
-        'Iz 52,13-53,12', // poniedziałek
-        'Lm 1,1-12.18-20', // wtorek
-        'Lm 2,1-9', // środa
-        'Lm 2,10-22', // czwartek
-        'Lm 3,1-33', // piątek
-        'Lm 5,1-22', // sobota
-        'co najmniej@4 czyt. z wigili', // niedziela
-        '1 P 1,1-21', // poniedziałek
-        '1 P 1,22-2,10', // wtorek
-        '1 P 2,11-25', // środa
-        '1 P 3,1-17', // czwartek
-        '1 P 3,18-4,11', // piątek
-        '1 P 4,12-5,14', // sobota
+        'Wj 1,1-22', // czwartek
+        'Wj 2,1-22', // piątek
+        'Wj 3,1-20', // sobota
+
+        '1 WP I|Wj 5,1-6,1',// niedziela
+        'Wj 6,2-13', // poniedziałek
+        'Wj 6,29-7,25', // wtorek
+        'Wj 10,21-11,10', // środa
+        'Wj 12,1-20', // czwartek
+        'Wj 12,21-36', // piątek
+        'Wj 12,37-49;13,11-16', // sobota
+        
+        '2 WP II|Wj 13,17-14,9', // niedziela
+        'Wj 14,10-31', // poniedziałek
+        'Wj 16,1-18.35', // wtorek
+        'Wj 17,1-16', // środa
+        'Wj 18,13-27', // czwartek
+        'Wj 19,1-19;20,18-21', // piątek
+        'Wj 20,1-17', // sobota
+        
+        '3 WP III|Wj 22,20-23,9', // niedziela
+        'Wj 24,1-18', // poniedziałek
+        'Wj 32,1-20', // wtorek
+        'Wj 33,7-11.18.23; 34,5-9.29-35', // środa
+        'Wj 34,10-28', // czwartek
+        'Wj 35,30-36,1;37,1-9', // piątek
+        'Wj 40,16-38', // sobota
+        
+        '4 WP IV|Kpł 8,1-17;9,22-24', // niedziela
+        'Kpł 16,2-28', // poniedziałek
+        'Kpł 19,1-18.31-37', // wtorek
+        'Kpł 26,3-17.38-45', // środa
+        'Lb 3,1-13;8,5-11', // czwartek
+        'Lb 9,15-10,10.33-36', // piątek
+        'Lb 11,4-6.10-30', // sobota
+        
+        '5 WP I|Lb 12,1-15', // niedziela
+        'Lb 12,16-13,3.17-33', // poniedziałek
+        'Lb 14,1-25', // wtorek
+        'Lb 16,1-11.16-24.28-35', // środa
+        'Lb 20,1-13;21,4-9', // czwartek
+        'Lb 22,1-8.20-35', // piątek
+        'Lb 24,1-19', // sobota
+        
+        'II|Jr 22,1-9;23,1-8', // Niedziela Palmowa
+        'Jr 26,1-15', // poniedziałek
+        'Jr 8,13-9,8', // wtorek
+        'Jr 11,18-20;12,1-13', // środa
+        'Jr 15,10-21', // czwartek
+        'Jr 16,1-15', // piątek
+        'Jr 20,7-18', // sobota
+        
+        'co najmniej@4 czyt. z wigili', // Niedziela Wielkanocna
+        'Dz 1,1-26', // poniedziałek
+        'Dz 2,1-21', // wtorek
+        'Dz 2,22-41', // środa
+        'Dz 2,42-3,10', // czwartek
+        'Dz 3,11-4,4', // piątek
+        'Dz 4,5-31', // sobota
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         '2 W|Kol 3,1-17', // niedziela
         'II|Ap 1,1-20', // poniedziałek
         'Ap 2,1-11', // wtorek

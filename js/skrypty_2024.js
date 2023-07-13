@@ -37,15 +37,16 @@ $(document).ready(function () {
     $('.d_roku_372').find('.dane .oznaczenie').after('<p class="tom">I tom brew.</p>');
     // Narodzenie Pańskie #2
     $('.d_roku_' + (narodzeniePanskie + dniRoku - 1)).find('.dane .sigla').after('<p class="opis">kończy się okres Adwentu<br>Wigilia</p><p>&nbsp;</p>');
-    $('.d_roku_' + (narodzeniePanskie + dniRoku - 1)).find('.dane').append('<p class="niedziela" style="background-color: transparent;">Narodzenie Pańskie (u)</p>');
+    $('.d_roku_' + (narodzeniePanskie + dniRoku - 1)).find('.dane').append('<p class="niedziela">Narodzenie Pańskie (u)</p>');
     $('.d_roku_' + (narodzeniePanskie + dniRoku)).addClass('nakaz');
     $('.d_roku_' + (narodzeniePanskie + dniRoku)).find('.dane .sigla').before('<p class="opis">rozpoczyna się okres Narodzenia Pańskiego<br><br></p>');
     $('.d_roku_' + (narodzeniePanskie + dniRoku)).find('.dane .sigla').html('<span>msza wigilii:</span> Iz 62,1-5; Ps 89; Dz 13,16-17.22-25; Mt 1,1-25<br><span>msza w nocy:</span> Iz 9,1-3.5-6; Ps 96; Tt 2,11-14; Łk 2,1-14<br><span>msza o świcie:</span> Iz 62,11-12; Ps 97; Tt 3,4-7; Łk 2,15-20<br><span>msza w dzień:</span> Iz 52,7-10; Ps 98; Hbr 1,1-6; J 1,1-18');
     $('.d_roku_' + (narodzeniePanskie + dniRoku + 1)).addClass('sw_Inne');
-    // Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.
-    // $('.d_roku_29').find('.dane .sigla').before('<p class="swieto">Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
-    // $('.d_roku_29').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128; Mt 2,13-15.19-23');
-    // $('.d_roku_29').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
+    // Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w pierwszą niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.
+    // $('.d_roku_' + narodzeniePanskie).siblings('.dzien.S').find('.dane').prepend('<p class="niedziela">XXX_Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
+    // $('.d_roku_29').find('.dane .niedziela .sigla').before('<p class="swieto">Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
+    $('.d_roku_' + narodzeniePanskie).siblings('.dzien.N').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128;<br> Mt 2,13-15.19-23');
+    $('.d_roku_' + narodzeniePanskie).siblings('.dzien.N').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
     // 1 stycznia
     $('.d_roku_' + (narodzeniePanskie + 6)).find('.niedziela').html('Świętej Bożej Rodzicielki Maryi (u)');
     // $('.d_roku_' + (narodzeniePanskie + 8) + ' .obchod').empty();
