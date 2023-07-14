@@ -144,7 +144,7 @@
         '', // 11
         'św m Nereusza i Achillesa (wd), św Pankracego m (wd)', // 12
         'Najśw Maryi Panny Fatimskiej (wd)', // 13
-        'św Macieja ap (ś)', // 14
+        'św Macieja ap (ś)|Dz 1,15-17.20-26; Ps 113; J 15,9-17~Dz 5,12-32', // 14
         '', // 15
         'św Andrzeja Boboli pr m - patrona Polski (ś)|Ap 12,10-12a lub 1 Kor 1,10-13.17-18; Ps 34;@J 17,20-26~Ef 4,1-7.11-24', // 16
         '', // 17

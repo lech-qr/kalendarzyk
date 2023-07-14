@@ -45,8 +45,8 @@ $(document).ready(function () {
     // Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w pierwszą niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.
     // $('.d_roku_' + narodzeniePanskie).siblings('.dzien.S').find('.dane').prepend('<p class="niedziela">XXX_Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
     // $('.d_roku_29').find('.dane .niedziela .sigla').before('<p class="swieto">Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
-    $('.d_roku_' + narodzeniePanskie).siblings('.dzien.N').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128;<br> Mt 2,13-15.19-23');
-    $('.d_roku_' + narodzeniePanskie).siblings('.dzien.N').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
+    $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128;<br> Mt 2,13-15.19-23');
+    $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
     // 1 stycznia
     $('.d_roku_' + (narodzeniePanskie + 6)).find('.niedziela').html('Świętej Bożej Rodzicielki Maryi (u)');
     // $('.d_roku_' + (narodzeniePanskie + 8) + ' .obchod').empty();
@@ -123,7 +123,8 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 55)).find('.niedziela').html('Najświętszej Trójcy (u)');
     $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Wj 34,4b-6.8-9; PS: Dn 3,52-56;@2 Kor 13,11-13; J 3,16-18');
     $('.d_roku_' + (wielkanoc + 56)).find('.oznaczenie').empty('');
-    $('.d_roku_' + (wielkanoc + 57)).find('.g_czyt').before('<p class="oznaczenie">9 OZ I</p>');
+    $('.d_roku_' + (wielkanoc + 56)).find('.dane .prawe .g_czyt').html('gcz: 1 Kor 2,1-16');
+    $('.d_roku_' + (wielkanoc + 57)).find('.g_czyt').before('<p class="oznaczenie">8 OZ I</p>');
     // Najświętszego Ciała i Krwi Chrystusa (u) - czwartek po pierwszej niedzieli po Zesłaniu
     $('.d_roku_' + (wielkanoc + 59)).find('.dane').append('<p class="niedziela">Najświętszego Ciała i Krwi Chrystusa (u)</p>');
     $('.d_roku_' + (wielkanoc + 60)).addClass('nakaz');
@@ -190,9 +191,16 @@ $(document).ready(function () {
 
     // Kolory - ustawienia ogólne ze względu na okres liturgiczny
     // Ustal I Niedzielę Adwentu
-    var INA = $('article div.dane p.niedziela:contains("I Niedziela Adwentu")').closest('.dzien').attr('class');
+    var biezacyRok = $('#wkladka-1 > article.prawa.wzor_A > div.tresc > h2').html();
+    console.log('Bieżący rok to: ' + biezacyRok);
+    var znajdzINA = 'I Niedziela Adwentu'.toLowerCase();
+    var INA = $('section[id*=' + biezacyRok + '] article div.dane p.niedziela').filter(function () {
+        return $(this).text().toLowerCase() == znajdzINA;
+    }).closest('.dzien').next().attr('class');
     var INA1 = INA.substr(INA.indexOf("_") + 1);
     var INA2 = INA1.substr(INA1.indexOf("_") + 1);
+    console.log('Który dzień roku to Pierwsza Niedziela Adwentu: ' + INA2);
+
     // Dodaj klasę adwent do elementów od pierwszego dnia do Bożego Narodzenia - kolor FIOLETOWY
     for (var i = 1; i <= (narodzeniePanskie - 1); i++) {
         $('.d_roku_' + i).addClass('adwent');
@@ -218,7 +226,7 @@ $(document).ready(function () {
         $('.okrZwykly .dane .prawe p.kolor').text('z');
     }
     // i od Zesłania Ducha Świętego do I Niedzieli Adwentu
-    for (var i = (wielkanoc + 50); i <= INA2; i++) {
+    for (var i = (wielkanoc + 50); i <= (INA2 - 1); i++) {
         $('.d_roku_' + i).addClass('okrZwykly');
         $('.okrZwykly .dane .prawe p.kolor').text('z');
     }
