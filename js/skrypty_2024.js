@@ -13,10 +13,6 @@ $(document).ready(function () {
     // $('.d_roku_2').find('.nr_dnia p').html('28');
     // $('.d_roku_3').find('.nr_dnia p').html('29');
     // $('.d_roku_4').find('.nr_dnia p').html('30');
-    // św. Andrzeja ap (ś)
-    $('.d_roku_4').find('.sigla').html('Rz 10,9-18; Ps 19; Mt 4,18-22');
-    $('.d_roku_4').find('.sigla').before('<p class="swieto">św Andrzeja ap (ś)</p>');
-    $('.d_roku_4').find('.g_czyt').html('gcz: 1 Kor 1,18-2,5');
 
     // Święta stałe
     // I Niedziela Adwentu
@@ -72,7 +68,9 @@ $(document).ready(function () {
     $('.d_roku_' + popielec + ' .dane').html('<p class="opis">rozpoczyna się okres Wielkiego Postu</p><p class="swieto">Środa Popielcowa</p><p class="sigla">Jl 2,12-18; Ps 51; 2 Kor 5,20-6,2; Mt 6,1-6.16-18</p><div class="obchod"><p class="wspomnienie">*Katedry św Piotra ap (ś)</p></div><div class="prawe"><p class="tydzien_ps">IV</p><p class="tom">II tom brew.</p><p class="g_czyt">gcz: Iz 58,1-12</p><p class="kolor">f</p></div>');
     // Wielkanoc
     // Wielki Poniedziałek
+    $('.d_roku_' + (wielkanoc - 6)).find('.dane .swieto').remove();
     $('.d_roku_' + (wielkanoc - 6)).find('.dane .sigla').before('<p class="swieto">Wielki Poniedziałek</p>');
+    $('.d_roku_' + (wielkanoc - 6)).find('.dane .sigla').html('Iz 42,1-7; Ps 27; J 12,1-11');
     $('.d_roku_' + (wielkanoc - 5)).find('.dane .sigla').before('<p class="swieto">Wielki Wtorek</p>');
     $('.d_roku_' + (wielkanoc - 4)).find('.dane .sigla').before('<p class="swieto">Wielka Środa</p>');
     // Wielki Czwartek
@@ -91,6 +89,10 @@ $(document).ready(function () {
     // Poniedziałek Wielkanocny
     $('.d_roku_' + (wielkanoc + 1)).addClass('sw_Inne');
     $('.d_roku_' + (wielkanoc + 1)).find('.dane .sigla').before('<p class="swieto">Poniedziałek Wielkanocny</p>');
+    // Zwiastowanie Pańskie (u) - zwykle 25 maraca - w 2024 wypada w Wielki Poniedziałek więce przeniesione na pierwszy dzień po oktawie
+    $('.d_roku_128').find('.dane').prepend('<p class="swieto">Zwiastowanie Pańskie (u)</p>');
+    $('.d_roku_128').find('.dane .sigla').html('Iz 7,10-14;8,10c; Ps 40; Hbr 10,4-10;<br>Łk 1,26-38');
+    $('.d_roku_128').find('.dane .prawe .g_czyt').html('gcz: 1 Krn 17,1-15');
     // Wniebowstąpienie Pańskie (u) - najbliższa niedziela w 40 dni po Wielkanocy
     $('.d_roku_' + (wielkanoc + 41)).find('.niedziela').html('Wniebowstąpienie Pańskie (u)');
     $('.d_roku_' + (wielkanoc + 42)).find('.dane .sigla').html('Dz 1,1-11; Ps 47; Ef 1,17-23; Mt 28,16-20');
@@ -157,7 +159,7 @@ $(document).ready(function () {
     $('article div.dane p.niedziela:contains("Przemienienie Pańskie (ś)")').closest('.dzien').next('.dzien').next('.dzien').find('.g_czyt').before('<p class="oznaczenie">18 OZ II</p>');
 
 
-    //// Wspólne dla wszystkich lat
+    // Wspólne dla wszystkich lat
     // 
     // Oktawy 
     // Dodaj klasę oktawa do dni Bożego Narodzenia (obu) i od Wielkanocy

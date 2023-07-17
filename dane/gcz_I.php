@@ -4,17 +4,19 @@
         '1 A I|Iz 6,1-13', // niedziela
         'Iz 7,1-17', // poniedziałek
         'Iz 8,1-18', // wtorek
-        '???', // środa
+        'Iz 8,23b-9,6', // środa
         'Iz 10,5-21', // czwartek
         'Iz 11,10-16', // piątek
         'Iz 13,1-22a', // sobota
+
         '2 A II|Iz 14,1-21', // niedziela
         'Iz 34,1-17', // poniedziałek
         'Iz 35,1-10', // wtorek
         'Rt 1,1-22', // środa
-        '???', // czwartek
+        'Rt 2,1-13', // czwartek
         'Rt 2,14-23', // piątek
         'Rt 3,1-18', // sobota
+
         '3 A III|Rt 4,1-22', // niedziela
         '1 Krn 17,1-15', // poniedziałek
         'Mi 4,1-7', // wtorek
@@ -22,6 +24,7 @@
         'Mi 7,7-13', // czwartek
         'Mi 7,14-20', // piątek
         'Iz 40,1-11', // sobota
+
         '4 A IV|Iz 40,12-18.21-31', // niedziela
         'Iz 41,8-20', // poniedziałek
         'Iz 41,21-29', // wtorek
@@ -29,14 +32,15 @@
         'Iz 43,1-13', // czwartek
         'Iz 43,18-28', // piątek
         'Iz 44,1-8.21-23', // sobota
+
     // Boże Narodzenie
-        'Iz 11,1-10', 
-        '???', 
-        '???', 
-        '???', 
-        'Kol 1,1-14', 
-        '???', 
-        'Kol 2,4-15', 
+        'Iz 11,1-10', // niedziela
+        '???', // poniedziałek
+        'Kol 1,1-14', // wtorek
+        'Kol 1,15-2,3', // środa
+        'Kol 2,4-15', //czwartek
+        '???', // piątek
+        'Kol 2,4-15', //sobota
         '???', 
         'Kol 2,16-3,4', 
         'Kol 3,5-16', 
