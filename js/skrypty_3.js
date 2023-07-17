@@ -259,7 +259,7 @@ $(document).ready(function () {
     // Pion
     $('article.wzor_A > div.tresc.skrocony .zawartosc').append('<img class="linia pionowa" src="../images/linie/skrocony_pion.svg" alt="Linia pionowa" />');
 
-    ////Ustalanie wysokości    
+    //Ustalanie wysokości    
     // Policz wysokość - porównaj lewą i prawą i ustaw wysokość dnia na większą z tych dwóch
     $('article .tresc .dzien').each(function () {
         var h_lewe = $(this).children('.dane').outerHeight();
