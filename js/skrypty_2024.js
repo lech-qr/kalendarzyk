@@ -16,16 +16,16 @@ $(document).ready(function () {
 
     // Święta stałe
     // I Niedziela Adwentu
-    $('.d_roku_1').find('.dane .sigla').before('<p class="opis">początek nowego roku liturgicznego - czytania: cykl A, I<br>rozpoczyna się okres Adwentu</p>');
+    $('.d_roku_1').find('.dane .sigla').before('<p class="opis">początek nowego roku liturgicznego - czytania: cykl B, II<br>rozpoczyna się okres Adwentu</p>');
     $('.d_roku_1').find('.dane .oznaczenie').after('<p class="tom">I tom brew.</p>');
     // Narodzenie Pańskie
-    $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .sigla').html('<span>msza rano:</span> 2 Sm 7,1-5.8b-12.14a.16; Ps 89; Łk 1,67-79');
+    // $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .sigla').html('<span>msza rano:</span> 2 Sm 7,1-5.8b-12.14a.16; Ps 89;<br>Rz 16,25-27; Łk 1,26-38');
     $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .sigla').after('<p class="opis">kończy się okres Adwentu<br>Wigilia</p>');
-    $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .g_czyt').prepend('<br>');
     $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane').append('<p class="niedziela" style="background-color: transparent;">Narodzenie Pańskie (u)</p>');
     $('.d_roku_' + (narodzeniePanskie)).addClass('nakaz');
     $('.d_roku_' + narodzeniePanskie).find('.dane .sigla').before('<p class="opis">rozpoczyna się okres Narodzenia Pańskiego<br><br></p>');
     $('.d_roku_' + narodzeniePanskie).find('.dane .sigla').html('<span>msza wigilii:</span> Iz 62,1-5; Ps 89; Dz 13,16-17.22-25; Mt 1,1-25<br><span>msza w nocy:</span> Iz 9,1-3.5-6; Ps 96; Tt 2,11-14; Łk 2,1-14<br><span>msza o świcie:</span> Iz 62,11-12; Ps 97; Tt 3,4-7; Łk 2,15-20<br><span>msza w dzień:</span> Iz 52,7-10; Ps 98; Hbr 1,1-6; J 1,1-18');
+    $('.d_roku_' + narodzeniePanskie).find('.dane .prawe .g_czyt').html('gcz: Iz 11,1-10')
     $('.d_roku_' + (narodzeniePanskie + 1)).addClass('sw_Inne');
     // I Niedziela Adwentu #2
     $('.d_roku_371').find('.dane .sigla').after('<p class="opis">kończy się okres zwykły</p>');
@@ -41,7 +41,10 @@ $(document).ready(function () {
     // Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w pierwszą niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.
     // $('.d_roku_' + narodzeniePanskie).siblings('.dzien.S').find('.dane').prepend('<p class="niedziela">XXX_Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
     // $('.d_roku_29').find('.dane .niedziela .sigla').before('<p class="swieto">Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
-    $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128;<br> Mt 2,13-15.19-23');
+    // W roku A
+    // $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128;<br> Mt 2,13-15.19-23');    // W roku A
+    // W roku B
+    $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('Rdz 15,1-6;21,1-3; Ps 105;<br>Hbr 11,8.11-12.17-19; Łk 2,22-40');
     $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
     // 1 stycznia
     $('.d_roku_' + (narodzeniePanskie + 6)).find('.niedziela').html('Świętej Bożej Rodzicielki Maryi (u)');
