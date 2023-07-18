@@ -33,7 +33,7 @@
         '#Młodzianków',
         '1 J 2,3-11; Ps 96; Łk 2,22-35', 
         '1 J 2,12-17; Ps 96; Łk 2,36-40', 
-        'OOOO_Świętej Rodziny: Jezusa, Maryi i Józefa (ś)|Rdz 15,1-6;21,1-3; Ps 105;@Hbr 11,8.11-12.17-19; Łk 2,22-40', //Świętej Rodziny: Jezusa, Maryi
+        'Świętej Rodziny: Jezusa, Maryi i Józefa (ś)|Rdz 15,1-6;21,1-3; Ps 105;@Hbr 11,8.11-12.17-19; Łk 2,22-40', //Świętej Rodziny: Jezusa, Maryi
         '???', // Pierwszy stycznia - Świętej Bożej Rodzicielki Maryi (u)
         '1 J 2,22-28; Ps 98; J 1,19-28', 
         '1 J 2,29-3,6; Ps 98; J 1,29-34', 
