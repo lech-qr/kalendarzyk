@@ -18,20 +18,20 @@
         'Iz 29,1-8', // sobota
 
         '3 A III|Iz 29,13-24', // niedziela
-        'Iz 30,18-26', // poniedziałek
-        'Iz 30,27-33;31,4-9', // wtorek
-        'Iz 31,1-3;32,1-8', // środa
-        'Iz 32,15-33,6', // czwartek
-        'Iz 45,1-13', // piątek
-        'Iz 46,1-13', // sobota
+        'Iz 46,1-13', // poniedziałek
+        'Iz 47,1.3B-15', // wtorek
+        'Iz 48,1-11', // środa
+        'Iz 48,12-21;49,9B-13', // czwartek
+        'Iz 49,14-50,1', // piątek
+        'Iz 51,1-11', // sobota
 
-        '4 A IV|Iz 47,1.3b-15', // niedziela
-        'Iz 48,1-11', // poniedziałek
-        'Iz 48,12-21;49,9b-13', // wtorek
-        'Iz 49,14-50,1', // środa
-        'Iz 51,1-11', // czwartek
-        'Iz 51,17-52,2.7-10', // piątek
-        'GGG', // sobota
+        '4 A IV|Iz 51,17-52,2.7-10', // niedziela
+        'GGG', // poniedziałek
+        'GGG', // wtorek
+        'GGG', // środa
+        'GGG', // czwartek
+        'Pnp 1,1-10', // piątek
+        'Pnp 1,11-2,7', // sobota
 
         'GGG', // niedziela
         'GGG', // poniedziałek
