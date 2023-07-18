@@ -2,7 +2,7 @@
 
     $sigla_B_II = array (1 =>
         // Adwent
-        'I Niedziela Adwentu|Iz 63,16b-17.19b;64,2b-7;@Ps 80; 1 Kor 1,3-9; Mk 13,33-37', 
+        'testI Niedziela Adwentu|Iz 63,16b-17.19b;64,2b-7;@Ps 80; 1 Kor 1,3-9; Mk 13,33-37', 
         'Iz 2,1-5 lub Iz 4,2-6; Ps 122; Mt 8,5-11', 
         'Iz 11,1-10; Ps 72; Łk 10,21-24', 
         'Iz 25,6-10a; Ps 23; Mt 15,29-37', 
