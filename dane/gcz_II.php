@@ -35,10 +35,10 @@
 
         'GGG', // niedziela
         'GGG', // poniedziałek
-        'GGG', // wtorek
-        'GGG', // środa
-        'GGG', // czwartek
-        'GGG', // piątek
+        'Pnp 4,1-5,1', // wtorek
+        'Pnp 5,2-6,3', // środa
+        'Pnp 6,4-7,9', // czwartek
+        'Pnp 7,10-8,7', // piątek
         'GGG', // sobota
         'GGG', // niedziela
     // Okres zwykły
@@ -67,8 +67,8 @@
         
         '4 OZ IV|Rdz 27,1-29', // niedziela
         'Rdz 27,30-45', // poniedziałek
-        'Rdz 28,10-29-1', // wtorek
-        'GGG', // środa
+        'Rdz 28,10-29,14', // wtorek
+        'Rdz 31,1-18', // środa
         'Rdz 32,3-30', // czwartek
         'Rdz 35,1-29', // piątek
         'Rdz 37,2-4.12-36', // sobota
