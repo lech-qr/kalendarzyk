@@ -100,7 +100,7 @@
 //        '1 Kor 15,1-19', // poniedziałek
 //        '1 Kor 15,20-34', // wtorek
     // Wielki Post - środa popielcowa
-        'Iz 58,1-12', // środa
+        'GGG', // środa Popielcowa
         'Wj 1,1-22', // czwartek
         'Wj 2,1-22', // piątek
         'Wj 3,1-20', // sobota
@@ -124,7 +124,7 @@
         '3 WP III|Wj 22,20-23,9', // niedziela
         'Wj 24,1-18', // poniedziałek
         'Wj 32,1-20', // wtorek
-        'Wj 33,7-11.18.23; 34,5-9.29-35', // środa
+        'Wj 33,7-11.18.23;34,5-9.29-35', // środa
         'Wj 34,10-28', // czwartek
         'Wj 35,30-36,1;37,1-9', // piątek
         'Wj 40,16-38', // sobota
@@ -166,10 +166,10 @@
         'Dz 5,17-42', // wtorek
         'Dz 6,1-15', // środa
         'Dz 7,1-16', // czwartek
-        'Dz 7,1-16', // piątek
+        'Dz 7,17-43', // piątek
         'Dz 7,44-8,3', // sobota
 
-        '3 W III|Dz 8,4-2', // niedziela
+        '3 W III|Dz 8,4-25', // niedziela
         'Dz 8,26-40', // poniedziałek
         'Dz 9,1-22', // wtorek
         'Dz 9,23-43', // środa

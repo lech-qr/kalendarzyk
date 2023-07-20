@@ -63,7 +63,7 @@ $(document).ready(function () {
     // Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w pierwszą niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.
     // $('.d_roku_' + narodzeniePanskie).siblings('.dzien.S').find('.dane').prepend('<p class="niedziela">XXX_Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
     // $('.d_roku_29').find('.dane .niedziela .sigla').before('<p class="swieto">Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
-    
+
     if (cykl[0] === "A") {
         // Rok A
         $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128;<br> Mt 2,13-15.19-23');
@@ -71,7 +71,7 @@ $(document).ready(function () {
         // Rok B
         $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('Rdz 15,1-6;21,1-3; Ps 105;<br>Hbr 11,8.11-12.17-19; Łk 2,22-40');
         $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
-    }    
+    }
     // 1 stycznia
     $('.d_roku_' + (narodzeniePanskie + 6)).find('.niedziela').html('Świętej Bożej Rodzicielki Maryi (u)');
     // $('.d_roku_' + (narodzeniePanskie + 8) + ' .obchod').empty();
@@ -90,23 +90,29 @@ $(document).ready(function () {
     $('.d_roku_' + chrzestPanski).find('.dane .sigla').empty();
     if (cykl[0] === "A") {
         // Rok A
-        $('.d_roku_' + chrzestPanski).find('.dane').prepend('<p class="sigla">Iz 55,1-11; PS: Iz 12,2-6; 1 J 5,1-9; Mk 1,7-11</p>');
+        $('.d_roku_' + chrzestPanski).find('.dane').prepend('<p class="sigla">Iz 42,1-4.6-7; Ps 29; Dz 10,34-38; Mt 3,13-17</p>');
     } else if (cykl[0] === "B") {
         // Rok B
-        $('.d_roku_' + chrzestPanski).find('.dane').prepend('<p class="sigla">Iz 42,1-4.6-7; Ps 29; Dz 10,34-38; Mt 3,13-17</p>');
+        $('.d_roku_' + chrzestPanski).find('.dane').prepend('<p class="sigla">Iz 55,1-11; PS: Iz 12,2-6; 1 J 5,1-9; Mk 1,7-11</p>');
     }
     $('.d_roku_' + chrzestPanski).find('.dane').append('<p class="opis">kończy się okres Narodzenia Pańskiego</p>');
     $('.d_roku_' + chrzestPanski).find('.dane .prawe').html('<p class="g_czyt">gcz: Iz 42,1-9;49,1-9</p><p class="kolor">b</p>');
     $('.d_roku_' + (chrzestPanski + 1)).find('.sigla').before('<p class="opis">rozpoczyna się okres zwykły - czytania: cykl ' + cykl + '</p>');
     $('.d_roku_' + (chrzestPanski + 1)).find('.g_czyt').before('<p class="oznaczenie">1 OZ I</p><p class="tom">III tom brew.</p>');
     // Środa Popielcowa
-    $('.d_roku_' + popielec).find('.dane').empty();
-    $('.d_roku_' + popielec + ' .dane').html('<p class="opis">rozpoczyna się okres Wielkiego Postu</p><p class="swieto">Środa Popielcowa</p><p class="sigla">Jl 2,12-18; Ps 51; 2 Kor 5,20-6,2; Mt 6,1-6.16-18</p><div class="obchod"><p class="wspomnienie">*Katedry św Piotra ap (ś)</p></div><div class="prawe"><p class="tydzien_ps">IV</p><p class="tom">II tom brew.</p><p class="g_czyt">gcz: Iz 58,1-12</p><p class="kolor">f</p></div>');
+    $('.d_roku_' + popielec).find('.dane .swieto').removeClass('swieto').addClass('wspomnienie');
+    $('.d_roku_' + popielec).find('.dane .wspomnienie').prepend('*');
+    $('.d_roku_' + popielec).find('.dane .sigla').empty();
+    $('.d_roku_' + popielec + ' .dane').prepend('<p class="opis">rozpoczyna się okres Wielkiego Postu</p><p class="swieto">Środa Popielcowa</p><p class="sigla">Jl 2,12-18; Ps 51; 2 Kor 5,20-6,2; Mt 6,1-6.16-18</p></div>');
+    $('.d_roku_' + popielec).find('.dane .prawe').empty();
+    $('.d_roku_' + popielec + ' .dane .prawe').prepend('<p class="tydzien_ps">IV</p><p class="tom">II tom brew.</p><p class="g_czyt">gcz: Iz 58,1-12</p><p class="kolor">f</p>');
     // Wielkanoc
     // Wielki Poniedziałek
-    $('.d_roku_' + (wielkanoc - 6)).find('.dane .swieto').remove();
-    $('.d_roku_' + (wielkanoc - 6)).find('.dane .sigla').before('<p class="swieto">Wielki Poniedziałek</p>');
-    $('.d_roku_' + (wielkanoc - 6)).find('.dane .sigla').html('Iz 42,1-7; Ps 27; J 12,1-11');
+    $('.d_roku_' + (wielkanoc - 6)).find('.dane .swieto').removeClass('swieto').addClass('wspomnienie');
+    $('.d_roku_' + (wielkanoc - 6)).find('.dane .wspomnienie').prepend('*');
+    $('.d_roku_' + (wielkanoc - 6)).find('.dane .sigla').remove();
+    $('.d_roku_' + (wielkanoc - 6)).find('.dane').prepend('<p class="swieto">Wielki Poniedziałek</p><p class="sigla">Iz 42,1-7; Ps 27; J 12,1-11</p>');
+    $('.d_roku_' + (wielkanoc - 6)).find('.dane .prawe .g_czyt').html('gcz: Jr 26,1-15');
     $('.d_roku_' + (wielkanoc - 5)).find('.dane .sigla').before('<p class="swieto">Wielki Wtorek</p>');
     $('.d_roku_' + (wielkanoc - 4)).find('.dane .sigla').before('<p class="swieto">Wielka Środa</p>');
     // Wielki Czwartek
@@ -116,12 +122,18 @@ $(document).ready(function () {
     // Wielki Piątek
     $('.d_roku_' + (wielkanoc - 2)).find('.dane .sigla').before('<p class="swieto">Wielki Piątek</p>');
     // Wielka Sobota
-    $('.d_roku_' + (wielkanoc - 1)).find('.dane .sigla').before('<p class="swieto">Wielka Sobota</p>');
+    $('.d_roku_' + (wielkanoc - 1)).find('.dane .sigla').before('<p class="swieto">Wielka Sobota<br>&nbsp;</p>');
     $('.d_roku_' + (wielkanoc - 1)).find('.dane .sigla').empty();
     // Wielkanoc
     $('.d_roku_' + wielkanoc).closest('article .tresc').addClass('wielkanoc');
     $('.d_roku_' + wielkanoc).find('.dane .sigla').before('<p class="opis">rozpoczyna się okres wielkanocny<br><br>Wigilia Paschalna w Wielką Noc:</p>');
-    $('.d_roku_' + wielkanoc).find('.dane .sigla').html('Rdz 1,1-2,2; Ps 104 <span>lub</span> Ps 33;<br>Rdz 22,1-18; Ps 16;<br>Wj 14,15-15,1a; PS: Wj 15,1b-6.17-18;<br>Iz 54,4a.5-14; Ps 30;<br>Iz 55,1-11; PS: Iz 12,2-6;<br>Ba 3,9-15.32-4,4; Ps 19;<br>Ez 36,16-17a.18-28; Ps 42-43<br><span>lub gdy będzie chrzest:</span> PS: Iz 12,2-6 <span>lub</span> Ps 51;<br>Rz 6,3-11; Ps 118; Mt 28,1-10<br><span>msza w dzień:</span><br>Dz 10,34a.37-43; Ps 118; Kol 3,1-4<br><span>lub</span> 1 Kor 5,6b-8; sekwencja; J 20,1-9<br><br><span>kończy się Święte Triduum Paschalne</span>');
+    if (cykl[0] === "A") {
+        // Rok A
+        $('.d_roku_' + wielkanoc).find('.dane .sigla').html('Rdz 1,1-2,2; Ps 104 <span>lub</span> Ps 33;<br>Rdz 22,1-18; Ps 16;<br>Wj 14,15-15,1a; PS: Wj 15,1b-6.17-18;<br>Iz 54,4a.5-14; Ps 30;<br>Iz 55,1-11; PS: Iz 12,2-6;<br>Ba 3,9-15.32-4,4; Ps 19;<br>Ez 36,16-17a.18-28; Ps 42-43<br><span>lub gdy będzie chrzest:</span> PS: Iz 12,2-6 <span>lub</span> Ps 51;<br>Rz 6,3-11; Ps 118; Mt 28,1-10<br><span>msza w dzień:</span><br>Dz 10,34a.37-43; Ps 118; Kol 3,1-4<br><span>lub</span> 1 Kor 5,6b-8; sekwencja; J 20,1-9<br><br><span>kończy się Święte Triduum Paschalne</span>');
+    } else if (cykl[0] === "B") {
+        // Rok B
+        $('.d_roku_' + wielkanoc).find('.dane .sigla').html('Rdz 1,1-2,2; Ps 104 <span>lub</span> Ps 33;<br>Rdz 22,1-18; Ps 16;<br>Wj 14,15-15,1a; PS: Wj 15,1b-6.17-18;<br>Iz 54,4a.5-14; Ps 30;<br>Iz 55,1-11; PS: Iz 12,2-6;<br>Ba 3,9-15.32-4,4; Ps 19;<br>Ez 36,16-17a.18-28; Ps 42-43<br><span>lub gdy będzie chrzest:</span> PS: Iz 12,2-6 <span>lub</span> Ps 51;<br>Rz 6,3-11; Ps 118; Mk 16,1-7<br><span>msza w dzień:</span><br>Dz 10,34a.37-43; Ps 118; Kol 3,1-4<br><span>lub</span> 1 Kor 5,6b-8; sekwencja; J 20,1-9<br><br><span>kończy się Święte Triduum Paschalne</span>');
+    }
     // Poniedziałek Wielkanocny
     $('.d_roku_' + (wielkanoc + 1)).addClass('sw_Inne');
     $('.d_roku_' + (wielkanoc + 1)).find('.dane .sigla').before('<p class="swieto">Poniedziałek Wielkanocny</p>');
