@@ -211,7 +211,7 @@
         
         '8 W IV|GGG', // niedziela
         'GGG', // poniedziałek
-        '7 OZ IV|2 Kor 2,12-3,6', // wtorek
+        '7 OZ III|2 Kor 2,12-3,6', // wtorek
         '2 Kor 3,7-4,4', // środa
         'GGG', // czwartek
         '2 Kor 5,1-21', // piątek

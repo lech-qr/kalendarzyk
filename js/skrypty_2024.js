@@ -143,7 +143,13 @@ $(document).ready(function () {
     $('.d_roku_128').find('.dane .prawe .g_czyt').html('gcz: 1 Krn 17,1-15');
     // Wniebowstąpienie Pańskie (u) - najbliższa niedziela w 40 dni po Wielkanocy
     $('.d_roku_' + (wielkanoc + 41)).find('.niedziela').html('Wniebowstąpienie Pańskie (u)');
-    $('.d_roku_' + (wielkanoc + 42)).find('.dane .sigla').html('Dz 1,1-11; Ps 47; Ef 1,17-23; Mt 28,16-20');
+    if (cykl[0] === "A") {
+        // Rok A
+        $('.d_roku_' + (wielkanoc + 42)).find('.dane .sigla').html('Dz 1,1-11; Ps 47; Ef 1,17-23; Mt 28,16-20');
+    } else if (cykl[0] === "B") {
+        // Rok B
+        $('.d_roku_' + (wielkanoc + 42)).find('.dane .sigla').html('Dz 1,1-11; Ps 47; Ef 4,1-13; Mk 16,15-20');
+    }
     $('.d_roku_' + (wielkanoc + 42)).find('.prawe .oznaczenie').html('7 W');
     $('.d_roku_' + (wielkanoc + 42)).find('.prawe .g_czyt').html('gcz: Ef 4,1-24');
     $('.d_roku_' + (wielkanoc + 42)).find('.prawe .oznaczenie').empty();
@@ -151,7 +157,13 @@ $(document).ready(function () {
     // Zesłanie Ducha Świętego - kolejna niedziela po Wniebowstąpieniu
     $('.d_roku_' + (wielkanoc + 48)).find('.niedziela').html('Zesłanie Ducha Świętego - Pentekoste (u)');
     $('.d_roku_' + (wielkanoc + 48)).find('.sigla').html('<span>msza rano:</span> Dz 28,16-20.30-31; Ps 11; J 21,20-25');
-    $('.d_roku_' + (wielkanoc + 49)).find('.sigla').html('<span>msza wigilii:</span> Rdz 11,1-9; Ps 33; Wj 19,3-8a.16-20b;@PS: Dn 3,52-56 <span>lub</span> Ps 19; Ez 37,1-14; Ps 107;@Jl 3,1-5; Ps 104; Rz 8,22-27; J 7,37-39<br><span>msza w dzień:</span> Dz 2,1-11; Ps 104; 1 Kor 12,3b-7.12-13;<br>sekwencja; J 20,19-23');
+    if (cykl[0] === "A") {
+        // Rok A
+        $('.d_roku_' + (wielkanoc + 49)).find('.sigla').html('<span>msza wigilii:</span> Rdz 11,1-9; Ps 33; Wj 19,3-8a.16-20b;@PS: Dn 3,52-56 <span>lub</span> Ps 19; Ez 37,1-14; Ps 107;@Jl 3,1-5; Ps 104; Rz 8,22-27; J 7,37-39<br><span>msza w dzień:</span> Dz 2,1-11; Ps 104; 1 Kor 12,3b-7.12-13;<br>sekwencja; J 20,19-23');
+    } else if (cykl[0] === "B") {
+        // Rok B
+        $('.d_roku_' + (wielkanoc + 49)).find('.sigla').html('<span>msza wigilii:</span> Rdz 11,1-9; Ps 33; Wj 19,3-8a.16-20b;@PS: Dn 3,52-56 <span>lub</span> Ps 19; Ez 37,1-14; Ps 107;@Jl 3,1-5; Ps 104; Rz 8,22-27; J 7,37-39<br><span>msza w dzień:</span> Dz 2,1-11; Ps 104; Ga 5,16-25;<br>sekwencja; J 15,26-27;16,12-15');
+    }
     $('.d_roku_' + (wielkanoc + 49)).find('.sigla').after('<p class="opis">kończy się okres wielkanocny</p>');
     $('.d_roku_' + (wielkanoc + 49)).find('.oznaczenie').empty();
     $('.d_roku_' + (wielkanoc + 49)).find('.g_czyt').html('gcz: Rz 8,5-27');
@@ -163,22 +175,41 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 50)).find('.obchod .wspomnienie').prepend('*');
     $('.d_roku_' + (wielkanoc + 50)).find('.prawe').prepend('<p class="tom">III tom brew.</p>');
     $('.d_roku_' + (wielkanoc + 50)).find('.prawe .g_czyt').html('gcz: Ga 3,22-4,7');
+    $('.d_roku_' + (wielkanoc + 50)).find('.prawe .kolor').html('b');
     // Jezusa Chrystusa Najwyższego i Wiecznego Kapłana (ś) - czwartek po Zesłaniu Ducha Świętego
     $('.d_roku_' + (wielkanoc + 53)).find('.sigla').before('<p class="swieto">Jezusa Chrystusa Najwyższego i Wiecznego Kapłana (ś)</p>');
-    $('.d_roku_' + (wielkanoc + 53)).find('.sigla').html('Rdz 22,9-18 lub Hbr 10,4-10;@Ps 40; Mt 26,36-42');
+    if (cykl[0] === "A") {
+        // Rok A
+        $('.d_roku_' + (wielkanoc + 53)).find('.sigla').html('Rdz 22,9-18 lub Hbr 10,4-10;@Ps 40; Mt 26,36-42');
+    } else if (cykl[0] === "B") {
+        // Rok B
+        $('.d_roku_' + (wielkanoc + 53)).find('.sigla').html('Jr 31,31-34 lub Hbr 10,11-18;@Ps 110; Mk 14,22-25');
+    }
     $('.d_roku_' + (wielkanoc + 53)).find('.obchod .wspomnienie').prepend('*');
     $('.d_roku_' + (wielkanoc + 53)).find('.prawe .g_czyt').html('<br>gcz: Hbr 4,14-16;5,1-10');
     $('.d_roku_' + (wielkanoc + 53)).find('.prawe .kolor').html('b');
     // Najświętszej Trójcy (u) - niedziela po Zesłaniu Ducha Świętego
     $('.d_roku_' + (wielkanoc + 55)).find('.niedziela').html('Najświętszej Trójcy (u)');
-    $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Wj 34,4b-6.8-9; PS: Dn 3,52-56;@2 Kor 13,11-13; J 3,16-18');
+    if (cykl[0] === "A") {
+        // Rok A
+        $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Wj 34,4b-6.8-9; PS: Dn 3,52-56;@2 Kor 13,11-13; J 3,16-18');
+    } else if (cykl[0] === "B") {
+        // Rok B
+        $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Pwt 4,32-34.39-40; Ps 33;@Rz 8,14-17; Mt 28,16-20');
+    }
     $('.d_roku_' + (wielkanoc + 56)).find('.oznaczenie').empty('');
     $('.d_roku_' + (wielkanoc + 56)).find('.dane .prawe .g_czyt').html('gcz: 1 Kor 2,1-16');
-    $('.d_roku_' + (wielkanoc + 57)).find('.g_czyt').before('<p class="oznaczenie">8 OZ I</p>');
+    $('.d_roku_' + (wielkanoc + 57)).find('.g_czyt').before('<p class="oznaczenie">8 OZ IV</p>');
     // Najświętszego Ciała i Krwi Chrystusa (u) - czwartek po pierwszej niedzieli po Zesłaniu
     $('.d_roku_' + (wielkanoc + 59)).find('.dane').append('<p class="niedziela">Najświętszego Ciała i Krwi Chrystusa (u)</p>');
     $('.d_roku_' + (wielkanoc + 60)).addClass('nakaz');
-    $('.d_roku_' + (wielkanoc + 60)).find('.dane .sigla').html('Pwt 8,2-3.14b-16a; Ps 147B; 1 Kor 10,16-17;@J 6,51-58');
+    if (cykl[0] === "A") {
+        // Rok A
+        $('.d_roku_' + (wielkanoc + 60)).find('.dane .sigla').html('Pwt 8,2-3.14b-16a; Ps 147B; 1 Kor 10,16-17;@J 6,51-58');
+    } else if (cykl[0] === "B") {
+        // Rok B
+        $('.d_roku_' + (wielkanoc + 60)).find('.dane .sigla').html('Wj 24,3-8; Ps 116B; Hbr 9,11-15;@Mk 14,12-16.22-26');
+    }
     $('.d_roku_' + (wielkanoc + 60)).find('.dane .obchod .wspomnienie').prepend('*');
     $('.d_roku_' + (wielkanoc + 60)).find('.dane .prawe .g_czyt').html('gcz: Wj 24,1-11');
     $('.d_roku_' + (wielkanoc + 60)).find('.dane .prawe .kolor').html('b');
