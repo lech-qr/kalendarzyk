@@ -175,7 +175,6 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 50)).find('.obchod .wspomnienie').prepend('*');
     $('.d_roku_' + (wielkanoc + 50)).find('.prawe').prepend('<p class="tom">III tom brew.</p>');
     $('.d_roku_' + (wielkanoc + 50)).find('.prawe .g_czyt').html('gcz: Ga 3,22-4,7');
-    $('.d_roku_' + (wielkanoc + 50)).find('.prawe .kolor').html('b');
     // Jezusa Chrystusa Najwyższego i Wiecznego Kapłana (ś) - czwartek po Zesłaniu Ducha Świętego
     $('.d_roku_' + (wielkanoc + 53)).find('.sigla').before('<p class="swieto">Jezusa Chrystusa Najwyższego i Wiecznego Kapłana (ś)</p>');
     if (cykl[0] === "A") {
@@ -215,7 +214,13 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 60)).find('.dane .prawe .kolor').html('b');
     // Najśw Serca Pana Jezusa (u) - piątek po drugiej niedzieli po Zesłaniu
     $('.d_roku_' + (wielkanoc + 68)).find('.sigla').before('<p class="uroczystosc">Najśw Serca Pana Jezusa (u)</p>');
-    $('.d_roku_' + (wielkanoc + 68)).find('.sigla').html('Pwt 7,6-11; Ps 103; 1 J 4,7-16; Mt 11,25-30');
+    if (cykl[0] === "A") {
+        // Rok A
+        $('.d_roku_' + (wielkanoc + 68)).find('.sigla').html('Pwt 7,6-11; Ps 103; 1 J 4,7-16; Mt 11,25-30');
+    } else if (cykl[0] === "B") {
+        // Rok B
+        $('.d_roku_' + (wielkanoc + 68)).find('.sigla').html('Oz 11,1.3-4.8c-9; PS: Iz 12,2-6;@Ef 3,8-12.14-19; J 19,31-37');
+    }
     $('.d_roku_' + (wielkanoc + 68)).find('.g_czyt').html('gcz: Rz 8,28-39');
     // Niepokalanego Serca Najśw Maryi Panny (wo) - sobota po drugiej niedzieli po Zesłaniu
     $('.d_roku_' + (wielkanoc + 69)).find('.obchod .wspomnienie').prepend('Niepokalanego Serca Najśw Maryi Panny (wo)<br>*');

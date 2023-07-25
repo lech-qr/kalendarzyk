@@ -126,6 +126,18 @@ $(document).ready(function () {
             if ($(this).is(':contains("św Stanisława bp m - głównego patrona Polski (u)")')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
+            // św Macieja ap (ś) - czerwony
+            if ($(this).is(':contains("św Macieja ap (ś)")')) {
+                $(this).find('.dane .prawe p.kolor').text('cz');
+            }
+            // Najśw Maryi Panny Matki Kościoła (ś) - biały
+            if ($(this).is(':contains("Najśw Maryi Panny Matki Kościoła (ś)")')) {
+                $(this).find('.dane .prawe p.kolor').text('b');
+            }
+            // św Barnaby ap (wo) - czerwony
+            if ($(this).is(':contains("św Barnaby ap (wo)")')) {
+                $(this).find('.dane .prawe p.kolor').text('cz');
+            }
             // św ap Piotra i Pawła (u) - czerwony
             if ($(this).is(':contains("św ap Piotra i Pawła (u)")')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');

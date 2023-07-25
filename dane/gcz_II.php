@@ -247,7 +247,7 @@
         'Ag 1,2-2,9', // środa
         'Ag 2,11-23', // czwartek
         'Za 1,1-2,4', // piątek
-        'Za 1,1-2,4', // sobota
+        'Za 2,5-17', // sobota
 
         '12 OZ IV|Za 3,1-4,14', // niedziela
         'Za 8,1-17.20-23', // poniedziałek
