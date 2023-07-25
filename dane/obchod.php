@@ -158,7 +158,7 @@
         'św Bedy Czcigodnego pr dK (wd), św Grzegorza VII pp (wd), św Marii Magdaleny de Pazzi dz (wd)', // 25
         'św Filipa Nereusza pr (wo)', // 26
         'św Augustyna z Canterbury bp (wd), św Pawła VI pp (wd)', // 27
-        '', // 28
+        'bł Stefana Wyszyńskiego bp (wd)', // 28
         'św Urszuli Ledóchowskiej dz (wo)', // 29
         'św Jana Sarkandra pr m (wd), św Zdzisławy (wd)', // 30
         'Nawiedzenie Najśw Maryi Panny (ś)|So 3,14-17 lub Rz 12,9-16b; PS: Iz 12,2-6; Łk 1,39-56~Pnp 2,8-14;8,6-7', // 31
@@ -193,7 +193,7 @@
         'św Zygmunta Gorazdowskiego pr (wd) ', // 26
         'św Cyryla Aleksandryjskiego bp dK (wd)', // 27
         'św Ireneusza bp m (wo)', // 28
-        'św ap Piotra i Pawła (u)|msza wigilii: Dz 3,1-10; Ps 19;@Ga 1,11-20; J 21,15-19@msza w dzień: Dz 12,1-11; Ps 34;@2 Tm 4,6-9.17-18; Mt 16,13-19~Ga 1,15-2,10', // 29
+        'św ap Piotra i Pawła (u)|msza wigilii: Dz 3,1-10; Ps 19;@Ga 1,11-20; J 21,15-19@msza w dzień: Dz 12,1-11; Ps 34;@2 Tm 4,6-9.16-18; Mt 16,13-19~Ga 1,15-2,10', // 29
         'św Pierwszych m Świętego Kościoła Rzymskiego (wd)', // 30
     );
 
@@ -219,7 +219,7 @@
         '', // 19
         'bł Czesława pr (wd)', // 20
         'św Wawrzyńca z Brindisi pr dK (wd), św Apolinarego bp m (wd)', // 21
-        'św Marii Magdaleny (ś)|Pnp 8,6-7 lub 2 Kor 5,14-17; Ps 63; J 20,1.11-18~Kol 3, 1-17 lub Rz 12, 1-21', // 22
+        'św Marii Magdaleny (ś)|Pnp 8,6-7 lub 2 Kor 5,14-17; Ps 63; J 20,1.11-18~Kol 3,1-17 lub Rz 12,1-21', // 22
         'św Brygidy zk - patronki Europy (ś)|Ga 2,19-20; Ps 34; J 15,1-8~Flp 3,7-4,1.4-9', // 23
         'św Kingi dz (wo)', // 24
         'św Jakuba ap (ś)|2 Kor 4,7-15; Ps 126; Mt 20,20-28~1 Kor 4,1-16', // 25
