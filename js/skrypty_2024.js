@@ -238,9 +238,9 @@ $(document).ready(function () {
     // $('.d_roku_149').find('.dane .sigla').before('<p class="uroczystosc">św Wojciecha bp m - głównego patrona Polski (u)</p>');
     // $('.d_roku_149').find('.dane .wspomnienie').prepend('*');
     // $('.d_roku_149').find('.dane .prawe .g_czyt').html('gcz: Dz 20,17-36');
-    //Przemienienie Pańskie (ś)
-    $('article div.dane p.niedziela:contains("Przemienienie Pańskie (ś)")').closest('.dzien').next('.dzien').find('.g_czyt').before('<p class="tom">IV tom brew.</p>');
-    $('article div.dane p.niedziela:contains("Przemienienie Pańskie (ś)")').closest('.dzien').next('.dzien').next('.dzien').find('.g_czyt').before('<p class="oznaczenie">18 OZ II</p>');
+    //Przemienienie Pańskie (ś) - Odkomentuj jeśli Przemienienie wypada w niedzielę
+    //$('article div.dane p.niedziela:contains("Przemienienie Pańskie (ś)")').closest('.dzien').next('.dzien').find('.g_czyt').before('<p class="tom">IV tom brew.</p>');
+    //$('article div.dane p.niedziela:contains("Przemienienie Pańskie (ś)")').closest('.dzien').next('.dzien').next('.dzien').find('.g_czyt').before('<p class="oznaczenie">18 OZ II</p>');
 
 
     // Wspólne dla wszystkich lat
