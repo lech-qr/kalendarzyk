@@ -238,7 +238,10 @@
         'św Jana Marii Vianneya pr (wo)', // 4
         'Rocznica poświęcenia rzymskiej Bazyliki Najśw Maryi Panny (wd)', // 5
         // Święto Pańskie jest ważniejsze od niedzieli. Stąd to oznaczenie
-        'Przemienienie Pańskie (święto Pańskie)|Dn 7,9-10.13-14; Ps 97; 2 P 1,16-19; Mt 17,1-9~2 Kor 3,7-4,6', // 6
+        // Rok A 
+        // 'Przemienienie Pańskie (święto Pańskie)|Dn 7,9-10.13-14 lub 2 P 1,16-19; Ps 97; Mt 17,1-9~2 Kor 3,7-4,6', // 6
+        // Rok B
+        'Przemienienie Pańskie (święto Pańskie)|Dn 7,9-10.13-14 lub 2 P 1,16-19; Ps 97; Mk 9,2-10~2 Kor 3,7-4,6', // 6        
         'św m Sykstusa II pp i Towarzyszy (wd), św Kajetana pr (wd)', // 7
         'św Dominika pr (wo)', // 8
         'św Teresy Benedykty od Krzyża dz m - patronki Europy (ś)|Oz 2,16b.17b.21-22; Ps 45; Mt 25,1-13~2 Kor 4,7-5,8', // 9
@@ -256,7 +259,7 @@
         'św Piusa X pp (wo)', // 21
         'Najśw Maryi Panny Królowej (wo)', // 22
         'św Róży z Limy dz (wd)', // 23
-        'św Bartłomieja ap (ś)|Ap 21,9b-14; Ps 145; J 1,45-51~1 Kor4,1-16', // 24
+        'św Bartłomieja ap (ś)|Ap 21,9b-14; Ps 145; J 1,45-51~1 Kor 4,1-16', // 24
         'św Ludwika króla (wd), św Józefa Kalasantego pr (wd)', // 25
         'Najśw Maryi Panny Częstochowskiej (u)|Prz 8,22-35 lub Iz 2,2-5; Ps 48; Ga 4,4-7; J 2,1-11~Ga 3,22-4,7', // 26
         'św Moniki (wo)', // 27
@@ -275,7 +278,7 @@
         '', // 6
         'św Melchiora Grodzieckiego pr m (wd)', // 7
         'Narodzenie Najśw Maryi Panny (ś)|Mi 5,1-4a lub Rz 8,28-30; Ps 13; Mt 1,1-16.18-23~Rdz 3,9-20', // 8
-        'św Piotra Klawera pr (wd), bł Anieli Salawy dz (wd)', // 9
+        'św Piotra Klawera pr (wd)', // 9
         '', // 10
         '', // 11
         'Najśw Imienia Maryi (wd)', // 12

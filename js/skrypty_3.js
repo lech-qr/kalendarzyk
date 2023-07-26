@@ -114,10 +114,10 @@ $(document).ready(function () {
             if ($(this).is(':contains("Najświętszej Trójcy (u)")')) {
                 $(this).next('.dzien').find('.dane .prawe p.kolor').text('b');
             }
-            // Przemienienie Pańskie (ś) - biały
-            if ($(this).is(':contains("Przemienienie Pańskie (ś)")')) {
-                $(this).next('.dzien').find('.dane .prawe p.kolor').text('b');
-            }
+            // Przemienienie Pańskie (ś) - biały - Odkomentuj jeśli Przemienienie wypada w niedzielę
+            // if ($(this).is(':contains("Przemienienie Pańskie (ś)")')) {
+            //    $(this).next('.dzien').find('.dane .prawe p.kolor').text('b');
+            //}
             // Najświętszego Ciała i Krwi Chrystusa (u) - biały
             if ($(this).is(':contains("Najświętszego Ciała i Krwi Chrystusa (u)")')) {
                 $(this).next('.dzien').find('.dane .prawe p.kolor').text('b');
@@ -203,10 +203,10 @@ $(document).ready(function () {
     $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').find('.dane p.swieto').empty();
     $('article div.dane p.wspomnienie:contains("męczeństwo św Jana Chrzciciela (wo)")').closest('.dane').find('.sigla').append('<br><span>lub czyt. własne:</span><br>Jr 1,17-19; Ps 71; Mk 6,17-29');
     $('article div.dane p.wspomnienie:contains("św Aniołów Stróżów (wo)")').closest('.dane').find('.sigla').append('<br><span>lub czyt. własne:</span><br>Wj 23,20-23; Ps 91; Mt 18,1-5.10');
-    // Znajdź dokładne dopadowanie - inaczej regułą działałby dla XVIII Niedzieli Zwykłej, ale także dla XXVIII Niedzieli Zwykłej czy VIII…
+    // Znajdź dokładne dopasowanie - inaczej regułą działałby dla XVIII Niedzieli Zwykłej, ale także dla XXVIII Niedzieli Zwykłej czy VIII…
     $('article div.dane p.niedziela').filter(function () {
         return $(this).text() === "XVIII Niedziela Zwykła";
-    }).closest('.dzien').next('.dzien').find('.g_czyt').before('<p class="tom">III tom brew.</p>');
+    }).closest('.dzien').next('.dzien').find('.g_czyt').before('<p class="tom">IV tom brew.</p>');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').addClass('nakaz');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').before('<div class="dzien pierwszy" style="padding: 0px; height: 3mm;"><div class="nr_dnia"></div><div class="nazwad"></div><div class="dane"><p class="niedziela">Wszystkich Świętych (u)</p></div></div>');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').remove();
