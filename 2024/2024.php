@@ -97,7 +97,7 @@
     $_12_nr_dnia_roku = $_11_nr_dnia_roku + $_11_ilosc_d;
     $_12_nr_dnia = 1; // Stała po za miesiącem wielkanocnym
     $_12_nazwa_d = 1;
-    $_12_przelam = 16;
+    $_12_przelam = 17;
     $_12_ilosc_d = 31; // Stała
     
 
@@ -106,6 +106,7 @@
     include('../dane/' . $sigla . '.php');
     include('../dane/' . $gcz . '.php');
     
+    include('00-okladka.php');
     include('00-wkladka_1.php');
     include('00-wkladka_2_lewa.php');
     include('00-wkladka_skrocony_A.php');

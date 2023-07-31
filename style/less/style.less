@@ -1,165 +1,299 @@
 @import "zmienne.less";
 
-    @font-01_roman: zapfhumnstplroman;
-    @font-01_bold: zapfhumnstplbold;
-    @font-01_italic: zapfhumnstplitalic;
-    @font-02_roman: swis721cnplroman;
-    @font-02_bold: swis721cnplbold;
-    @font-02_italic: swis721cnplitalic;
-    @font-02_bolditalic: swis721cnplbolditalic;
+@font-00_bold: warnock_probold;
+@font-00_regular: warnock_proregular;
+@font-00_italic: warnock_proitalic;
+@font-00_bolditalic: warnock_probold_italic;
+@font-01_roman: zapfhumnstplroman;
+@font-01_bold: zapfhumnstplbold;
+@font-01_italic: zapfhumnstplitalic;
+@font-02_roman: swis721cnplroman;
+@font-02_bold: swis721cnplbold;
+@font-02_italic: swis721cnplitalic;
+@font-02_bolditalic: swis721cnplbolditalic;
 
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
+
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
+
 body {
     background-color: #f1f1f1;
     line-height: 1;
     font-family: swis721cnplroman;
     color: @czarny;
+
     section {
         position: relative;
         height: unit(@arkusz_h + 2*@spad + 2*@znaczniki + 7, mm);
-        article {            
+
+        article {
             position: absolute;
-            display: block; 
+            display: block;
             margin: 0.5em 0;
             width: unit(@arkusz_w + 2*@spad + 2*@znaczniki, mm);
             height: unit(@arkusz_h + 2*@spad + 2*@znaczniki, mm);
             background-color: #fff;
+
             &.lewa {
                 left: 49%;
                 margin-left: unit((@arkusz_w + 2*@spad + 2*@znaczniki)*-1, mm);
+
                 &.wzor_B {
                     div.naglowek {
                         p.miesiac {
                             float: left;
                         }
+
                         p.rok {
-                            float: right;                       
-                        }                        
+                            float: right;
+                        }
                     }
                 }
             }
+
             &.prawa {
                 right: 49%;
-                margin-right: unit((@arkusz_w + 2*@spad + 2*@znaczniki)*-1, mm);              
+                margin-right: unit((@arkusz_w + 2*@spad + 2*@znaczniki)*-1, mm);
+
                 &.wzor_B {
                     div.naglowek {
                         p.miesiac {
                             float: right;
                         }
+
                         p.rok {
-                            float: left;                       
-                        }                        
+                            float: left;
+                        }
                     }
-                }                
+                }
             }
-            &.wzor_A, &.wzor_B {
+
+            &.wzor_A,
+            &.wzor_B {
+
                 // Nowe znaczniki i pasery
                 .tresc {
                     float: left;
                     width: unit(@arkusz_w - 2, mm);
                     height: unit(@arkusz_h, mm);
                 }
-                .znacz, .paser {
+
+                .znacz,
+                .paser {
                     float: left;
                 }
+
                 .znacz {
                     width: unit(@znaczniki + @spad, mm);
                     height: unit(@znaczniki + @spad, mm);
                 }
+
                 .paser {
-                    &.G, &.D {
+
+                    &.G,
+                    &.D {
                         width: unit(@arkusz_w, mm);
                         height: unit(@znaczniki + @spad, mm);
                     }
-                    &.L, &.P {
+
+                    &.L,
+                    &.P {
                         width: unit(@znaczniki + @spad, mm);
-                        height: unit(@arkusz_h, mm);                        
+                        height: unit(@arkusz_h, mm);
                     }
                 }
+
                 // Nowe znaczniki i pasery - koniec              
             }
+
             &.wzor_A {
                 &:nth-of-type(even) {
                     .tresc {
                         margin: 0 0 0 2mm;
                     }
                 }
+
                 &:nth-of-type(odd) {
                     .tresc {
                         margin: 0 2mm 0 0;
                     }
-                }                
-            }            
+                }
+            }
+
             &.wzor_B {
                 &:nth-of-type(even) {
                     .tresc {
                         margin: 0 10mm 0 2mm;
                     }
                 }
+
                 &:nth-of-type(odd) {
                     .tresc {
                         margin: 0 12mm 0 0;
                     }
-                }                  
+                }
+
                 ul.znaczniki {
                     &:before {
                         background-color: @szary;
                     }
                 }
+
                 div.naglowek {
                     position: absolute;
                     z-index: 1;
                     left: unit(@znaczniki, mm);
                     top: unit(@znaczniki, mm);
                     width: unit(@arkusz_w + 2*@spad, mm);
-                    background-color: @szary; 
+                    background-color: @szary;
+
                     p {
                         font-family: @font-01_bold;
                         text-transform: uppercase;
                         font-size: 3.2mm;
                     }
-                }               
+                }
+
                 div.tresc {
                     position: relative;
                     width: unit(@tresc_w, mm);
                     top: 7.7mm;
+
                     .linia {
                         position: absolute;
-                        z-index: 9;                        
+                        z-index: 9;
                         display: block;
                         padding: 0;
                     }
+
                     .dzien {
                         overflow: hidden;
                         position: relative;
-                        width: 100%;                          
-                        &.pierwszy {                           
+                        width: 100%;
+
+                        &.pierwszy {
                             .dane {
                                 height: 2.4mm;
                                 min-height: 0;
                             }
-                        }                        
+                        }
+
                         .nr_dnia {
                             position: absolute;
                             top: 0;
@@ -167,7 +301,8 @@ body {
                             height: 100%;
                             font-family: @font-01_bold;
                             font-size: 3.2mm;
-                            text-align: center;                         
+                            text-align: center;
+
                             p {
                                 text-align: center;
                                 position: relative;
@@ -177,17 +312,19 @@ body {
                                 transform: translateY(-50%);
                             }
                         }
+
                         .nazwad {
                             position: absolute;
-                            top: 0;                                
+                            top: 0;
                             width: 5mm;
                             height: 100%;
                             font-family: @font-01_bold;
-                            font-size: 3.2mm;   
+                            font-size: 3.2mm;
                             text-align: center;
                             background-image: url(../../images/linie/pionowe.svg);
                             background-position: center;
                             background-size: auto;
+
                             p {
                                 text-align: center;
                                 position: relative;
@@ -196,6 +333,7 @@ body {
                                 -webkit-transform: translateY(-50%);
                                 transform: translateY(-50%);
                             }
+
                             &.oktawa {
                                 img {
                                     position: absolute;
@@ -207,45 +345,60 @@ body {
                                 }
                             }
                         }
-                        &.S, &.d_przed_nakaz {
+
+                        &.S,
+                        &.d_przed_nakaz {
                             &:not(:last-of-type) {
                                 .kolor {
                                     margin: 0 1mm 3mm 0 !important;
-                                }                                
+                                }
                             }
+
                             &:last-of-type {
                                 .kolor {
                                     margin: 0 1mm 0 0 !important;
-                                }                                
+                                }
                             }
                         }
-                        &.panstwowe, &.sw_Inne {
-                            .nr_dnia, .nazwad {                          
+
+                        &.panstwowe,
+                        &.sw_Inne {
+
+                            .nr_dnia,
+                            .nazwad {
                                 p {
                                     color: @czerwony;
                                 }
-                            }                           
+                            }
                         }
-                        &.N, &.nakaz {
+
+                        &.N,
+                        &.nakaz {
                             background-color: @czerwony25;
-                            .nr_dnia, .nazwad {
-                                background-color: #fff;                           
+
+                            .nr_dnia,
+                            .nazwad {
+                                background-color: #fff;
+
                                 p {
                                     color: @czerwony;
                                 }
                             }
                         }
+
                         .dane {
                             position: relative;
                             height: 100%;
                             min-height: 22.66px;
                             top: 0;
-                            width: unit(@tresc_w - 10, mm);                          
+                            width: unit(@tresc_w - 10, mm);
+
                             p {
                                 margin: 0 2mm;
                                 font-size: 2.2mm;
                                 line-height: 3mm;
                             }
+
                             p.niedziela {
                                 position: absolute;
                                 width: 100%;
@@ -261,55 +414,71 @@ body {
                                 letter-spacing: 0.14em;
                                 border-radius: 1.4mm 1.4mm 0 0;
                             }
-                            p.swieto, p.uroczystosc {
+
+                            p.swieto,
+                            p.uroczystosc {
                                 font-family: @font-02_bold;
                                 color: @czerwony;
+
                                 &.zniesione {
                                     font-family: @font-02_roman;
                                     color: @czarny;
-                                }                                
-                            }                            
+                                }
+                            }
+
                             p.opis {
                                 font-family: @font-02_roman;
+
                                 &.triduum {
                                     font-family: @font-02_bolditalic;
                                     color: @czerwony;
                                 }
                             }
+
                             p.sigla {
                                 font-family: @font-02_bold;
+
                                 span {
                                     font-family: @font-02_roman;
                                 }
                             }
+
                             p.tydzien_ps {
                                 font-family: @font-02_bold;
                             }
+
                             p.tom {
                                 font-family: @font-02_roman;
                             }
+
                             div.obchod {
                                 p {
                                     &.wspomnienie {
                                         font-family: @font-02_roman;
-                                    }                                    
+                                    }
                                 }
                             }
+
                             div.prawe {
                                 position: absolute;
                                 top: 0;
                                 right: 0;
+
                                 p {
                                     margin: 0 1mm;
                                     text-align: right;
+
                                     &.oznaczenie {
                                         font-family: @font-02_bold;
                                     }
+
                                     &.g_czyt {
                                         font-family: @font-02_italic;
                                     }
+
                                     &.kolor {
                                         font-family: @font-02_bolditalic;
+
                                         &.pozycja {
                                             position: absolute;
                                             right: 0;
@@ -321,38 +490,49 @@ body {
                         }
                     }
                 }
+
                 &.lewa {
                     .naglowek {
                         padding: 7mm 10mm 0.5mm 8mm;
                     }
+
                     .tresc {
                         left: unit(@znaczniki, mm);
-                        .dzien {
-                            &.S:not(:last-child), &.pierwszy {
 
-                            }                            
+                        .dzien {
+
+                            &.S:not(:last-child),
+                            // &.pierwszy {}
+
                             .nr_dnia {
                                 left: 0;
                             }
+
                             .nazwad {
                                 left: 5mm;
                             }
+
                             .dane {
                                 left: 10mm;
-                            }                            
+                            }
                         }
                     }
-                }                 
+                }
+
                 &.prawa {
                     .naglowek {
                         padding: 7mm 8mm 0.5mm 10mm;
-                    }                    
+                    }
+
                     .tresc {
                         left: unit(@znaczniki, mm);
+
                         .dzien {
-                            &.S:not(:last-child), &.pierwszy {
+
+                            &.S:not(:last-child),
+                            &.pierwszy {
                                 border-bottom: 0;
-/*                                &:after {
+                                /*                                &:after {
                                     content: '';
                                     position: absolute;
                                     left: 0;
@@ -370,23 +550,28 @@ body {
                                     width: 19.5mm;
                                     border-bottom: @tabela solid @czarny;
                                 }*/
-                            }                            
+                            }
+
                             .nr_dnia {
                                 right: 0;
                             }
+
                             .nazwad {
                                 right: 5mm;
-                            } 
+                            }
+
                             .dane {
                                 left: 0;
-                            }                             
-                        }                        
+                            }
+                        }
                     }
-                }                 
+                }
             }
+
             .tresc.wielkanoc {
                 z-index: 1;
             }
+
             img.wielkanoc {
                 position: absolute;
                 width: 75mm;
@@ -394,6 +579,7 @@ body {
                 left: 15mm;
                 z-index: 0;
             }
+
             .homilia {
                 h2 {
                     font-family: @font-01_bold;
@@ -401,12 +587,14 @@ body {
                     font-size: 2.6mm;
                     margin: 2.4mm;
                 }
+
                 h3 {
                     font-family: @font-01_roman;
                     text-align: center;
                     font-size: 2.2mm;
                     margin-bottom: 3.8mm;
                 }
+
                 p {
                     font-family: @font-01_italic;
                     text-align: justify;
@@ -414,6 +602,7 @@ body {
                     text-indent: 7mm;
                     line-height: 1.12em;
                 }
+
                 h4 {
                     font-family: @font-01_roman;
                     text-align: center;
@@ -422,6 +611,86 @@ body {
                 }
             }
         }
+
+        &#okladka-1 {
+            article {
+
+                .kolor {
+                    position: absolute;
+                    top: 5mm;
+                    left: 5mm;
+                    width: unit(@arkusz_w + 6, mm);
+                    height: unit(@arkusz_h + 6, mm);
+                    z-index: 0;
+                }
+
+                .tresc {
+                    text-align: center;
+
+                    >* {
+                        position: relative;
+                    }
+
+                    h1 {
+                        font-family: @font-00_bold;
+                        text-transform: uppercase;
+                        margin: 13mm 0 5.5mm 0;
+                        font-size: 8.5mm;
+                        line-height: 10.5mm;
+
+                    }
+
+                    h2 {
+                        font-family: @font-00_bold;
+                        font-size: 9mm;
+                    }
+
+                    img.krzyz {
+                        width: 54mm;
+                        margin: 10mm 0 15.5mm 0;
+                    }
+
+                    h3 {
+                        font-family: @font-00_bold;
+                        font-size: 4.35mm;
+                        line-height: 5.5mm;
+                    }
+
+                    h4 {
+                        font-family: @font-00_bolditalic;
+                        margin: 13mm 0 0 0;
+                        font-size: 4.5mm;
+                        line-height: 5.3mm;
+                    }
+
+                    img.szema {
+                        width: 58mm;
+                        margin: 5mm 0 -7mm 0;
+                    }
+
+                    img.kerygma {
+                        width: 25mm;
+                        margin: 5mm 0 4mm 0;
+                    }
+
+                    h5 {
+                        font-family: @font-00_bolditalic;
+                        color: #fff;
+                        line-height: 5mm;
+                    }
+                }
+            }
+        }
+
+        &#okladka-2 {
+            article {
+                background-image: url('../../images/usun/okładka1.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
         &#wkladka-1 {
             article {
                 .tresc {
@@ -433,6 +702,7 @@ body {
                         font-size: 10mm;
                         line-height: 11mm;
                     }
+
                     h2 {
                         margin-top: 9mm;
                         text-align: center;
@@ -441,45 +711,54 @@ body {
                         font-size: 14mm;
                         color: @czerwony;
                     }
+
                     p {
                         font-family: @font-02_roman;
                         text-align: center;
                         font-size: 2.7mm;
                         line-height: 1.3em;
+
                         &:nth-of-type(1) {
                             margin-top: 8.5mm;
                             letter-spacing: .025em;
                         }
+
                         &:nth-of-type(2) {
                             margin-top: 9mm;
                             letter-spacing: .01em;
                         }
+
                         &:nth-of-type(3) {
                             margin-top: 2.5mm;
                             letter-spacing: .025em;
                         }
                     }
+
                     img {
                         display: block;
                         margin: 10mm auto 0 auto;
                         width: 15mm;
-                    }                    
+                    }
                 }
             }
         }
+
         &#wkladka-2 {
             article {
                 .tresc {
                     position: relative;
                     z-index: 1;
-                    > p {
+
+                    >p {
                         font-family: @font-02_roman;
+
                         &:nth-of-type(1) {
                             margin-top: 8mm;
                             font-size: 2.4mm;
                             text-align: center;
                             letter-spacing: .025em;
                             line-height: 1.1em;
+
                             &:after {
                                 content: '';
                                 position: relative;
@@ -487,11 +766,12 @@ body {
                                 width: 54mm;
                                 height: 1px;
                                 left: 50%;
-                                margin: 1mm 0 0 -27mm;                                
+                                margin: 1mm 0 0 -27mm;
                                 background-color: @czerwony;
                             }
                         }
                     }
+
                     h2 {
                         font-family: @font-02_roman;
                         margin-top: 1mm;
@@ -499,11 +779,13 @@ body {
                         text-align: center;
                         letter-spacing: .025em;
                         line-height: 1.1em;
-                        text-transform: uppercase;                        
+                        text-transform: uppercase;
                     }
+
                     .wrap table {
                         margin: 0 auto 1.5mm auto;
                         width: 70mm;
+
                         tr {
                             td {
                                 font-family: @font-02_roman;
@@ -512,16 +794,20 @@ body {
                             }
                         }
                     }
+
                     .wrap {
                         width: 75mm;
                         margin: 0 auto;
+
                         h3 {
                             font-family: @font-02_roman;
                             font-size: 2.6mm;
                             line-height: 1.1em;
                         }
+
                         table.oznaczenia {
                             margin-top: 1mm;
+
                             tr {
                                 td {
                                     &:nth-of-type(1) {
@@ -529,13 +815,16 @@ body {
                                         text-align: center;
                                         text-indent: -5mm;
                                     }
+
                                     &:nth-of-type(2) {
                                         width: 1mm;
                                     }
+
                                     &:nth-of-type(3) {
                                         width: 54mm;
                                         letter-spacing: -0.02em;
                                     }
+
                                     img {
                                         position: absolute;
                                         width: 3.5mm;
@@ -543,6 +832,7 @@ body {
                                         margin-left: 3.2mm;
                                     }
                                 }
+
                                 &:nth-of-type(4) {
                                     td:nth-of-type(1) {
                                         position: absolute;
@@ -550,44 +840,55 @@ body {
                                     }
                                 }
                             }
-                        }                        
+                        }
+
                         table.o_niedziel {
                             margin: 0 0 .5mm 5mm;
+
                             tr {
                                 td:nth-of-type(1) {
                                     width: 5mm;
                                 }
+
                                 td:nth-of-type(2) {
                                     width: 30mm;
                                 }
+
                                 td:nth-of-type(3) {
                                     width: 5mm;
                                 }
+
                                 td:nth-of-type(4) {
                                     width: 30mm;
                                 }
                             }
                         }
+
                         p {
                             font-family: @font-02_roman;
                             font-size: 2.6mm;
                             line-height: 1.3em;
                             letter-spacing: -.05mm;
                             margin-bottom: 1.5mm;
+
                             i {
                                 font-family: @font-02_italic;
                             }
                         }
+
                         table.kolory {
                             margin: 1mm 0 1.5mm 0;
+
                             tr {
                                 td:nth-child(1) {
                                     width: 18mm;
                                     text-align: center;
                                 }
+
                                 td:nth-child(2) {
                                     padding-left: 3mm;
                                 }
+
                                 &:nth-child(1) {
                                     td:nth-child(1) {
                                         text-transform: uppercase;
@@ -598,6 +899,7 @@ body {
                                         background-color: @czerwony25;
                                     }
                                 }
+
                                 &:nth-child(2) {
                                     td:nth-child(1) {
                                         color: @czerwony;
@@ -605,55 +907,66 @@ body {
                                 }
                             }
                         }
+
                         table.k_szat {
                             margin: 1mm 0 2mm 3mm;
+
                             tr {
                                 td {
                                     letter-spacing: -.02em;
                                     line-height: 1.165em;
+
                                     &:nth-child(1) {
                                         width: 2.5mm;
                                         font-family: @font-02_bolditalic;
                                     }
+
                                     &:nth-child(2) {
                                         width: 12.5mm;
+
                                         i {
                                             font-family: @font-02_italic;
                                         }
                                     }
-                                    &:nth-child(3) {
-                                        
-                                    }
-                                    &:nth-child(4) {
-                                    }
+
+                                    // &:nth-child(3) {}
+
+                                    // &:nth-child(4) {}
                                 }
                             }
                         }
+
                         table.skroty {
                             margin: 1mm 0;
+
                             tr {
                                 td {
                                     &:nth-child(1) {
                                         width: 5mm;
                                         text-indent: 2mm;
                                     }
+
                                     &:nth-child(2) {
                                         width: 20mm;
+
                                         &:before {
                                             content: '-';
                                             margin-right: 1mm;
                                         }
                                     }
+
                                     &:nth-child(3) {
                                         width: 5mm;
-                                        text-indent: 2mm;                                        
+                                        text-indent: 2mm;
                                     }
+
                                     &:nth-child(4) {
                                         width: 30mm;
+
                                         &:before {
                                             content: '-';
                                             margin-right: 1mm;
-                                        }                                        
+                                        }
                                     }
                                 }
                             }
@@ -662,96 +975,125 @@ body {
                 }
             }
         }
+
         .wzor_A {
             &.prawa {
                 .tresc {
                     left: 5mm;
                 }
             }
+
             &.lewa {
                 .tresc {
                     left: 5mm;
                 }
             }
+
             .skrocony {
                 position: relative;
+
                 h4 {
                     width: 75mm;
                     margin: 10mm 0 2.5mm 0;
                     font-size: 4.3mm;
                     font-family: @font-02_bold;
                     text-align: center;
+
                     span {
                         color: @czerwony;
                     }
                 }
+
                 .zawartosc {
                     width: 75mm;
                     margin: 0;
-                    > div {
+
+                    >div {
                         float: left;
                         width: 25mm;
+
                         h5 {
                             text-align: center;
                             font-family: @font-02_bold;
                             font-size: 3mm;
                             padding: 0.6mm 0 1mm 0;
                         }
+
                         table {
                             font-family: @font-02_bold;
                             font-size: 2.55mm;
                             width: 100%;
+
                             tr {
                                 th {
                                     padding-bottom: 1mm;
                                 }
+
                                 td {
                                     font-size: 2.3mm;
                                 }
                             }
+
                             tr {
-                                th, td {
+
+                                th,
+                                td {
                                     width: 14.28571%;
                                     text-align: center;
+
                                     &:nth-of-type(1) {
                                         color: @czerwony;
                                     }
                                 }
+
                                 td {
-                                    &.czerwony, &.sty-1, &.sty-6, &.maj-1, &.maj-3, &.sie-15, &.lis-1, &.lis-11, &.gru-25, &.gru-26 {
+
+                                    &.czerwony,
+                                    &.sty-1,
+                                    &.sty-6,
+                                    &.maj-1,
+                                    &.maj-3,
+                                    &.sie-15,
+                                    &.lis-1,
+                                    &.lis-11,
+                                    &.gru-25,
+                                    &.gru-26 {
                                         color: @czerwony;
                                     }
                                 }
                             }
                         }
                     }
+
                     h6 {
                         font-family: @font-02_bold;
                         font-family: swis721cnplbold;
                         font-size: 3.2mm;
                         display: inline-block;
-                        margin: 1mm 0;
+                        margin: 2mm 0;
                         text-align: justify;
                         text-align-last: justify;
                         line-height: 1.3em;
-                        letter-spacing: -.01em;
+                        letter-spacing: -.03em;
+
                         span {
                             white-space: nowrap;
                         }
                     }
+
                     img.linia {
                         float: left;
-                        &.pozioma {
-                            
-                        }
+
+                        // &.pozioma {}
+
                         &.pionowa {
                             position: absolute;
                             left: 25mm;
-                            top: 17mm;  
+                            top: 17mm;
                         }
                     }
                 }
-            }            
+            }
         }
     }
 }

@@ -227,15 +227,26 @@ $(document).ready(function () {
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').after('<p class="opis">początek czasu zimowego</p>');
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .prawe .kolor').html('b, z');
     // Jezusa Chrystusa Króla Wszechświata (u) - ostatnia niedziela roku liturgicznego (między 20 a 26 listopada).
-    $('section[id^="listopad"] article.wzor_B > div.tresc .dzien .nr_dnia p:contains("19")').closest('.dzien').nextAll('.S').eq(2).find('.niedziela').html('Jezusa Chrystusa Króla Wszechświata (u)');
-    $('section[id^="listopad"] article.wzor_B > div.tresc .dzien .nr_dnia p:contains("19")').closest('.dzien').nextAll('.S').eq(2).find('.niedziela').css('letter-spacing', '0.1em');
-    $('section[id^="listopad"] article.wzor_B > div.tresc .dzien .nr_dnia p:contains("19")').closest('.dzien').nextAll('.N').eq(1).attr('id', 'JezChrKW');
-    $('section[id^="listopad"] article.wzor_B > div.tresc .dzien .nr_dnia p:contains("19")').closest('.dzien').nextAll('.N').eq(1).find('.sigla').html('Ez 34,11-12.15-17; Ps 23;<br>1 Kor 15,20-26.28; Mt 25,31-46');
-    $('section[id^="listopad"] article.wzor_B > div.tresc .dzien .nr_dnia p:contains("19")').closest('.dzien').nextAll('.N').eq(1).find('.g_czyt').html('gcz: Dn 7,1-27 lub Ap 1,4-6.10.12-18;<br>2,26-28;3,5.12.20-21');
-    $('section[id^="listopad"] article.wzor_B > div.tresc .dzien .nr_dnia p:contains("19")').closest('.dzien').nextAll('.N').eq(1).find('.prawe .kolor').html('b');
-    var JezChrKW = $('section[id^="listopad"] article.wzor_B > div.tresc .dzien .nr_dnia p:contains("19")').closest('.dzien').nextAll('.N').eq(1).find('.oznaczenie').text();
-    $('section[id^="listopad"] article.wzor_B > div.tresc .dzien .nr_dnia p:contains("19")').closest('.dzien').nextAll('.N').eq(1).find('.oznaczenie').remove();
-    $('section[id^="listopad"] article.wzor_B > div.tresc .dzien .nr_dnia p:contains("19")').closest('.dzien').nextAll('.N').eq(1).next('.dzien').find('.g_czyt').before('<p class="oznaczenie">' + JezChrKW + '</p>');
+    var JezChrKW = $('article .tresc .dzien.S .dane p.niedziela:contains("XXXIV Niedziela Zwykła")').closest('.dzien').attr('class').replace('dzien S d_roku_', '');
+    values = JezChrKW.split(' ');
+    JezChrKW_S = Number(values[0]);
+    $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').html('Jezusa Chrystusa Króla Wszechświata (u)');
+    $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').css('letter-spacing', '0.1em');
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.oznaczenie').remove();
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27 lub Ap 1,4-6.10.12-18;<br>2,26-28;3,5.12.20-21');
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.prawe .kolor').html('b');
+    $('.d_roku_' + (JezChrKW_S + 2)).find('.g_czyt').before('<p class="oznaczenie">34 OZ II</p>');
+
+    // Konflikty 2024
+    $('.d_roku_371').find('.dane .niedziela').html('Niepokalane Poczęcie Najśw Maryi Panny (u)');
+    $('.d_roku_371').find('.dane .niedziela').css('letter-spacing', '0.07em');
+    $('.d_roku_372').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Flp 1,4-6.8-11; Łk 1,26-38');
+    $('.d_roku_372').find('.dane .obchod').remove();
+    $('.d_roku_372').find('.dane .prawe .oznaczenie').remove();
+    $('.d_roku_372').find('.dane .prawe .g_czyt').html('Rz 5,12-21');
+    $('.d_roku_372').find('.dane .prawe .kolor').html('b');
+    $('.d_roku_373').find('.dane .prawe').prepend('<p class="oznaczenie">2 A II</p>');
+
     // Dodaj klasę przed nakazanym
     $('.dzien.nakaz').prev('.dzien').addClass('d_przed_nakaz');
 
