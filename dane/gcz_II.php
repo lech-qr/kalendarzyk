@@ -425,8 +425,8 @@
         'Dn 2,26-47', // piątek
         'Dn 3,8-12.19-24.91-97', // sobota
         
-        '34 OZ II|GGG', // niedziela
-        'Dn 5,1-2.5-9.13-17.25-31', // poniedziałek
+        '34 OZ II|GGG', // niedziela  // Jezusa Chrystusa Króla Wszechświata (u) - ostatnia niedziela roku liturgicznego (między 20 a 26 listopada)
+        'Dn 5,1-2.5-9.@13-17.25-31', // poniedziałek
         'Dn 6,3-27', // wtorek
         'Dn 8,1-26', // środa
         'Dn 9,1-4a.18-27', // czwartek
@@ -453,26 +453,21 @@
 
         '3 A III|Rt 4,1-22', // niedziela
         '1 Krn 17,1-15', // poniedziałek
-        'Mi 4,1-7', // wtorek
-        'Mi 4,14-5,7', // środa
-        'Mi 7,7-13', // czwartek
-        'Mi 7,14-20', // piątek
-        'Iz 40,1-11', // sobota
-
-        '4 A IV|Iz 40,12-18.21-31', // niedziela
-        'Iz 41,8-20', // poniedziałek
-        'Iz 41,21-29', // wtorek
-        'Iz 42,10-25', // środa
-        'Iz 43,1-13', // czwartek
-        'Iz 43,18-28', // piątek
-        'Iz 44,1-8.21-23', // sobota
-
-        'Iz 11,1-10', // niedziela
-        '???', // poniedziałek
-        'Kol 1,1-14', // wtorek
-        'Kol 1,15-2,3', // środa
-        'Kol 2,4-15', //czwartek
-        '???', // piątek
-        'Kol 2,16-3,4', //sobota
+        // Od 17 do 24 grudnia są inne godziny czytań
+        'Iz 40,1-11', // 17
+        'Iz 40,12-18.21-31', // 18
+        'Iz 41,8-20', // 19
+        'Iz 41,21-29', // 20
+        'Iz 42,10-25', // 21
+        '4 A IV|Iz 43,1-13', // 22
+        'Iz 43,18-28', // 23
+        'Iz 44,1-8.21-23', // 24
+        'Iz 11,1-10', // 25
+        'Dz 6,8-7,2a.44-59', // 26 - Szczepana
+        '1 J 1,1-2,3', // 27 - Jana
+        'Wj 1,8-16.22', // 28 - Młodzianków
+        'Kol 1,1-14', // 29 - w roku II Pnp 1,1-10
+        'Kol 1,15-2,3',// 30 - w roku II Pnp 1,11-2,7
+        'Kol 2,4-15' // 31 w roku II Pnp 2,8-3,5
 
     );
