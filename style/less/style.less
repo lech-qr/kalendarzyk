@@ -4,6 +4,8 @@
 @font-00_regular: warnock_proregular;
 @font-00_italic: warnock_proitalic;
 @font-00_bolditalic: warnock_probold_italic;
+@font-00_semibold: warnock_prosemibold;
+@font-00_semibolditalic: warnock_prosemibold_italic;
 @font-01_roman: zapfhumnstplroman;
 @font-01_bold: zapfhumnstplbold;
 @font-01_italic: zapfhumnstplitalic;
@@ -683,7 +685,62 @@ body {
         }
 
         &#okladka-2 {
-            article {
+            article.lewa {
+
+                * {
+                    text-align: center;
+                    font-family: @font-01_roman;
+                }
+
+                h2 {
+                    font-family: @font-00_semibolditalic;
+                    font-size: 3.4mm;
+                    margin: 19.3mm 0 4.2mm 0;
+                    line-height: 4mm;
+                    letter-spacing: -0.05mm;
+                }
+
+                p:nth-of-type(1) {
+                    font-family: @font-00_italic;
+                    font-size: 3mm;
+                    text-indent: 12mm;
+                    line-height: 3.7mm;
+                    margin: 0 7.5mm 0 7.5mm;
+                    letter-spacing: -0.05mm;
+                    text-align: justify;
+                }
+
+                p:nth-of-type(2) {
+                    font-family: @font-00_italic;
+                    font-size: 3mm;
+                    line-height: 3.6mm;
+                    margin: 8.5mm 0 7.5mm 0;
+                    letter-spacing: -0.05mm;
+
+                    strong {
+                        font-family: @font-00_semibolditalic;
+                    }
+                }
+
+                p:nth-of-type(3) {
+                    font-family: @font-00_regular;
+                    font-size: 3.2mm;
+                    line-height: 3.8mm;
+                    letter-spacing: -0.15mm;
+                    margin: 0 0 7.5mm 0;
+
+                    strong {
+                        font-family: @font-00_semibold;
+                    }
+                }
+
+                p:nth-of-type(4) {
+                    font-family: @font-00_semibold;
+                    font-size: 3.2mm;
+                }
+            }
+
+            article.prawa {
                 background-image: url('../../images/usun/okładka1.jpg');
                 background-position: center;
                 background-size: cover;
