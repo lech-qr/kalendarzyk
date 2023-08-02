@@ -741,10 +741,51 @@ body {
             }
 
             article.prawa {
-                background-image: url('../../images/usun/okładka1.jpg');
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
+
+
+                .tresc {
+                    * {
+                        margin-left: 3mm;
+                        text-align: center;
+                    }
+
+                    h3 {
+                        font-family: @font-00_semibold;
+                        font-size: 3.4mm;
+                        letter-spacing: -0.02em;
+                        margin-bottom: 3.2mm;
+
+                        &:nth-of-type(1) {
+                            margin-top: 7mm;
+                        }
+                    }
+
+                    h4 {
+                        font-family: @font-00_semibold;
+                        font-size: 3.1mm;
+                        letter-spacing: -0.02em;
+                        margin-bottom: 0.9mm;
+                    }
+
+                    p {
+                        font-family: @font-00_regular;
+                        font-size: 3.1mm;
+                        line-height: 3.6mm;
+                        margin-bottom: 3mm;
+
+                        &:nth-of-type(1) {
+                            font-family: @font-00_semibold;
+                        }
+
+                        &.oraz {
+                            margin-top: 3mm;
+                        }
+
+                        &.www {
+                            letter-spacing: .4mm;
+                        }
+                    }
+                }
             }
         }
 
