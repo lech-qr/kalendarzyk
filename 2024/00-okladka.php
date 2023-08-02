@@ -31,7 +31,31 @@
     </article>
     <article class="prawa wzor_A">
         <div class="tresc">
+            <h3>CENTRUM LITURGICZNE</h3>
+            <p>Centrum Liturgiczne zaopatruje wspólnoty<br>neokatechumenalne w Polsce w:</p>
 
+            <h4>SPRZĘT LITURGICZNY</h4>
+            <p>krzyże, krzyżyki misyjne i laudesowe,<br>świeczniki, naczynia, welony, chrzcielnice;</p>
+
+            <h4>FOTOIKONY</h4>
+            <p>reprodukcje ikon Kiko z IKNE w Rzymie,</p>
+
+            <h4>LITERATURĘ</h4>
+            <p>Biblie, brewiarze, lekcjonarze i mszały,<br>słowniki teologiczne i biblijne, pamiątkowe albumy,<br>śpiewniki i książki pomocne w formacji<br>na Drodze Neokatechumenalnej;</p>
+
+            <h4>WINO MSZALNE CENACOLO</h4>
+            <p>z certyfikatem kościelnym<br>(białe i czerwone słodkie, importowane z Włoch)</p>
+
+            <h4>INSTRUMENTY I AKCESORIA MUZYCZNE</h4>
+            <p class="oraz">oraz wiele innych.</p>
+
+            <h4>Centrum Liturgiczne</h4>
+            <p>ul. Biernackiego 22, 20-089 Lublin<br>e-mail: sklep@centrumliturgiczne.pl<br>tel.: 609 777 777; 81 748 20 00</p>
+
+            <p classs="www">www.centrumliturgiczne.pl</p>
+
+            <h4>Konto bankowe:</h4>
+            <p>Tomasz Bojarski PPHU TiBi<br>20-089 Lublin, ul. Biernackiego 22<br>Nr: 52 1020 5558 0000 8302 3415 0240<br>kod BIC (SWIFT): BPKOPLPW</p>
         </div>
     </article>
 </section>
