@@ -2,8 +2,8 @@ $(document).ready(function () {
 
     var cykl = 'B, II';
 
-    var kolor = "#d60057" // Czerwony
-    // var kolor = "red" // Zielony
+    // var kolor = "#d60057" // Czerwony
+    var kolor = "#40ae49" // Zielony
     // var kolor = "#000" // Fioletowy
 
     var narodzeniePanskie = 23; // który dzień roku

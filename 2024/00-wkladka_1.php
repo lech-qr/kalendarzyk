@@ -1,6 +1,6 @@
 <section id="wkladka-1">
     <!-- Ukryty artykuł jest po to żeby poprawnie liczyła się parzysta i nieparzysta strona -->
-    <article style="display: none;"></article>
+    <article class="lewa" style="opacity: 0;"></article>
     <article class="prawa wzor_A">
         <div class="tresc">
             <h1>Czytania Liturgiczne</h1>
