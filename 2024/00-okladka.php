@@ -15,7 +15,7 @@
             <img class="szema" src="../images/shema.jpg" alt="Szema" >
             <h4>Słuchaj Izraelu<br>Pan jest naszym Bogiem<br>Pan jest Jedyny</h4>
             <img class="kerygma" src="../images/kerygma-okladka.svg" >
-            <h5>tel. kom. +48 609 777 777<br>e-mail: kerygma@fundacja.org.pl</h5>
+            <h5>tel. kom. +48 609 777 777<br>e-mail: sklep@centrumliturgiczne.pl</h5>
         </div>
     </article>
 </section>
@@ -34,7 +34,7 @@
             <h3>CENTRUM LITURGICZNE</h3>
             <p>Centrum Liturgiczne zaopatruje wspólnoty<br>neokatechumenalne w Polsce w:</p>
 
-            <h4>SPRZĘT LITURGICZNY</h4>
+            <h4>WYSOKIEJ JAKOŚCI SPRZĘT LITURGICZNY</h4>
             <p>krzyże, krzyżyki misyjne i laudesowe,<br>świeczniki, naczynia, welony, chrzcielnice;</p>
 
             <h4>FOTOIKONY</h4>
@@ -55,7 +55,7 @@
             <p classs="www">www.centrumliturgiczne.pl</p>
 
             <h4>Konto bankowe:</h4>
-            <p>Tomasz Bojarski PPHU TiBi<br>20-089 Lublin, ul. Biernackiego 22<br>Nr: 52 1020 5558 0000 8302 3415 0240<br>kod BIC (SWIFT): BPKOPLPW</p>
+            <p>Tomasz Bojarski PPHU TiBi<br>20-089 Lublin, ul. Biernackiego 22<br>Nr: 81 1020 3150 0000 3502 0143 9512<br>kod BIC (SWIFT): BPKOPLPW</p>
         </div>
     </article>
 </section>

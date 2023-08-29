@@ -148,6 +148,7 @@ $(document).ready(function () {
     $('.d_roku_128').find('.dane').prepend('<p class="swieto">Zwiastowanie Pańskie (u)</p>');
     $('.d_roku_128').find('.dane .sigla').html('Iz 7,10-14;8,10c; Ps 40; Hbr 10,4-10;<br>Łk 1,26-38');
     $('.d_roku_128').find('.dane .prawe .g_czyt').html('gcz: 1 Krn 17,1-15');
+    $('.d_roku_129').find('.dane .prawe .g_czyt').before('<p class="oznaczenie">II</p>');
     // Wniebowstąpienie Pańskie (u) - najbliższa niedziela w 40 dni po Wielkanocy
     $('.d_roku_' + (wielkanoc + 41)).find('.niedziela').html('Wniebowstąpienie Pańskie (u)');
     if (cykl[0] === "A") {
