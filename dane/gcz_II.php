@@ -162,7 +162,7 @@
         'Dz 4,5-31', // sobota
         
         '2 W|Kol 3,1-17', // niedziela
-        'II|Dz 4,32-5,16', // poniedziałek
+        'Dz 4,32-5,16', // poniedziałek
         'Dz 5,17-42', // wtorek
         'Dz 6,1-15', // środa
         'Dz 7,1-16', // czwartek
