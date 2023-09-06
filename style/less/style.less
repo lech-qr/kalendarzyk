@@ -105,19 +105,6 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
-}
 
 ol,
 ul {
@@ -142,126 +129,77 @@ body {
 
     section {
         position: relative;
-        height: unit(@arkusz_h + 2*@spad + 2*@znaczniki + 7, mm);
+        display: grid;
+        grid-template-columns: repeat(2, unit(@arkusz_w + 2*@spad, mm));
+        grid-template-rows: repeat(1, unit(@arkusz_h + 2*@spad, mm));
+        grid-column-gap: 5rem;
+        margin-bottom: 5rem;
+        justify-content: center;
 
         article {
-            position: absolute;
-            display: block;
-            margin: 0.5em 0;
-            width: unit(@arkusz_w + 2*@spad + 2*@znaczniki, mm);
-            height: unit(@arkusz_h + 2*@spad + 2*@znaczniki, mm);
+            position: relative;
+            width: unit(@arkusz_w + 2*@spad, mm);
+            height: unit(@arkusz_h + 2*@spad, mm);
             background-color: #fff;
 
             &.lewa {
-                left: 49%;
-                margin-left: unit((@arkusz_w + 2*@spad + 2*@znaczniki)*-1, mm);
 
                 &.wzor_B {
                     div.naglowek {
-                        p.miesiac {
-                            float: left;
-                        }
-
-                        p.rok {
-                            float: right;
-                        }
+                        flex-direction: row;
                     }
                 }
             }
 
             &.prawa {
-                right: 49%;
-                margin-right: unit((@arkusz_w + 2*@spad + 2*@znaczniki)*-1, mm);
 
                 &.wzor_B {
                     div.naglowek {
-                        p.miesiac {
-                            float: right;
-                        }
-
-                        p.rok {
-                            float: left;
-                        }
+                        flex-direction: row-reverse;
                     }
                 }
             }
 
             &.wzor_A,
             &.wzor_B {
-
-                // Nowe znaczniki i pasery
                 .tresc {
-                    float: left;
-                    width: unit(@arkusz_w - 2, mm);
-                    height: unit(@arkusz_h, mm);
+                    width: unit(@arkusz_w - 12, mm);
+                    max-height: unit(@arkusz_h, mm);
                 }
-
-                .znacz,
-                .paser {
-                    float: left;
-                }
-
-                .znacz {
-                    width: unit(@znaczniki + @spad, mm);
-                    height: unit(@znaczniki + @spad, mm);
-                }
-
-                .paser {
-
-                    &.G,
-                    &.D {
-                        width: unit(@arkusz_w, mm);
-                        height: unit(@znaczniki + @spad, mm);
-                    }
-
-                    &.L,
-                    &.P {
-                        width: unit(@znaczniki + @spad, mm);
-                        height: unit(@arkusz_h, mm);
-                    }
-                }
-
-                // Nowe znaczniki i pasery - koniec              
             }
 
             &.wzor_A {
+
                 &:nth-of-type(even) {
                     .tresc {
-                        margin: 0 0 0 2mm;
+                        margin: 0 0 0 10mm;
                     }
                 }
 
                 &:nth-of-type(odd) {
                     .tresc {
-                        margin: 0 2mm 0 0;
+                        margin: 0 0 0 8mm;
                     }
                 }
             }
 
             &.wzor_B {
+
                 &:nth-of-type(even) {
                     .tresc {
-                        margin: 0 10mm 0 2mm;
+                        margin: 0 0 0 10mm;
                     }
                 }
 
                 &:nth-of-type(odd) {
                     .tresc {
-                        margin: 0 12mm 0 0;
-                    }
-                }
-
-                ul.znaczniki {
-                    &:before {
-                        background-color: @szary;
+                        margin: 0 0 0 8mm;
                     }
                 }
 
                 div.naglowek {
-                    position: absolute;
-                    z-index: 1;
-                    left: unit(@znaczniki, mm);
-                    top: unit(@znaczniki, mm);
+                    display: flex;
+                    justify-content: space-between;
                     width: unit(@arkusz_w + 2*@spad, mm);
                     background-color: @szary;
 
@@ -273,14 +211,12 @@ body {
                 }
 
                 div.tresc {
-                    position: relative;
-                    width: unit(@tresc_w, mm);
-                    top: 7.7mm;
 
                     .linia {
                         position: absolute;
                         z-index: 9;
                         display: block;
+                        width: unit(@arkusz_w - 12, mm);
                         padding: 0;
                     }
 
@@ -393,17 +329,17 @@ body {
                             height: 100%;
                             min-height: 22.66px;
                             top: 0;
-                            width: unit(@tresc_w - 10, mm);
+                            width: unit(@tresc_w - 7, mm);
 
                             p {
-                                margin: 0 2mm;
+                                margin: 0 1mm;
                                 font-size: 2.2mm;
                                 line-height: 3mm;
                             }
 
                             p.niedziela {
                                 position: absolute;
-                                width: 100%;
+                                width: unit(@arkusz_w - 22, mm);
                                 height: 3mm;
                                 line-height: 3mm;
                                 margin: 0;
@@ -499,7 +435,7 @@ body {
                     }
 
                     .tresc {
-                        left: unit(@znaczniki, mm);
+                        // left: unit(@znaczniki, mm);
 
                         .dzien {
 
@@ -527,31 +463,12 @@ body {
                     }
 
                     .tresc {
-                        left: unit(@znaczniki, mm);
 
                         .dzien {
 
                             &.S:not(:last-child),
                             &.pierwszy {
                                 border-bottom: 0;
-                                /*                                &:after {
-                                    content: '';
-                                    position: absolute;
-                                    left: 0;
-                                    bottom: 0;
-                                    display: block;
-                                    width: 10mm;
-                                    border-bottom: @tabela solid @czarny;
-                                }
-                                &:before {
-                                    content: '';
-                                    position: absolute;
-                                    bottom: 0;
-                                    right: 0;
-                                    display: block;
-                                    width: 19.5mm;
-                                    border-bottom: @tabela solid @czarny;
-                                }*/
                             }
 
                             .nr_dnia {
@@ -576,9 +493,9 @@ body {
 
             img.wielkanoc {
                 position: absolute;
-                width: 75mm;
+                width: unit(@arkusz_w - 21, mm);
                 bottom: 7mm;
-                right: 15mm;
+                right: 17mm;
                 z-index: 0;
             }
 
@@ -587,7 +504,8 @@ body {
                     font-family: @font-01_bold;
                     text-align: center;
                     font-size: 2.6mm;
-                    margin: 2.4mm;
+                    margin-bottom: 2.4mm;
+                    padding-top: 2.4mm;
                 }
 
                 h3 {
@@ -614,13 +532,14 @@ body {
             }
         }
 
-        &#okladka-1 {
-            article {
+        &#okladka-1,
+        &#okladka-2 {
+            article.zewnetrzna {
 
                 .kolor {
                     position: absolute;
-                    top: 5mm;
-                    left: 5mm;
+                    top: 0;
+                    left: 0;
                     width: unit(@arkusz_w + 6, mm);
                     height: unit(@arkusz_h + 6, mm);
                     z-index: 0;
@@ -684,66 +603,12 @@ body {
             }
         }
 
+        &#okladka-1,
         &#okladka-2 {
-            article.lewa {
-
-                * {
-                    text-align: center;
-                    font-family: @font-01_roman;
-                }
-
-                h2 {
-                    font-family: @font-00_semibolditalic;
-                    font-size: 3.4mm;
-                    margin: 19.3mm 0 4.2mm 0;
-                    line-height: 4mm;
-                    letter-spacing: -0.05mm;
-                }
-
-                p:nth-of-type(1) {
-                    font-family: @font-00_italic;
-                    font-size: 3mm;
-                    text-indent: 12mm;
-                    line-height: 3.7mm;
-                    margin: 0 7.5mm 0 7.5mm;
-                    letter-spacing: -0.05mm;
-                    text-align: justify;
-                }
-
-                p:nth-of-type(2) {
-                    font-family: @font-00_italic;
-                    font-size: 3mm;
-                    line-height: 3.6mm;
-                    margin: 8.5mm 0 7.5mm 0;
-                    letter-spacing: -0.05mm;
-
-                    strong {
-                        font-family: @font-00_semibolditalic;
-                    }
-                }
-
-                p:nth-of-type(3) {
-                    font-family: @font-00_regular;
-                    font-size: 3.2mm;
-                    line-height: 3.8mm;
-                    letter-spacing: -0.15mm;
-                    margin: 0 0 7.5mm 0;
-
-                    strong {
-                        font-family: @font-00_semibold;
-                    }
-                }
-
-                p:nth-of-type(4) {
-                    font-family: @font-00_semibold;
-                    font-size: 3.2mm;
-                }
-            }
-
-            article.prawa {
-
-
+            article.lewa.srodek {
                 .tresc {
+                    margin: 0 0 0 10mm;
+
                     * {
                         margin-left: 3mm;
                         text-align: center;
@@ -756,7 +621,7 @@ body {
                         margin-bottom: 3.2mm;
 
                         &:nth-of-type(1) {
-                            margin-top: 7mm;
+                            margin-top: 10mm;
                         }
                     }
 
@@ -787,13 +652,71 @@ body {
                     }
                 }
             }
+
+            article.prawa.srodek {
+                .tresc {
+                    margin: 0 0 0 8mm;
+
+                    * {
+                        text-align: center;
+                        font-family: @font-01_roman;
+                    }
+
+                    h2 {
+                        font-family: @font-00_semibolditalic;
+                        font-size: 3.4mm;
+                        margin: 19.3mm 0 4.2mm 0;
+                        line-height: 4mm;
+                        letter-spacing: -0.05mm;
+                    }
+
+                    p:nth-of-type(1) {
+                        font-family: @font-00_italic;
+                        font-size: 3mm;
+                        text-indent: 12mm;
+                        line-height: 3.7mm;
+                        margin: 0 3.5mm 0 3.5mm;
+                        letter-spacing: -0.05mm;
+                        text-align: justify;
+                    }
+
+                    p:nth-of-type(2) {
+                        font-family: @font-00_italic;
+                        font-size: 3mm;
+                        line-height: 3.6mm;
+                        margin: 8.5mm 0 7.5mm 0;
+                        letter-spacing: -0.05mm;
+
+                        strong {
+                            font-family: @font-00_semibolditalic;
+                        }
+                    }
+
+                    p:nth-of-type(3) {
+                        font-family: @font-00_regular;
+                        font-size: 3.2mm;
+                        line-height: 3.8mm;
+                        letter-spacing: -0.15mm;
+                        margin: 0 0 7.5mm 0;
+
+                        strong {
+                            font-family: @font-00_semibold;
+                        }
+                    }
+
+                    p:nth-of-type(4) {
+                        font-family: @font-00_semibold;
+                        font-size: 3.2mm;
+                    }
+                }
+            }
         }
 
         &#wkladka-1 {
             article {
                 .tresc {
                     h1 {
-                        margin-top: 29mm;
+                        margin-top: 32mm;
                         text-align: center;
                         font-family: @font-01_bold;
                         text-transform: uppercase;
@@ -844,14 +767,12 @@ body {
         &#wkladka-2 {
             article {
                 .tresc {
-                    position: relative;
-                    z-index: 1;
 
                     >p {
                         font-family: @font-02_roman;
 
                         &:nth-of-type(1) {
-                            margin-top: 8mm;
+                            margin-top: 11mm;
                             font-size: 2.4mm;
                             text-align: center;
                             letter-spacing: .025em;
@@ -1075,24 +996,13 @@ body {
         }
 
         .wzor_A {
-            &.prawa {
-                .tresc {
-                    left: 5mm;
-                }
-            }
-
-            &.lewa {
-                .tresc {
-                    left: 5mm;
-                }
-            }
 
             .skrocony {
                 position: relative;
 
                 h4 {
                     width: 75mm;
-                    margin: 10mm 0 2.5mm 0;
+                    margin: 13mm 0 2.5mm 0;
                     font-size: 4.3mm;
                     font-family: @font-02_bold;
                     text-align: center;
@@ -1182,12 +1092,10 @@ body {
                     img.linia {
                         float: left;
 
-                        // &.pozioma {}
-
                         &.pionowa {
                             position: absolute;
                             left: 25mm;
-                            top: 17mm;
+                            top: 7mm;
                         }
                     }
                 }
