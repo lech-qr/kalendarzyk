@@ -1,26 +1,26 @@
 $(document).ready(function () {
 
     // Znaczniki i cięcie
-    $('article.wzor_A .tresc').each(function () {
-        $(this).before('<div class="znacz LG"><img src="../images/ciecie/ciecie1A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).before('<div class="paser G"><img src="../images/pasery/paser1A.svg" alt="Paser" /></div>');
-        $(this).before('<div class="znacz PG"><img src="../images/ciecie/ciecie2A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).before('<div class="paser L"><img src="../images/pasery/paser4A.svg" alt="Paser" /></div>');
-        $(this).after('<div class="znacz PD"><img src="../images/ciecie/ciecie3A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).after('<div class="paser D"><img src="../images/pasery/paser3AB.svg" alt="Paser" /></div>');
-        $(this).after('<div class="znacz LD"><img src="../images/ciecie/ciecie4A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).after('<div class="paser P"><img src="../images/pasery/paser2A.svg" alt="Paser" /></div>');
-    });
-    $('article.wzor_B .tresc').each(function () {
-        $(this).before('<div class="znacz LG"><img src="../images/ciecie/ciecie1A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).before('<div class="paser G"><img src="../images/pasery/paser1A.svg" alt="Paser" /></div>');
-        $(this).before('<div class="znacz PG"><img src="../images/ciecie/ciecie2A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).before('<div class="paser L"><img src="../images/pasery/paser4A.svg" alt="Paser" /></div>');
-        $(this).after('<div class="znacz PD"><img src="../images/ciecie/ciecie3A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).after('<div class="paser D"><img src="../images/pasery/paser3AB.svg" alt="Paser" /></div>');
-        $(this).after('<div class="znacz LD"><img src="../images/ciecie/ciecie4A.svg" alt="Znacznik cięcia" /></div>');
-        $(this).after('<div class="paser P"><img src="../images/pasery/paser2A.svg" alt="Paser" /></div>');
-    });
+    // $('article.wzor_A .tresc').each(function () {
+    //     $(this).before('<div class="znacz LG"><img src="../images/ciecie/ciecie1A.svg" alt="Znacznik cięcia" /></div>');
+    //     $(this).before('<div class="paser G"><img src="../images/pasery/paser1A.svg" alt="Paser" /></div>');
+    //     $(this).before('<div class="znacz PG"><img src="../images/ciecie/ciecie2A.svg" alt="Znacznik cięcia" /></div>');
+    //     $(this).before('<div class="paser L"><img src="../images/pasery/paser4A.svg" alt="Paser" /></div>');
+    //     $(this).after('<div class="znacz PD"><img src="../images/ciecie/ciecie3A.svg" alt="Znacznik cięcia" /></div>');
+    //     $(this).after('<div class="paser D"><img src="../images/pasery/paser3AB.svg" alt="Paser" /></div>');
+    //     $(this).after('<div class="znacz LD"><img src="../images/ciecie/ciecie4A.svg" alt="Znacznik cięcia" /></div>');
+    //     $(this).after('<div class="paser P"><img src="../images/pasery/paser2A.svg" alt="Paser" /></div>');
+    // });
+    // $('article.wzor_B .tresc').each(function () {
+    //     $(this).before('<div class="znacz LG"><img src="../images/ciecie/ciecie1A.svg" alt="Znacznik cięcia" /></div>');
+    //     $(this).before('<div class="paser G"><img src="../images/pasery/paser1A.svg" alt="Paser" /></div>');
+    //     $(this).before('<div class="znacz PG"><img src="../images/ciecie/ciecie2A.svg" alt="Znacznik cięcia" /></div>');
+    //     $(this).before('<div class="paser L"><img src="../images/pasery/paser4A.svg" alt="Paser" /></div>');
+    //     $(this).after('<div class="znacz PD"><img src="../images/ciecie/ciecie3A.svg" alt="Znacznik cięcia" /></div>');
+    //     $(this).after('<div class="paser D"><img src="../images/pasery/paser3AB.svg" alt="Paser" /></div>');
+    //     $(this).after('<div class="znacz LD"><img src="../images/ciecie/ciecie4A.svg" alt="Znacznik cięcia" /></div>');
+    //     $(this).after('<div class="paser P"><img src="../images/pasery/paser2A.svg" alt="Paser" /></div>');
+    // });
 
     // Nagłowek
     $('section').each(function () {
@@ -28,7 +28,7 @@ $(document).ready(function () {
         values = miesiacRok.split('-');
         miesiac = values[0];
         rok = values[1];
-        $(this).find('article.wzor_B .znacz.PG').after('<div class="naglowek"><p class="miesiac">' + miesiac + '</p><p class="rok">' + rok + '</p></div>');
+        $(this).find('article.wzor_B').prepend('<div class="naglowek"><p class="miesiac">' + miesiac + '</p><p class="rok">' + rok + '</p></div>');
     });
 
     // Obchody

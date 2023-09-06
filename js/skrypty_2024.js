@@ -37,6 +37,7 @@ $(document).ready(function () {
     console.log('Cykl bieżący to ' + cykl + '. W przyszłym roku będzie ' + cykl_plus_1);
 
     $('body section#okladka-1 article .kolor').css('background-color', kolor);
+    $('body section#okladka-2 article .kolor').css('background-color', kolor);
 
     // Pierwsze dni roku kościelnego - listopad / grudzień poprzedniego roku kalendarzowego
     // $('.d_roku_1').find('.nr_dnia p').html('27');
