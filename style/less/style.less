@@ -122,6 +122,7 @@ html {
 }
 
 body {
+    zoom: 1.75;
     background-color: #f1f1f1;
     line-height: 1;
     font-family: swis721cnplroman;
@@ -132,8 +133,8 @@ body {
         display: grid;
         grid-template-columns: repeat(2, unit(@arkusz_w + 2*@spad, mm));
         grid-template-rows: repeat(1, unit(@arkusz_h + 2*@spad, mm));
-        grid-column-gap: 5rem;
-        margin-bottom: 5rem;
+        grid-column-gap: 2rem;
+        margin-bottom: 2rem;
         justify-content: center;
 
         article {
@@ -174,11 +175,23 @@ body {
                     .tresc {
                         margin: 0 0 0 10mm;
                     }
+
+                    &.zewnetrzna {
+                        .tresc {
+                            margin: 0 0 0 8mm;
+                        }
+                    }
                 }
 
                 &:nth-of-type(odd) {
                     .tresc {
                         margin: 0 0 0 8mm;
+                    }
+
+                    &.zewnetrzna {
+                        .tresc {
+                            margin: 0 0 0 10mm;
+                        }
                     }
                 }
             }
