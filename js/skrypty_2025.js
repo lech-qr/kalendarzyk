@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
-    var cykl = 'B, II';
+    var cykl = 'C, I';
 
     // var kolor = "#d60057" // Czerwony
     // var kolor = "#40ae49" // Zielony
-    var kolor = "red" // Fioletowy
+    var kolor = "#000" // Fioletowy
 
     var narodzeniePanskie = 23; // który dzień roku
     var chrzestPanski = 36; // który dzień roku
@@ -12,7 +12,7 @@ $(document).ready(function () {
     var wielkanoc = 120; // który dzień roku
 
     // Długość roku. Przestępny, czy nie? 365 lub 366
-    var dniRoku = 366;
+    var dniRoku = 365;
 
     var narodzeniePanskie2 = narodzeniePanskie + dniRoku; // Drugie Boże Narodzenie
 

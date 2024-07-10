@@ -227,15 +227,15 @@ $(document).ready(function () {
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').after('<p class="opis">początek czasu zimowego</p>');
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .prawe .kolor').html('b, z');
     // Jezusa Chrystusa Króla Wszechświata (u) - ostatnia niedziela roku liturgicznego (między 20 a 26 listopada).
-    var JezChrKW = $('article .tresc .dzien.S .dane p.niedziela:contains("XXXIV Niedziela Zwykła")').closest('.dzien').attr('class').replace('dzien S d_roku_', '');
-    values = JezChrKW.split(' ');
-    JezChrKW_S = Number(values[0]);
-    $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').html('Jezusa Chrystusa Króla Wszechświata (u)');
-    $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').css('letter-spacing', '0.1em');
-    $('.d_roku_' + (JezChrKW_S + 1)).find('.oznaczenie').remove();
-    $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27 lub Ap 1,4-6.10.12-18;<br>2,26-28;3,5.12.20-21');
-    $('.d_roku_' + (JezChrKW_S + 1)).find('.prawe .kolor').html('b');
-    $('.d_roku_' + (JezChrKW_S + 2)).find('.g_czyt').before('<p class="oznaczenie">34 OZ II</p>');
+    // var JezChrKW = $('article .tresc .dzien.S .dane p.niedziela:contains("XXXIV Niedziela Zwykła")').closest('.dzien').attr('class').replace('dzien S d_roku_', '');
+    // values = JezChrKW.split(' ');
+    // JezChrKW_S = Number(values[0]);
+    // $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').html('Jezusa Chrystusa Króla Wszechświata (u)');
+    // $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').css('letter-spacing', '0.1em');
+    // $('.d_roku_' + (JezChrKW_S + 1)).find('.oznaczenie').remove();
+    // $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27 lub Ap 1,4-6.10.12-18;<br>2,26-28;3,5.12.20-21');
+    // $('.d_roku_' + (JezChrKW_S + 1)).find('.prawe .kolor').html('b');
+    // $('.d_roku_' + (JezChrKW_S + 2)).find('.g_czyt').before('<p class="oznaczenie">34 OZ II</p>');
 
     // Konflikty 2024
     $('.d_roku_371').find('.dane .niedziela').html('Niepokalane Poczęcie Najśw Maryi Panny (u)');
