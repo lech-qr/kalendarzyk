@@ -1,13 +1,13 @@
 <?php
     $rok_kal = "2025";
-    $gcz = 'gcz_II';
+    $gcz = 'gcz_I';
     $sigla = 'sigla_C_I';
     
     // Listopad / Grudzień - poprzedniego roku kalendarzowego
     $_00_nr_dnia_roku = 1;
     $_00_nr_dnia = 1;
     $_00_nazwa_d = 1;
-    $_00_przelam = 16;
+    $_00_przelam = 17;
     $_00_ilosc_d = 31; 
     
     // Styczeń
@@ -32,20 +32,20 @@
     $_03_ilosc_d = 31; 
 
     // Kwiecień  
-    $_04a_nr_dnia_roku = $_03b_nr_dnia_roku + $_03b_ilosc_d;
+    $_04a_nr_dnia_roku = $_03_nr_dnia_roku + $_03_ilosc_d;
     $_04a_nr_dnia = 1; // Stała poza miesiącem wielkanocnym
     $_04a_nazwa_d = 3;
-    $_04a_przelam = 16;
-    $_04a_ilosc_d = 16;   
+    $_04a_przelam = 17;
+    $_04a_ilosc_d = 17;   
 
     $_04b_nr_dnia_roku = $_04a_nr_dnia_roku + $_04a_ilosc_d;
     $_04b_nr_dnia = $_04a_ilosc_d + 1;
-    $_04b_nazwa_d = 5;
-    $_04b_przelam = 21;
+    $_04b_nazwa_d = 6;
+    $_04b_przelam = 20;
     $_04b_ilosc_d = 30 - $_04a_ilosc_d;    // Stała
     
     // Maj
-    $_05_nr_dnia_roku = $_04_nr_dnia_roku + $_04_ilosc_d;
+    $_05_nr_dnia_roku = $_04b_nr_dnia_roku + $_04b_ilosc_d;
     $_05_nr_dnia = 1; // Stała poza miesiącem wielkanocnym
     $_05_nazwa_d = 5;
     $_05_przelam = 17;
@@ -69,7 +69,7 @@
     $_08_nr_dnia_roku = $_07_nr_dnia_roku + $_07_ilosc_d;
     $_08_nr_dnia = 1; // Stała poza miesiącem wielkanocnym
     $_08_nazwa_d = 6;
-    $_08_przelam = 16;
+    $_08_przelam = 15;
     $_08_ilosc_d = 31; // Stała
     
     // Wrzesień

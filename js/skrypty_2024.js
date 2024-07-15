@@ -329,4 +329,14 @@ $(document).ready(function () {
         $('.okrWielk .dane .prawe p.kolor').text('b');
     }
 
+    // Konflikty 2024
+    $('.d_roku_371').find('.dane .niedziela').html('Niepokalane Poczęcie Najśw Maryi Panny (u)');
+    $('.d_roku_371').find('.dane .niedziela').css('letter-spacing', '0.07em');
+    $('.d_roku_372').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Flp 1,4-6.8-11; Łk 1,26-38');
+    $('.d_roku_372').find('.dane .obchod').remove();
+    $('.d_roku_372').find('.dane .prawe .oznaczenie').remove();
+    $('.d_roku_372').find('.dane .prawe .g_czyt').html('Rz 5,12-21');
+    $('.d_roku_372').find('.dane .prawe .kolor').html('b');
+    $('.d_roku_373').find('.dane .prawe').prepend('<p class="oznaczenie">2 A II</p>');
+
 });

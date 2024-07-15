@@ -6,10 +6,10 @@ $(document).ready(function () {
     // var kolor = "#40ae49" // Zielony
     var kolor = "#000" // Fioletowy
 
-    var narodzeniePanskie = 23; // który dzień roku
-    var chrzestPanski = 36; // który dzień roku
-    var popielec = 74; // który dzień roku
-    var wielkanoc = 120; // który dzień roku
+    var narodzeniePanskie = 25; // który dzień roku
+    var chrzestPanski = 43; // który dzień roku
+    var popielec = 95; // który dzień roku
+    var wielkanoc = 141; // który dzień roku
 
     // Długość roku. Przestępny, czy nie? 365 lub 366
     var dniRoku = 365;
@@ -45,14 +45,29 @@ $(document).ready(function () {
     // $('.d_roku_3').find('.nr_dnia p').html('29');
     // $('.d_roku_4').find('.nr_dnia p').html('30');
 
+    // Konflikty 2025
+    $('.d_roku_7').find('.dane .niedziela').remove();
+    $('.d_roku_7').find('.dane').append('<p class="niedziela">Niepokalane Poczęcie Najśw Maryi Panny (u)</p>');
+    $('.d_roku_7').find('.dane .niedziela').css('letter-spacing', '0.07em');
+    $('.d_roku_8').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Ef 1,3-6.11-12; Łk 1,26-38~Rz 5,12-21')
+    $('.d_roku_8').find('.dane .obchod .swieto.zniesione').remove();
+    $('.d_roku_8').find('.dane .prawe .g_czyt').html('Rz 5,12-21');
+    $('.d_roku_336 .dane > p.niedziela').css('background-color', 'transparent');
+    // $('.d_roku_372').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Flp 1,4-6.8-11; Łk 1,26-38');
+    // $('.d_roku_372').find('.dane .obchod').remove();
+    // $('.d_roku_372').find('.dane .prawe .oznaczenie').remove();
+    // $('.d_roku_372').find('.dane .prawe .g_czyt').html('Rz 5,12-21');
+    // $('.d_roku_372').find('.dane .prawe .kolor').html('b');
+    // $('.d_roku_373').find('.dane .prawe').prepend('<p class="oznaczenie">2 A II</p>');
+
     // Święta stałe
     // I Niedziela Adwentu
     $('.d_roku_1').find('.dane .sigla').before('<p class="opis">początek nowego roku liturgicznego - czytania: cykl ' + cykl + '<br>rozpoczyna się okres Adwentu</p>');
     $('.d_roku_1').find('.dane .oznaczenie').after('<p class="tom">I tom brew.</p>');
     // Narodzenie Pańskie
-    // $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .sigla').html('<span>msza rano:</span> 2 Sm 7,1-5.8b-12.14a.16; Ps 89;<br>Rz 16,25-27; Łk 1,26-38');
+    $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .sigla').prepend('<span>msza rano:</span>');
     $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane .sigla').after('<p class="opis">kończy się okres Adwentu<br>Wigilia</p>');
-    $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane').append('<p class="niedziela" style="background-color: transparent;">Narodzenie Pańskie (u)</p>');
+    $('.d_roku_' + (narodzeniePanskie - 1)).find('.dane').append('<p class="odstep">&nbsp;</p><p class="niedziela">Narodzenie Pańskie (u)</p>');
     $('.d_roku_' + (narodzeniePanskie)).addClass('nakaz');
     $('.d_roku_' + narodzeniePanskie).find('.dane .sigla').before('<p class="opis">rozpoczyna się okres Narodzenia Pańskiego<br><br></p>');
     $('.d_roku_' + narodzeniePanskie).find('.dane .sigla').html('<span>msza wigilii:</span> Iz 62,1-5; Ps 89; Dz 13,16-17.22-25; Mt 1,1-25<br><span>msza w nocy:</span> Iz 9,1-3.5-6; Ps 96; Tt 2,11-14; Łk 2,1-14<br><span>msza o świcie:</span> Iz 62,11-12; Ps 97; Tt 3,4-7; Łk 2,15-20<br><span>msza w dzień:</span> Iz 52,7-10; Ps 98; Hbr 1,1-6; J 1,1-18');
@@ -67,18 +82,17 @@ $(document).ready(function () {
     $('.d_roku_' + (narodzeniePanskie + dniRoku)).find('.dane .sigla').html('<span>msza wigilii:</span> Iz 62,1-5; Ps 89; Dz 13,16-17.22-25; Mt 1,1-25<br><span>msza w nocy:</span> Iz 9,1-3.5-6; Ps 96; Tt 2,11-14; Łk 2,1-14<br><span>msza o świcie:</span> Iz 62,11-12; Ps 97; Tt 3,4-7; Łk 2,15-20<br><span>msza w dzień:</span> Iz 52,7-10; Ps 98; Hbr 1,1-6; J 1,1-18');
     $('.d_roku_' + (narodzeniePanskie + dniRoku + 1)).addClass('sw_Inne');
     // Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w pierwszą niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.
-    // $('.d_roku_' + narodzeniePanskie).siblings('.dzien.S').find('.dane').prepend('<p class="niedziela">XXX_Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
-    // $('.d_roku_29').find('.dane .niedziela .sigla').before('<p class="swieto">Świętej Rodziny: Jezusa, Maryi i Józefa (ś)</p>');
+    $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
+    $('.d_roku_' + narodzeniePanskie2).nextAll('.dzien.N').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
     if (cykl[0] === "A") {
         // Rok A
         $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('Syr 3,2-6.12-14 lub Kol 3,12-21; Ps 128;<br> Mt 2,13-15.19-23');
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('Rdz 15,1-6;21,1-3; Ps 105;<br>Hbr 11,8.11-12.17-19; Łk 2,22-40');
-        $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
-        // Rok C - ponieważ to jest drugie Narodzenie Pańskie
-        $('.d_roku_' + narodzeniePanskie2).nextAll('.dzien.N').find('.dane .sigla').html('1 Sm 1,20-22.24-28; Ps 84;@1 J 3,1-2.21-24; Łk 2,41-52');
-        $('.d_roku_' + narodzeniePanskie2).nextAll('.dzien.N').find('.dane .prawe .g_czyt').html('gcz: Ef 5,21-6,4');
+    } else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('1 Sm 1,20-22.24-28; Ps 84;@1 J 3,1-2.21-24; Łk 2,41-52');
     }
     // 1 stycznia
     $('.d_roku_' + (narodzeniePanskie + 6)).find('.niedziela').html('Świętej Bożej Rodzicielki Maryi (u)');
@@ -89,12 +103,12 @@ $(document).ready(function () {
     // 6 stycznia - Objawienie Pańskie - Epifania (u)
     $('.d_roku_' + (narodzeniePanskie + 12) + ' .swieto').remove();
     $('.d_roku_' + (narodzeniePanskie + 12)).addClass('nakaz');
-    $('.d_roku_' + (narodzeniePanskie + 11) + ' .dane').append('<p class="odstep">&nbsp;</p><p class="niedziela">Objawienie Pańskie - Epifania (u)</p>');
+    $('.d_roku_' + (narodzeniePanskie + 11) + ' .dane').append('<p class="odstep">&nbsp;</p><p style="background-color: transparent" class="niedziela">Objawienie Pańskie - Epifania (u)</p>');
 
     // Święta ruchome
     // Chrzest Pański (pierwsza niedziela po Objawieniu Pańskim)
     $('.d_roku_' + (chrzestPanski - 1)).find('.dane .niedziela').html('Chrzest Pański (ś)');
-    $('.d_roku_' + (chrzestPanski - 1)).find('.dane .niedziela').css('background-color', 'transparent'); // Potrzebne gdy Objawienie Pańsie wypada w sobotę
+    // $('.d_roku_' + (chrzestPanski - 1)).find('.dane .niedziela').css('background-color', 'transparent'); // Potrzebne gdy Objawienie Pańsie wypada w sobotę
     $('.d_roku_' + chrzestPanski).find('.dane .sigla').empty();
     if (cykl[0] === "A") {
         // Rok A
@@ -102,6 +116,9 @@ $(document).ready(function () {
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + chrzestPanski).find('.dane').prepend('<p class="sigla">Iz 55,1-11; PS: Iz 12,2-6; 1 J 5,1-9; Mk 1,7-11</p>');
+    } else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + chrzestPanski).find('.dane').prepend('<p class="sigla">Iz 40,1-5.9-11; Ps 104; Tt 2,11-14;3,4-7;<br>Łk 3,15-16.21-22</p>');
     }
     $('.d_roku_' + chrzestPanski).find('.dane').append('<p class="opis">kończy się okres Narodzenia Pańskiego</p>');
     $('.d_roku_' + chrzestPanski).find('.dane .prawe').html('<p class="g_czyt">gcz: Iz 42,1-9;49,1-9</p><p class="kolor">b</p>');
@@ -120,7 +137,7 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc - 6)).find('.dane .wspomnienie').prepend('*');
     $('.d_roku_' + (wielkanoc - 6)).find('.dane .sigla').remove();
     $('.d_roku_' + (wielkanoc - 6)).find('.dane').prepend('<p class="swieto">Wielki Poniedziałek</p><p class="sigla">Iz 42,1-7; Ps 27; J 12,1-11</p>');
-    $('.d_roku_' + (wielkanoc - 6)).find('.dane .prawe .g_czyt').html('gcz: Jr 26,1-15');
+    // $('.d_roku_' + (wielkanoc - 6)).find('.dane .prawe .g_czyt').html('gcz: Jr 26,1-15');
     $('.d_roku_' + (wielkanoc - 5)).find('.dane .sigla').before('<p class="swieto">Wielki Wtorek</p>');
     $('.d_roku_' + (wielkanoc - 4)).find('.dane .sigla').before('<p class="swieto">Wielka Środa</p>');
     // Wielki Czwartek
@@ -141,23 +158,31 @@ $(document).ready(function () {
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + wielkanoc).find('.dane .sigla').html('Rdz 1,1-2,2; Ps 104 <span>lub</span> Ps 33;<br>Rdz 22,1-18; Ps 16;<br>Wj 14,15-15,1a; PS: Wj 15,1b-6.17-18;<br>Iz 54,4a.5-14; Ps 30;<br>Iz 55,1-11; PS: Iz 12,2-6;<br>Ba 3,9-15.32-4,4; Ps 19;<br>Ez 36,16-17a.18-28; Ps 42-43<br><span>lub gdy będzie chrzest:</span> PS: Iz 12,2-6 <span>lub</span> Ps 51;<br>Rz 6,3-11; Ps 118; Mk 16,1-7<br><span>msza w dzień:</span><br>Dz 10,34a.37-43; Ps 118; Kol 3,1-4<br><span>lub</span> 1 Kor 5,6b-8; sekwencja; J 20,1-9<br><br><span>kończy się Święte Triduum Paschalne</span>');
+    } else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + wielkanoc).find('.dane .sigla').html('Rdz 1,1-2,2; Ps 104 <span>lub</span> Ps 33;<br>Rdz 22,1-18; Ps 16;<br>Wj 14,15-15,1a; PS: Wj 15,1b-6.17-18;<br>Iz 54,4a.5-14; Ps 30;<br>Iz 55,1-11; PS: Iz 12,2-6;<br>Ba 3,9-15.32-4,4; Ps 19;<br>Ez 36,16-17a.18-28; Ps 42-43<br><span>lub gdy będzie chrzest:</span> PS: Iz 12,2-6 <span>lub</span> Ps 51;<br>Rz 6,3-11; Ps 118; Łk 24,1-12<br><span>msza w dzień:</span><br>Dz 10,34a.37-43; Ps 118; Kol 3,1-4<br><span>lub</span> 1 Kor 5,6b-8; sekwencja; J 20,1-9<br><br><span>kończy się Święte Triduum Paschalne</span>');
     }
     // Poniedziałek Wielkanocny
     $('.d_roku_' + (wielkanoc + 1)).addClass('sw_Inne');
     $('.d_roku_' + (wielkanoc + 1)).find('.dane .sigla').before('<p class="swieto">Poniedziałek Wielkanocny</p>');
     // Zwiastowanie Pańskie (u) - zwykle 25 maraca - w 2024 wypada w Wielki Poniedziałek więce przeniesione na pierwszy dzień po oktawie
     $('.d_roku_128').find('.dane').prepend('<p class="swieto">Zwiastowanie Pańskie (u)</p>');
-    $('.d_roku_128').find('.dane .sigla').html('Iz 7,10-14;8,10c; Ps 40; Hbr 10,4-10;<br>Łk 1,26-38');
+    $('.d_roku_128').find('.dane .sigla').html('Iz 7,10-14;8,10c; Ps 40; Hbr 10,4-10; Łk 1,26-38');
     $('.d_roku_128').find('.dane .prawe .g_czyt').html('gcz: 1 Krn 17,1-15');
     $('.d_roku_129').find('.dane .prawe .g_czyt').before('<p class="oznaczenie">II</p>');
     // Wniebowstąpienie Pańskie (u) - najbliższa niedziela w 40 dni po Wielkanocy
     $('.d_roku_' + (wielkanoc + 41)).find('.niedziela').html('Wniebowstąpienie Pańskie (u)');
+    // W 2025 Wniebowstąpienie Pańskie wypadło w niedzielę 1 czerwca stąd poniższy zapis
+    $('#czerwiec-2025 .lewa .dzien.pierwszy').find('.niedziela').html('Wniebowstąpienie Pańskie(u)');
     if (cykl[0] === "A") {
         // Rok A
         $('.d_roku_' + (wielkanoc + 42)).find('.dane .sigla').html('Dz 1,1-11; Ps 47; Ef 1,17-23; Mt 28,16-20');
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + (wielkanoc + 42)).find('.dane .sigla').html('Dz 1,1-11; Ps 47; Ef 4,1-13; Mk 16,15-20');
+    } else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + (wielkanoc + 42)).find('.dane .sigla').html('Dz 1,1-11; Ps 47; Hbr 9,24-28;10,19-23; Łk 24,46-53');
     }
     $('.d_roku_' + (wielkanoc + 42)).find('.prawe .oznaczenie').html('7 W');
     $('.d_roku_' + (wielkanoc + 42)).find('.prawe .g_czyt').html('gcz: Ef 4,1-24');
@@ -172,6 +197,9 @@ $(document).ready(function () {
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + (wielkanoc + 49)).find('.sigla').html('<span>msza wigilii:</span> Rdz 11,1-9; Ps 33; Wj 19,3-8a.16-20b;@PS: Dn 3,52-56 <span>lub</span> Ps 19; Ez 37,1-14; Ps 107;@Jl 3,1-5; Ps 104; Rz 8,22-27; J 7,37-39<br><span>msza w dzień:</span> Dz 2,1-11; Ps 104; Ga 5,16-25;<br>sekwencja; J 15,26-27;16,12-15');
+    } else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + (wielkanoc + 49)).find('.sigla').html('<span>msza wigilii:</span> Rdz 11,1-9; Ps 33; Wj 19,3-8a.16-20b;@PS: Dn 3,52-56 <span>lub</span> Ps 19; Ez 37,1-14; Ps 107;@Jl 3,1-5; Ps 104; Rz 8,22-27; J 7,37-39<br><span>msza w dzień:</span> Dz 2,1-11; Ps 104; Rz 8,8-17;<br>sekwencja; J 14,15-16.23b-26');
     }
     $('.d_roku_' + (wielkanoc + 49)).find('.sigla').after('<p class="opis">kończy się okres wielkanocny</p>');
     $('.d_roku_' + (wielkanoc + 49)).find('.oznaczenie').empty();
@@ -192,6 +220,9 @@ $(document).ready(function () {
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + (wielkanoc + 53)).find('.sigla').html('Jr 31,31-34 lub Hbr 10,11-18;@Ps 110; Mk 14,22-25');
+    } else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + (wielkanoc + 53)).find('.sigla').html('Iz 6,1-4.8 lub Hbr 2,10-18;@Ps 23; J 17,1-2.9.14-26');
     }
     $('.d_roku_' + (wielkanoc + 53)).find('.obchod .wspomnienie').prepend('*');
     $('.d_roku_' + (wielkanoc + 53)).find('.prawe .g_czyt').html('<br>gcz: Hbr 4,14-16;5,1-10');
@@ -204,6 +235,9 @@ $(document).ready(function () {
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Pwt 4,32-34.39-40; Ps 33;@Rz 8,14-17; Mt 28,16-20');
+    } else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Prz 8,22-31; Ps 8; Rz 5,1-5; j 16,12-15');
     }
     $('.d_roku_' + (wielkanoc + 56)).find('.oznaczenie').empty('');
     $('.d_roku_' + (wielkanoc + 56)).find('.dane .prawe .g_czyt').html('gcz: 1 Kor 2,1-16');
@@ -217,6 +251,10 @@ $(document).ready(function () {
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + (wielkanoc + 60)).find('.dane .sigla').html('Wj 24,3-8; Ps 116B; Hbr 9,11-15;@Mk 14,12-16.22-26');
+    }
+    else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + (wielkanoc + 60)).find('.dane .sigla').html('Rdz 14,18-20; Ps 110; 1 Kor 11,23-26; Łk 9,11b-17');
     }
     $('.d_roku_' + (wielkanoc + 60)).find('.dane .obchod .wspomnienie').prepend('*');
     $('.d_roku_' + (wielkanoc + 60)).find('.dane .prawe .g_czyt').html('gcz: Wj 24,1-11');

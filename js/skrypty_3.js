@@ -198,7 +198,7 @@ $(document).ready(function () {
     $('article div.dane p.swieto:contains("Najśw Maryi Panny Królowej Polski - głównej patronki Polski (u)")').parent('.dane').find('.prawe .g_czyt').prepend('<br>');
     $('article div.dane p.wspomnienie:contains("św Marty, Mari i Łazarza (wo)")').closest('.dane').find('.sigla').append('<br><span>lub czyt. własne:</span><br>1 J 4,7-16; Ps 34; J 11,19-27 <span>lub</span> Łk 10,38-42');
     $('article div.dane p.swieto:contains("św Teresy Benedykty od Krzyża dz m - patronki Europy (ś)")').closest('.dane').find('.prawe').prepend('<p>&nbsp;</p>');
-    $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').prev('.dzien').find('.dane').append('<p class="niedziela">Wniebowzięcie Najśw Maryi Panny (u)</p>');
+    $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').prev('.dzien').find('.dane').append('<p class="odstep">&nbsp;</p><p class="niedziela">Wniebowzięcie Najśw Maryi Panny (u)</p>');
     $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').addClass('nakaz');
     $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').find('.dane p.swieto').empty();
     $('article div.dane p.wspomnienie:contains("męczeństwo św Jana Chrzciciela (wo)")').closest('.dane').find('.sigla').append('<br><span>lub czyt. własne:</span><br>Jr 1,17-19; Ps 71; Mk 6,17-29');
@@ -210,7 +210,7 @@ $(document).ready(function () {
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').addClass('nakaz');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').before('<div class="dzien pierwszy" style="padding: 0px; height: 3mm;"><div class="nr_dnia"></div><div class="nazwad"></div><div class="dane"><p class="niedziela">Wszystkich Świętych (u)</p></div></div>');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').remove();
-    $('article div.dane p.swieto:contains("Wspomnienie Wszystkich Wiernych Zmarłych (ś)")').text('Wspomnienie Wszystkich Wiernych Zmarłych');
+    $('article div.dane p.swieto:contains("Wspomnienie Wszystkich Wiernych Zmarłych (ś)")').text('*Wspomnienie Wszystkich Wiernych Zmarłych');
     // Święta państwowe
     $('section[id^="maj"] .nr_dnia p').filter(function () {
         return $(this).text() === "1";
@@ -227,25 +227,16 @@ $(document).ready(function () {
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').after('<p class="opis">początek czasu zimowego</p>');
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .prawe .kolor').html('b, z');
     // Jezusa Chrystusa Króla Wszechświata (u) - ostatnia niedziela roku liturgicznego (między 20 a 26 listopada).
-    // var JezChrKW = $('article .tresc .dzien.S .dane p.niedziela:contains("XXXIV Niedziela Zwykła")').closest('.dzien').attr('class').replace('dzien S d_roku_', '');
-    // values = JezChrKW.split(' ');
-    // JezChrKW_S = Number(values[0]);
-    // $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').html('Jezusa Chrystusa Króla Wszechświata (u)');
-    // $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').css('letter-spacing', '0.1em');
-    // $('.d_roku_' + (JezChrKW_S + 1)).find('.oznaczenie').remove();
-    // $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27 lub Ap 1,4-6.10.12-18;<br>2,26-28;3,5.12.20-21');
-    // $('.d_roku_' + (JezChrKW_S + 1)).find('.prawe .kolor').html('b');
-    // $('.d_roku_' + (JezChrKW_S + 2)).find('.g_czyt').before('<p class="oznaczenie">34 OZ II</p>');
-
-    // Konflikty 2024
-    $('.d_roku_371').find('.dane .niedziela').html('Niepokalane Poczęcie Najśw Maryi Panny (u)');
-    $('.d_roku_371').find('.dane .niedziela').css('letter-spacing', '0.07em');
-    $('.d_roku_372').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Flp 1,4-6.8-11; Łk 1,26-38');
-    $('.d_roku_372').find('.dane .obchod').remove();
-    $('.d_roku_372').find('.dane .prawe .oznaczenie').remove();
-    $('.d_roku_372').find('.dane .prawe .g_czyt').html('Rz 5,12-21');
-    $('.d_roku_372').find('.dane .prawe .kolor').html('b');
-    $('.d_roku_373').find('.dane .prawe').prepend('<p class="oznaczenie">2 A II</p>');
+    var JezChrKW = $('article .tresc .dzien.S .dane p.niedziela:contains("XXXIV Niedziela Zwykła")').closest('.dzien').attr('class').replace('dzien S d_roku_', '');
+    values = JezChrKW.split(' ');
+    JezChrKW_S = Number(values[0]);
+    $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').html('Jezusa Chrystusa Króla Wszechświata (u)');
+    $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').css('letter-spacing', '0.1em');
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('2 Sm 5, 1-3; Ps 122; Kol 1, 12-20; Łk 23, 35-43');
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.oznaczenie').remove();
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27<br>lub Ap 1,4-6.10.12-18;<br>2,26-28;3,5.12.20-21');
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.prawe .kolor').html('b');
+    $('.d_roku_' + (JezChrKW_S + 2)).find('.g_czyt').before('<p class="oznaczenie">34 OZ II</p>');
 
     // Dodaj klasę przed nakazanym
     $('.dzien.nakaz').prev('.dzien').addClass('d_przed_nakaz');
@@ -288,7 +279,7 @@ $(document).ready(function () {
         var h_lewe = $(this).children('.dane').outerHeight();
         var h_prawe = $(this).find('.dane .prawe').outerHeight();
         var h_dnia = Math.max(h_lewe, h_prawe);
-        //        console.log('Wysokość dnia: ' + h_dnia);
+        // console.log('Wysokość dnia: ' + h_dnia);
         $(this).find('.dane').css('height', h_dnia + 'px');
         $(this).find('.prawe').css('height', h_dnia + 'px');
         $(this).find('.kolor').addClass('pozycja');
@@ -300,8 +291,8 @@ $(document).ready(function () {
         var wysok = 0;
         $(this).children('.dzien').each(function () {
             wysokosc = wysokosc + $(this).outerHeight();
-            //            console.log('Wysokość to: ' + wysokosc);
-            //            console.log('Ilość to: ' + ilosc);
+            // console.log('Wysokość to: ' + wysokosc);
+            // console.log('Ilość to: ' + ilosc);
         });
         wysok = ((525 - wysokosc) / ilosc) / 2;
         $(this).children('.dzien:not(.pierwszy)').find('.niedziela').css('bottom', wysok * -1 + 'px');
