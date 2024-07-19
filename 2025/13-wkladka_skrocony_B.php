@@ -6,17 +6,17 @@ $(document).ready(function(){
     });
 
     // Obszar do edycji - START
-    styczen_B       = 3;    
+    styczen_B       = 4;    
     luty_B_dlugosc  = 28;
-    cykl_N_B        = 'C';
-    cykl_p_B        = 'I';
-    popielec_B      = ['5 marca', 'mar-5'];
-    Wielkanoc_B     = ['20 kwietnia', 'kwi-20'];
-    Wielkanoc_I_B   = ['21 kwietnia', 'kwi-21'];
-    Wniebowst_B     = ['1 czerwca', 'cze-1'];
-    ZDS_B           = ['8 czerwca', 'cze-8'];
-    BC_B            = ['19 czerwca', 'cze-19'];
-    INA_B           = ['30 listopada', 'lis-30'];
+    cykl_N_B        = 'A';
+    cykl_p_B        = 'II';
+    popielec_B      = ['18 luty', 'lut-18'];
+    Wielkanoc_B     = ['5 kwietnia', 'kwi-5'];
+    Wielkanoc_I_B   = ['6 kwietnia', 'kwi-6'];
+    Wniebowst_B     = ['17 maja', 'maj-17'];
+    ZDS_B           = ['24\xa0maja', 'maj-24'];
+    BC_B            = ['4 czerwca', 'cze-4'];
+    INA_B           = ['29 listopada', 'lis-29'];
      // Obszar do edycji - STOP
     
     // Styczen
@@ -45,7 +45,7 @@ $(document).ready(function(){
     }   
     // Marzec
     var marzec_B = $('.skrot_II .luty table tr td.numer').length;
-    if (marzec_B === 12) {marzec_B = 2;} else if (marzec_B === 11) {marzec_B = 3;} else if (marzec_B === 10) {marzec_B = 4;} else if (marzec_B === 9) {marzec_B = 5;} else if ( marzec_B === 8 ) {marzec_B = 6;} else if (marzec_B === 7) {marzec_B = 0;} else if (marzec_B === 6) {marzec_B = 1;} else if (marzec_B === 5) {marzec_B = 2;}
+    if (marzec_B === 14) {marzec_B = 00;} else if (marzec_B === 13) {marzec_B = 1;} else if (marzec_B === 12) {marzec_B = 2;} else if (marzec_B === 11) {marzec_B = 3;} else if (marzec_B === 10) {marzec_B = 4;} else if (marzec_B === 9) {marzec_B = 5;} else if ( marzec_B === 8 ) {marzec_B = 6;} else if (marzec_B === 7) {marzec_B = 0;} else if (marzec_B === 6) {marzec_B = 1;} else if (marzec_B === 5) {marzec_B = 2;}
     for (var marzec_B_pusty = 1; marzec_B_pusty <= marzec_B; marzec_B_pusty++) {
         $('.skrot_II .marzec table tr td:empty').addClass('pusty');
         $('.skrot_II .marzec table tr td.pusty').first().removeClass('pusty').addClass('poczatek').html('&nbsp;');
@@ -228,7 +228,7 @@ $(document).ready(function(){
                 <div class="grudzien">
                     <h5>Grudzień</h5>
                 </div>
-                <h6>Cykl&nbsp;niedzielny&nbsp;czytań&nbsp;-&nbsp;<span id="cykl_N_B"></span>; cykl&nbsp;powszedni&nbsp;czytań&nbsp;-&nbsp;<span id="cykl_p_B"></span>; Popielec&nbsp;-&nbsp;<span id="popielec_B"></span>; Wielkanoc&nbsp;-&nbsp;<span id="Wielkanoc_B"></span>; Wniebowstąpienie&nbsp;-&nbsp;<span id="Wniebowst_B"></span>; Zesłanie&nbsp;Ducha&nbsp;Świętego&nbsp;-&nbsp;<span id="ZDS_B"></span>; Boże&nbsp;Ciało&nbsp;-&nbsp;<span id="BC_B"></span>; 1&nbsp;niedziela&nbsp;Adwentu&nbsp;-&nbsp;<span id="INA_B"></span></h6>
+                <h6>Cykl&nbsp;niedzielny&nbsp;czytań&nbsp;-&nbsp;<span id="cykl_N_B"></span>; cykl&nbsp;powszedni&nbsp;czytań&nbsp;-&nbsp;<span id="cykl_p_B"></span>; Popielec&nbsp;-&nbsp;<span id="popielec_B"></span>; Wielkanoc&nbsp;-&nbsp;<span id="Wielkanoc_B"></span>; Wniebowstąpienie&nbsp;-&nbsp;<span id="Wniebowst_B"></span>;<br>Zesłanie&nbsp;Ducha&nbsp;Świętego&nbsp;-&nbsp;<span id="ZDS_B"></span>;&nbsp;Boże&nbsp;Ciało&nbsp;-&nbsp;<span id="BC_B"></span>;<br>1&nbsp;niedziela&nbsp;Adwentu&nbsp;-&nbsp;<span id="INA_B"></span></h6>
             </div>            
         </div>
     </article>

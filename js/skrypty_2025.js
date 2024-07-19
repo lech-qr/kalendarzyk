@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     // var kolor = "#d60057" // Czerwony
     // var kolor = "#40ae49" // Zielony
-    var kolor = "#000" // Fioletowy
+    var kolor = "#e71294" // Fioletowy
 
     var narodzeniePanskie = 25; // który dzień roku
     var chrzestPanski = 43; // który dzień roku
