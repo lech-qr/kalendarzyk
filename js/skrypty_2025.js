@@ -49,9 +49,11 @@ $(document).ready(function () {
     $('.d_roku_7').find('.dane .niedziela').remove();
     $('.d_roku_7').find('.dane').append('<p class="niedziela">Niepokalane Poczęcie Najśw Maryi Panny (u)</p>');
     $('.d_roku_7').find('.dane .niedziela').css('letter-spacing', '0.07em');
-    $('.d_roku_8').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Ef 1,3-6.11-12; Łk 1,26-38~Rz 5,12-21')
+    $('.d_roku_8').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Flp 1,4-6.8-11; Łk 1,26-38')
     $('.d_roku_8').find('.dane .obchod .swieto.zniesione').remove();
     $('.d_roku_8').find('.dane .prawe .g_czyt').html('Rz 5,12-21');
+    $('.d_roku_8').find('.dane .prawe .oznaczenie').remove();
+    $('.d_roku_9').find('.dane .prawe .g_czyt').before('<p class="oznaczenie">2 A II</p>');
     $('.d_roku_336 .dane > p.niedziela').css('background-color', 'transparent');
     // $('.d_roku_372').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Flp 1,4-6.8-11; Łk 1,26-38');
     // $('.d_roku_372').find('.dane .obchod').remove();

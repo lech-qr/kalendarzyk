@@ -60,6 +60,9 @@ $(document).ready(function () {
             if ($(this).is(':contains("procesja z palmami")')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
+            // Niepokalane Poczęcie Najśw Maryi Panny (u) - biały
+        } else if (($(this).hasClass('S')) && $(this).is(':contains("Niepokalane Poczęcie Najśw Maryi Panny (u)")')) {
+            $(this).next('.dzien').find('.dane .prawe p.kolor').text('b');
         } else {
             // Wspomnienia
             // Męczennicy - czrwony
