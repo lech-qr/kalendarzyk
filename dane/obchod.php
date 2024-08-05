@@ -126,7 +126,7 @@
         '', // 26
         '', // 27
         'św Piotra Chanela pr m (wd), św Ludwika Marii Grignion de Montfort pr (wd)', // 28
-        'św Katarzyny Sieneńskiej dz dK - patronki Europy (ś)|1 J 1,5-2,2; Ps 103; Mt 11,25-30~@1 Kor 2,1-16', // 29
+        'św Katarzyny Sieneńskiej dz dK - patronki Europy (ś)|1 J 1,5-2,2; Ps 103; Mt 11,25-30~1 Kor 2,1-16', // 29
         'św Piusa V pp (wd)', // 30
     );
 
@@ -138,7 +138,7 @@
         'św Stanisława Kazimierczyka pr (wd)', // 5
         'św ap Filipa i Jakuba (ś)|1 Kor 15,1-8a; Ps 19; J 14,6-14~Dz 5,12-32', // 6
         '', // 7
-        'św Stanisława bp m - głównego patrona Polski (u)|Dz 20,17-18a.28-32.36; Ps 100;@Rz 8,31b-39; J 10,11-16~@2 Kor 4,1-18', // 8
+        'św Stanisława bp m - głównego patrona Polski (u)|Dz 20,17-18a.28-32.36; Ps 100;@Rz 8,31b-39; J 10,11-16~2 Kor 4,1-18', // 8
         '', // 9
         'św Jana z Avili pr dK (wd)', // 10
         '', // 11

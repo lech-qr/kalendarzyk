@@ -54,6 +54,41 @@ $(document).ready(function () {
     $('.d_roku_8').find('.dane .prawe .g_czyt').html('Rz 5,12-21');
     $('.d_roku_8').find('.dane .prawe .oznaczenie').remove();
     $('.d_roku_9').find('.dane .prawe .g_czyt').before('<p class="oznaczenie">2 A II</p>');
+
+    // Ofiarowanie Pańskie (ś)
+    $('.d_roku_63').find('.dane p.niedziela').remove();
+    $('.d_roku_63').find('.dane').append('<p class="niedziela">Ofiarowanie Pańskie (ś)</p>');
+    $('.d_roku_64 .dane .sigla').text('Ml 3,1-4; Ps 24; Hbr 2,14-18; Łk 2,22-40');
+    $('.d_roku_64 .dane .obchod').remove();
+    $('.d_roku_64').find('.dane .prawe .oznaczenie').text('4 OZ');
+    $('.d_roku_64').find('.dane .prawe .g_czyt').html('gcz: Wj 13,1-3a.11-16');
+    $('.d_roku_65').find('.dane .prawe .g_czyt').before('<p class="oznaczenie">IV</p>');
+    // św Wojciecha bp m - głównego patrona Polski (u) - wypada w oktawie więc zostaje przeniesiony
+    $('.d_roku_144 .dane .swieto').remove();
+    $('.d_roku_144 .dane .sigla').text('Dz 3,1-10; Ps 105; Łk 24,13-35');
+    $('.d_roku_144 .dane .obchod').append('<p class="swieto zniesione">*św Wojciecha bp m - głównego patrona Polski (u)</p>');
+    $('.d_roku_144 .dane .prawe .g_czyt').html('gcz: 1 P 2,11-25');
+    $('.d_roku_149 .dane').prepend('<p class="swieto">św Wojciecha bp m - głównego patrona Polski (u)</p>');
+    $('.d_roku_149 .dane .obchod .wspomnienie').prepend('*');
+    $('.d_roku_149 .dane .sigla').text('Dz 1,3-8; Ps 126; Flp 1,20c-30; J 12,24-26');
+    $('.d_roku_149 .dane .prawe .oznaczenie').remove();
+    $('.d_roku_149 .dane .prawe .g_czyt').html('gcz: Dz 20,17-36');
+    $('.d_roku_151 .dane .prawe').prepend('<p class="oznaczenie">II</p>');
+    // św Marka ew (ś) - wypada w oktawie więc przepada
+    $('.d_roku_146 .dane .swieto').remove();
+    $('.d_roku_146 .dane .obchod').append('<p class="swieto zniesione">*św Marka ew (ś)</p>');
+    $('.d_roku_146 .dane .sigla').text('Dz 4,1-12; Ps 118; J 21,1-14');
+    $('.d_roku_146 .dane .prawe .g_czyt').html('gcz: 1 P 3,18-4,11');
+
+    // św ap Piotra i Pawła (u)
+    $('.d_roku_210').find('.dane .niedziela').html('Świętych Apostołów Piotra i Pawła (u)');
+    $('.d_roku_211').find('.dane .sigla').html('msza wigilii: Dz 3,1-10; Ps 19;@Ga 1,11-20; J 21,15-19@msza w dzień: Dz 12,1-11; Ps 34;@2 Tm 4,6-9.16-18; Mt 16,13-19');
+    $('.d_roku_211').find('.dane .prawe .g_czyt').html('Ga 1,15-2,10');
+    $('.d_roku_211').find('.dane .obchod .swieto.zniesione').remove();
+    $('.d_roku_211 .dane .prawe .oznaczenie').remove();
+    $('.d_roku_212 .dane .obchod .wspomnienie').css('letter-spacing', '-0.02em');
+    $('.d_roku_212 .dane .prawe').prepend('<p class="oznaczenie">13 OZ I</p>');
+
     $('.d_roku_336 .dane > p.niedziela').css('background-color', 'transparent');
     // $('.d_roku_372').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Flp 1,4-6.8-11; Łk 1,26-38');
     // $('.d_roku_372').find('.dane .obchod').remove();
@@ -167,11 +202,6 @@ $(document).ready(function () {
     // Poniedziałek Wielkanocny
     $('.d_roku_' + (wielkanoc + 1)).addClass('sw_Inne');
     $('.d_roku_' + (wielkanoc + 1)).find('.dane .sigla').before('<p class="swieto">Poniedziałek Wielkanocny</p>');
-    // Zwiastowanie Pańskie (u) - zwykle 25 maraca - w 2024 wypada w Wielki Poniedziałek więce przeniesione na pierwszy dzień po oktawie
-    $('.d_roku_128').find('.dane').prepend('<p class="swieto">Zwiastowanie Pańskie (u)</p>');
-    $('.d_roku_128').find('.dane .sigla').html('Iz 7,10-14;8,10c; Ps 40; Hbr 10,4-10; Łk 1,26-38');
-    $('.d_roku_128').find('.dane .prawe .g_czyt').html('gcz: 1 Krn 17,1-15');
-    $('.d_roku_129').find('.dane .prawe .g_czyt').before('<p class="oznaczenie">II</p>');
     // Wniebowstąpienie Pańskie (u) - najbliższa niedziela w 40 dni po Wielkanocy
     $('.d_roku_' + (wielkanoc + 41)).find('.niedziela').html('Wniebowstąpienie Pańskie (u)');
     // W 2025 Wniebowstąpienie Pańskie wypadło w niedzielę 1 czerwca stąd poniższy zapis
@@ -239,11 +269,11 @@ $(document).ready(function () {
         $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Pwt 4,32-34.39-40; Ps 33;@Rz 8,14-17; Mt 28,16-20');
     } else if (cykl[0] === "C") {
         // Rok C
-        $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Prz 8,22-31; Ps 8; Rz 5,1-5; j 16,12-15');
+        $('.d_roku_' + (wielkanoc + 56)).find('.sigla').html('Prz 8,22-31; Ps 8; Rz 5,1-5; J 16,12-15');
     }
     $('.d_roku_' + (wielkanoc + 56)).find('.oznaczenie').empty('');
     $('.d_roku_' + (wielkanoc + 56)).find('.dane .prawe .g_czyt').html('gcz: 1 Kor 2,1-16');
-    $('.d_roku_' + (wielkanoc + 57)).find('.g_czyt').before('<p class="oznaczenie">8 OZ IV</p>');
+    $('.d_roku_' + (wielkanoc + 57)).find('.g_czyt').before('<p class="oznaczenie">11 OZ III</p>');
     // Najświętszego Ciała i Krwi Chrystusa (u) - czwartek po pierwszej niedzieli po Zesłaniu
     $('.d_roku_' + (wielkanoc + 59)).find('.dane').append('<p class="niedziela">Najświętszego Ciała i Krwi Chrystusa (u)</p>');
     $('.d_roku_' + (wielkanoc + 60)).addClass('nakaz');
@@ -263,12 +293,16 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 60)).find('.dane .prawe .kolor').html('b');
     // Najśw Serca Pana Jezusa (u) - piątek po drugiej niedzieli po Zesłaniu
     $('.d_roku_' + (wielkanoc + 68)).find('.sigla').before('<p class="uroczystosc">Najśw Serca Pana Jezusa (u)</p>');
+    $('.d_roku_' + (wielkanoc + 68)).find('.wspomnienie').prepend('*');
     if (cykl[0] === "A") {
         // Rok A
         $('.d_roku_' + (wielkanoc + 68)).find('.sigla').html('Pwt 7,6-11; Ps 103; 1 J 4,7-16; Mt 11,25-30');
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + (wielkanoc + 68)).find('.sigla').html('Oz 11,1.3-4.8c-9; PS: Iz 12,2-6;@Ef 3,8-12.14-19; J 19,31-37');
+    } else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + (wielkanoc + 68)).find('.sigla').html('Ez 34,11-16; Ps 23; Rz 5,5b-11; Łk 15,3-7');
     }
     $('.d_roku_' + (wielkanoc + 68)).find('.g_czyt').html('gcz: Rz 8,28-39');
     // Niepokalanego Serca Najśw Maryi Panny (wo) - sobota po drugiej niedzieli po Zesłaniu

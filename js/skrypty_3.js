@@ -63,6 +63,9 @@ $(document).ready(function () {
             // Niepokalane Poczęcie Najśw Maryi Panny (u) - biały
         } else if (($(this).hasClass('S')) && $(this).is(':contains("Niepokalane Poczęcie Najśw Maryi Panny (u)")')) {
             $(this).next('.dzien').find('.dane .prawe p.kolor').text('b');
+            // Ofiarowanie Pańskie (ś) - biały
+        } else if (($(this).hasClass('S')) && $(this).is(':contains("Ofiarowanie Pańskie (ś)")')) {
+            $(this).next('.dzien').find('.dane .prawe p.kolor').text('b');
         } else {
             // Wspomnienia
             // Męczennicy - czrwony
@@ -98,11 +101,11 @@ $(document).ready(function () {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
             // Święto Wojciecha - czerwony
-            if ($(this).is(':contains("św Wojciecha bp m - głównego patrona Polski (u)")')) {
+            if ($(this).is(':contains("św Wojciecha bp m - głównego patrona Polski (u)")') && $(this).is(':not(:contains("*św Wojciecha bp m - głównego patrona Polski (u)"))')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
             // Święto Ewangelisty - czerwony
-            if ($(this).is(':contains(" ew (ś)")') && $(this).is(':not(:contains("Jana"))')) {
+            if ($(this).is(':contains(" ew (ś)")') && $(this).is(':not(:contains("Jana"))') && $(this).is(':not(:contains("*"))')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
             // Święto św ap Filipa i Jakuba (ś) - czerwony
@@ -145,6 +148,10 @@ $(document).ready(function () {
             if ($(this).is(':contains("św ap Piotra i Pawła (u)")')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
+            // Jeśli piotra i Pawła wypadnie w niedzielę
+            if ($(this).is(':contains("Świętych Apostołów Piotra i Pawła (u)")')) {
+                $(this).next('.dzien').find('.dane .prawe p.kolor').text('cz');
+            }
             // św Tomasza ap (ś) - czerwony
             if ($(this).is(':contains("św Tomasza ap (ś)")')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');
@@ -172,6 +179,10 @@ $(document).ready(function () {
             // Wspomnienie Wszystkich Wiernych Zmarłych - fioletowy
             if ($(this).is(':contains("Wspomnienie Wszystkich Wiernych Zmarłych")')) {
                 $(this).find('.dane .prawe p.kolor').text('f');
+            }
+            // Niepokalanego Serca Najśw Maryi Panny (wo) - biały
+            if ($(this).is(':contains("Niepokalanego Serca Najśw Maryi Panny")')) {
+                $(this).find('.dane .prawe p.kolor').text('b');
             }
 
             // Inne
@@ -240,6 +251,12 @@ $(document).ready(function () {
     $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27<br>lub Ap 1,4-6.10.12-18;<br>2,26-28;3,5.12.20-21');
     $('.d_roku_' + (JezChrKW_S + 1)).find('.prawe .kolor').html('b');
     $('.d_roku_' + (JezChrKW_S + 2)).find('.g_czyt').before('<p class="oznaczenie">34 OZ II</p>');
+    // Nawiedzenie Najśw Maryi Panny (ś) - Czytanie z Sofoniasza jest tylko poza Okresem Wielkanocnym
+    $('.dzien').each(function () {
+        if ($(this).is(':contains("Nawiedzenie Najśw Maryi Panny (ś)")') && ($('.dzien').hasClass('okrWielk'))) {
+            $(this).find('.dane .sigla').text('Rz 12,9-16b; PS: Iz 12,2-6; Łk 1,39-56');
+        }
+    });
 
     // Dodaj klasę przed nakazanym
     $('.dzien.nakaz').prev('.dzien').addClass('d_przed_nakaz');

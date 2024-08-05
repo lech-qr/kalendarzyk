@@ -78,7 +78,7 @@
         'Rz 12,1-21', // poniedziałek
         'Rz 13,1-14', // wtorek
         'Rz 14,1-23', // środa
-        '???', // czwartek
+        'Rz 15,1-13', // czwartek
         'Rz 15,14-32', // piątek
         'Rz 16,1-27', // sobota
         '5 OZ I|1 Kor 1,1-17', // niedziela
@@ -90,7 +90,7 @@
         '1 Kor 6,1-11', // sobota
         '6 OZ II|1 Kor 6,12-20', // niedziela
         '1 Kor 7,1-24', // poniedziałek
-        '???', // wtorek
+        '1 Kor 7,25-40', // wtorek
         '1 Kor 8,1-13', // środa
         '1 Kor 9,1-18', // czwartek
         '1 Kor 9,19-27', // piątek
@@ -100,7 +100,7 @@
         '1 Kor 11,17-34', // wtorek
         '1 Kor 12,1-11', // środa
         '1 Kor 12,12-31a', // czwartek
-        '1 Kor 12,30-31-13,13', // piątek
+        '1 Kor 12,31-13,13', // piątek
         '1 Kor 14,1-19', // sobota
         '8 OZ IV|1 Kor 14,20-40', // niedziela
         '1 Kor 15,1-19', // poniedziałek
@@ -218,7 +218,7 @@
         // '10 OZ II|Syr 46,1-12', // niedziela
         // 'Joz 1,1-18', // poniedziałek
         '10 OZ|Joz 2,1-24', // wtorek
-        'Joz 3,1-17;4,14-19;5,10-12', // środa
+        'Joz 3,1-17;4,14-19;5,10-12', // środa Na pewno 17, momo że w Kalendarzayku z godzinami czytań
         'Joz 5,13-6,21', // czwartek
         'Joz 7,4-26', // piątek
         'Joz 10,1-14;11,15-17', // sobota
@@ -233,7 +233,7 @@
         'Sdz 16,4-6.16-31', // poniedziałek
         '1 Sm 1,1-19', // wtorek
         '1 Sm 1,20-28; 2,11-21', // środa
-        '???', // czwartek
+        '1 Sm 2,22-36', // czwartek
         '1 Sm 3,1-21', // piątek
         '1 Sm 4,1-18', // sobota
         '13 OZ I|1 Sm 5,16-6,5a.10-12.19-21;7,1', // niedziela
@@ -243,7 +243,7 @@
         '1 Sm 12,1-25', // czwartek
         '1 Sm 15,1-23', // piątek
         '1 Sm 16,1-13', // sobota
-        '14 OZ II@@|1 Sm 17,1-10.23b-26.40-51', // niedziela
+        '14 OZ II|1 Sm 17,1-10.23b-26.40-51', // niedziela
         '1 Sm 17,57-18,9.20-30', // poniedziałek
         '1 Sm 19,8-10;20,1-17', // wtorek
         '1 Sm 21,1-10;22,1-5', // środa
@@ -257,7 +257,7 @@
         '2 Sm 7,1-25', // czwartek
         '2 Sm 11,1-17.26-27', // piątek
         '2 Sm 12,1-25', // sobota
-        '16 OZ IV|2 Sm 15,7-14.@24-30;16,5-13', // niedziela
+        '16 OZ IV|2 Sm 15,7-14.24-30;16,5-13', // niedziela
         '2 Sm 18,6-17.@24-32;19,1-4', // poniedziałek
         '2 Sm 24,1-4.@10-18.24b-25', // wtorek
         '1 Krn 22,5-19', // środa

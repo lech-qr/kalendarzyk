@@ -48,7 +48,7 @@
     $_05_nr_dnia_roku = $_04b_nr_dnia_roku + $_04b_ilosc_d;
     $_05_nr_dnia = 1; // Stała poza miesiącem wielkanocnym
     $_05_nazwa_d = 5;
-    $_05_przelam = 17;
+    $_05_przelam = 16;
     $_05_ilosc_d = 31; // Stała
     
     // Czerwiec

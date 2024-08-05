@@ -103,7 +103,7 @@
         'Rdz 11,1-9; Ps 33; Mk 8,34-9,1', 
         'Hbr 11,1-7; Ps 145; Mk 9,2-13', 
  
-        'VII Niedziela zwykła|1Sm 26,2.7-9.12-13.22-23; Ps 103;@1 Kor 15,45-49; Łk 6,27-38', 
+        'VII Niedziela zwykła|1 Sm 26,2.7-9.12-13.22-23; Ps 103;@1 Kor 15,45-49; Łk 6,27-38', 
         'Syr 1,1-10; Ps 93; Mk 9,14-29', 
         'Syr 2,1-11; Ps 37; Mk 9,30-37', 
         'Syr 4,11-19; Ps 119; Mk 9,38-40',
@@ -112,7 +112,7 @@
         'Syr 17,1-15; Ps 103; Mk 10,13-16',
 
         'VIII Niedziela zwykła|Syr 27,4-7; Ps 92; 1 Kor 15,54b-58;@Łk 6,39-45',
-        '???',
+        'Syr 17,24-29; Ps 32; Mk 10,17-27',
         'Syr 35,1-12; Ps 50; Mk 10,28-31',
         // Wielki Post
         '???', 
@@ -126,7 +126,7 @@
         'Jon 3,1-10; Ps 51; Łk 11,29-32', 
         'Est 4,17k.l-m.r-u; Ps 138; Mt 7,7-12', 
         'Ez 18,21-28; Ps 130; Mt 5,20-26', 
-        'Pwt 26,16-19; Ps 119; Mt 5,43-48v', 
+        'Pwt 26,16-19; Ps 119; Mt 5,43-48', 
  
         'II Niedziela Wielkiego Postu|Rdz 15,5-12.17-18; Ps 27; Flp 3,17-4,1;@Łk 9,28b-36', 
         'Dn 9,4b-10; Ps 79; Łk 6,36-38', 
@@ -153,14 +153,14 @@
         'Jr 11,18-20; Ps 7; J 7,40-53', 
  
         'V Niedziela Wielkiego Postu|Iz 43,16-21; Ps 126; Flp 3,8-14; J 8,1-11', 
-        'Dn 13,1-9.15-17.19-30.33-62; Ps 23; J 8,1-11', 
+        'Dn 13,1-9.15-17.19-30.33-62; Ps 23; J 8,12-20', // J 8,1-11 W roku C jeżeli tę ewangelię oczytano w niedziele, należy odczytać następującą J 8,12-20
         'Lb 21,4-9; Ps 102; J 8,21-30', 
-        'Dn 3,14-20.91-92.95; PS: Dn 3,52-56;@J 8,31-42', 
+        'Dn 3,14-20.91-92.95; PS: Dn 3,52-56; J 8,31-42', 
         'Rdz 17,3-9; Ps 105; J 8,51-59', 
         'Jr 20,10-13; Ps 18; J 10,31-42', 
         'Ez 37,21-28; PS: Jr 31,10-13; J 11,45-57', 
 
-        'Niedziela Palmowa czyli Męki Pańskiej|<span>procesja z palmami:</span> Łk 19,28-40@<span>msza:</span> Iz 50,4-7; Ps 22; Flp 2,6-11;@Łk 22,14-23,56', 
+        'Niedziela Palmowa czyli Męki Pańskiej|<span>procesja z palmami:</span> Łk 19,28-40@<span>msza:</span> Iz 50,4-7; Ps 22; Flp 2,6-11; Łk 22,14-23,56', 
         'Iz 42,1-7; Ps 27; J 12,1-11', 
         'Iz 49,1-6; Ps 71; J 13,21-33.36-38', 
         'Iz 50,4-9a; Ps 69; Mt 26,14-25', 
@@ -192,15 +192,15 @@
         'Dz 9,1-20; Ps 117; J 6,52-59', 
         'Dz 9,31-42; Ps 116B; J 6,55.60-69', 
  
-        'IV Niedziela Wielkanocna|Dz 13,14.43-52; Ps 100; Ap 7,9.14b-17;@J 10,27-30', 
-        'Dz 11,1-18; Ps 42; J 10,11-18', 
+        'IV Niedziela Wielkanocna|Dz 13,14.43-52; Ps 100;@Ap 7,9.14b-17; J 10,27-30', 
+        'Dz 11,1-18; Ps 42; J 10,1-10', // W roku B i C -> J 10,1-10 | W roku A -> J 10,11-18 - poniedziałek po IV Niedzieli Wielkanocnej
         'Dz 11,19-26; Ps 87; J 10,22-30', 
         'Dz 12,24-13,5a; Ps 67; J 12,44-50', 
         'Dz 13,13-25; Ps 89; J 13,16-20', 
         'Dz 13,26-33; Ps 2; J 14,1-6', 
         'Dz 13,44-52; Ps 98; J 14,7-14', 
  
-        'V Niedziela Wielkanocna|Dz 14,21-27; Ps 145; Ap 21,1-5a;@J 13,31-33a.34-35', 
+        'V Niedziela Wielkanocna|Dz 14,21b-27; Ps 145; Ap 21,1-5a; J 13,31-33a.34-35', 
         'Dz 14,5-18; Ps 115; J 14,21-26', 
         'Dz 14,19-28; Ps 145; J 14,27-31a', 
         'Dz 15,1-6; Ps 122; J 15,1-8', 
@@ -208,7 +208,7 @@
         'Dz 15,22-31; Ps 57; J 15,12-17', 
         'Dz 16,1-10; Ps 100; J 15,18-21', 
  
-        'VI Niedziela Wielkanocna|Dz 15,1-2.22-29; Ps 67; Ap 21,10-14.22-23;@J 14,23-29', 
+        'VI Niedziela Wielkanocna|Dz 15,1-2.22-29; Ps 67; Ap 21,10-14.22-23; J 14,23-29', 
         'Dz 16,11-15; Ps 149; J 15,26-16,4a', 
         'Dz 16,22-34; Ps 138; J 16,5-11', 
         'Dz 17,15.22-18,1; Ps 148; J 16,12-15', 
