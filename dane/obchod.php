@@ -237,11 +237,7 @@
         '', // 3
         'św Jana Marii Vianneya pr (wo)', // 4
         'Rocznica poświęcenia rzymskiej Bazyliki Najśw Maryi Panny (wd)', // 5
-        // Święto Pańskie jest ważniejsze od niedzieli. Stąd to oznaczenie
-        // Rok A 
-        // 'Przemienienie Pańskie (święto Pańskie)|Dn 7,9-10.13-14 lub 2 P 1,16-19; Ps 97; Mt 17,1-9~2 Kor 3,7-4,6', // 6
-        // Rok B
-        'Przemienienie Pańskie (święto Pańskie)|Dn 7,9-10.13-14 lub 2 P 1,16-19; Ps 97; Mk 9,2-10~2 Kor 3,7-4,6', // 6        
+        'Przemienienie Pańskie (święto Pańskie)|Dn 7,9-10.13-14 lub 2 P 1,16-19; Ps 97; ~2 Kor 3,7-4,6', // 6
         'św m Sykstusa II pp i Towarzyszy (wd), św Kajetana pr (wd)', // 7
         'św Dominika pr (wo)', // 8
         'św Teresy Benedykty od Krzyża dz m - patronki Europy (ś)|Oz 2,16b.17b.21-22; Ps 45; Mt 25,1-13~2 Kor 4,7-5,8', // 9

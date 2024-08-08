@@ -89,6 +89,23 @@ $(document).ready(function () {
     $('.d_roku_212 .dane .obchod .wspomnienie').css('letter-spacing', '-0.02em');
     $('.d_roku_212 .dane .prawe').prepend('<p class="oznaczenie">13 OZ I</p>');
 
+    // Podwyższenie Krzyża Świętego (ś)
+    $('.d_roku_287').find('.dane .niedziela').html('Podwyższenie Krzyża Świętego (ś)');
+    $('.d_roku_288').find('.dane .sigla').html('Lb 21,4b-9; Ps 78; Flp 2,6-11; J 3,13-17');
+    $('.d_roku_288').find('.dane .prawe .g_czyt').html('Ga 2,19-3,7.13-14;6,14-16');
+    $('.d_roku_288').find('.dane .obchod .swieto.zniesione').remove();
+    $('.d_roku_288 .dane .prawe .oznaczenie').remove();
+    $('.d_roku_289 .dane .prawe').prepend('<p class="oznaczenie">24 OZ IV</p>');
+
+    // Wspomnienie Wszystkich Wiernych Zmarłych
+    $('.d_roku_336').find('.dane .niedziela').html('Wspomnienie Wszystkich Wiernych Zmarłych');
+    $('.d_roku_336').find('.dane .niedziela').css('letter-spacing', '0.1em');
+    $('.d_roku_337').find('.dane .sigla').html('I msza: Hi 19,1.23-27a; Ps 27;<br>1 Kor 15,20-24a.25-28;<br>Łk 23,44-46.50.52-53;24,1-6a<br>II msza: Dn 12,1-3; Ps 42-43; Rz 6,3-9; J 11,32-45<br>III msza: Mdr 3,1-9; Ps 103; 2 Kor 4,14-5,1; J 14,1-6');
+    $('.d_roku_337').find('.dane .prawe .g_czyt').html('gcz: 1 Kor 15,12-34<br>lub 1 Kor 15,35-57<br>lub 2 Kor 4,16-5,10');
+    $('.d_roku_337').find('.dane .obchod .swieto.zniesione').remove();
+    $('.d_roku_337 .dane .prawe .oznaczenie').remove();
+    $('.d_roku_338 .dane .prawe').prepend('<p class="oznaczenie">31 OZ III</p>');
+
     $('.d_roku_336 .dane > p.niedziela').css('background-color', 'transparent');
     // $('.d_roku_372').find('.dane .sigla').html('Rdz 3,9-15.20; Ps 98; Flp 1,4-6.8-11; Łk 1,26-38');
     // $('.d_roku_372').find('.dane .obchod').remove();
@@ -130,6 +147,17 @@ $(document).ready(function () {
     } else if (cykl[0] === "C") {
         // Rok C
         $('.d_roku_' + narodzeniePanskie).nextAll('.dzien.N').find('.dane .sigla').html('1 Sm 1,20-22.24-28; Ps 84;@1 J 3,1-2.21-24; Łk 2,41-52');
+    }
+    // Niedziela po Bożym Narodzeniu, ale z kolejnego roku - stąd przesunięcie o jeden rok
+    if (cykl[0] === "A") {
+        // Rok A - czytanie z B
+        $('.d_roku_' + narodzeniePanskie2).nextAll('.dzien.N').find('.dane .sigla').html('Rdz 15,1-6;21,1-3; Ps 105;<br>Hbr 11,8.11-12.17-19; Łk 2,22-40');
+    } else if (cykl[0] === "B") {
+        // Rok B - czytanie z C
+        $('.d_roku_' + narodzeniePanskie2).nextAll('.dzien.N').find('.dane .sigla').html('1 Sm 1,20-22.24-28; Ps 84;@1 J 3,1-2.21-24; Łk 2,41-52');
+    } else if (cykl[0] === "C") {
+        // Rok C - wycztanie z A
+        $('.d_roku_' + narodzeniePanskie2).nextAll('.dzien.N').find('.dane .sigla').html('Syr 3,2-6.12-14; Ps 128; Kol 3,12-21;<br> Mt 2,13-15.19-23');
     }
     // 1 stycznia
     $('.d_roku_' + (narodzeniePanskie + 6)).find('.niedziela').html('Świętej Bożej Rodzicielki Maryi (u)');
@@ -309,7 +337,26 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 69)).find('.obchod .wspomnienie').prepend('Niepokalanego Serca Najśw Maryi Panny (wo)<br>*');
 
     // Wspólne dla wszystkich lat
+    if (dniRoku === 365) {
+        // Nie przestępny
+        // Przemienienie Pańskie (ś) - 6 sierpnia
+        var przemienieniePanskie = 249;
+    } else {
+        // Przestępny
+        // Przemienienie Pańskie (ś) - 6 sierpnia
+        var przemienieniePanskie = 250;
+    }
     // 
+    if (cykl[0] === "A") {
+        // Rok A
+        $('.d_roku_' + przemienieniePanskie).find('.sigla').append('Mt 17,1-9');
+    } else if (cykl[0] === "B") {
+        // Rok B
+        $('.d_roku_' + przemienieniePanskie).find('.sigla').append('Mk 9,2-10');
+    } else if (cykl[0] === "C") {
+        // Rok C
+        $('.d_roku_' + przemienieniePanskie).find('.sigla').append('Łk 9,28b-36');
+    }
     // Oktawy 
     // Dodaj klasę oktawa do dni Bożego Narodzenia (obu) i od Wielkanocy
     for (var i = narodzeniePanskie; i <= (narodzeniePanskie + 7); i++) {

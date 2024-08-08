@@ -304,7 +304,7 @@
         'Kpł 23,1.4-11.15-16.27.34b-37;@Ps 81; Mt 13,54-58', 
         'Kpł 25,1.8-17; Ps 67; Mt 14,1-12', 
   
-        'XVIII Niedziela Zwykła|Koh 1,2;2,21-23; Ps 95; Kol 3,1-5.9-11;@Łk 12,13-21', 
+        'XVIII Niedziela Zwykła|Koh 1,2;2,21-23; Ps 90; Kol 3,1-5.9-11;@Łk 12,13-21', 
         'Lb 11,4b-15; Ps 81; Mt 14,13-21', 
         'Lb 12,1-13; Ps 51; Mt 14,22-36', 
         'Lb 13,1-2.25-14,1.26-30.34-35; Ps 106; Mt 15,21-28', 
@@ -459,21 +459,23 @@
  
         'III Niedziela Adwentu|Iz 35,1-6a.10; Ps 146; Jk 5,7-10; Mt 11,2-11', 
         'Lb 24,2-7.15-17a; Ps 25; Mt 21,23-27', 
+        'So 3,1-2.9-13; Ps 34; Mt 21,28-32',
         'Rdz 49,1a.2.8-10; Ps 72; Mt 1,1-17', 
         'Jr 23,5-8; Ps 72; Mt 1,18-24', 
         'Sdz 13,2-7.24-25a; Ps 71; Łk 1,5-25', 
         'Iz 7,10-14; Ps 24; Łk 1,26-38', 
-        'Pnp 2,8-14 lub So 3,14-17; Ps 33; Łk 1,39-45', 
+        // 'Pnp 2,8-14 lub So 3,14-17; Ps 33; Łk 1,39-45', 
  
         'IV Niedziela Adwentu|Iz 7,10-14; Ps 24; Rz 1,1-7; Mt 1,18-24', 
+        '1 Sm 1,24-28; PS: 1 Sm 2,1.4-8; Łk 1,46-56',
         'Ml 3,1-4.23-24; Ps 25; Łk 1,57-66',
         '2 Sm 7,1-5.8b-12.14a.16; Ps 89; Łk 1,67-79',
         '???', 
-        '???',
         '1 J 2,3-11; Ps 96; Łk 2,22-35', 
         '1 J 2,12-17; Ps 96; Łk 2,36-40', 
 
-        'Świętej Rodziny: Jezusa, Maryi i Józefa (ś)|Rdz 15,1-6;21,1-3; Ps 105;@Hbr 11,8.11-12.17-19; Łk 2,22-40', //Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.
+        'Świętej Rodziny: Jezusa, Maryi i Józefa (ś)|', //Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.
+        '1 J 2,3-11; Ps 96; Łk 2,22-35,',
         '1 J 2,12-17; Ps 96; Łk 2,36-40',
         '1 J 2,18-21; Ps 96; J 1,1-18',
     );

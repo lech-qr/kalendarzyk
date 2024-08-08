@@ -145,11 +145,11 @@ $(document).ready(function () {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
             // św ap Piotra i Pawła (u) - czerwony
-            if ($(this).is(':contains("św ap Piotra i Pawła (u)")')) {
+            if ($(this).is(':contains("św ap Piotra i Pawła (u)")') && !$(this).hasClass('S')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
             // Jeśli piotra i Pawła wypadnie w niedzielę
-            if ($(this).is(':contains("Świętych Apostołów Piotra i Pawła (u)")')) {
+            if ($(this).is(':contains("Świętych Apostołów Piotra i Pawła (u)")') && $(this).hasClass('S')) {
                 $(this).next('.dzien').find('.dane .prawe p.kolor').text('cz');
             }
             // św Tomasza ap (ś) - czerwony
@@ -169,16 +169,25 @@ $(document).ready(function () {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
             // Podwyższenie Krzyża Świętego (ś) - czerwony
-            if ($(this).is(':contains("Podwyższenie Krzyża Świętego (ś)")')) {
+            if ($(this).is(':contains("Podwyższenie Krzyża Świętego (ś)")') && !$(this).hasClass('S')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
+            // Podwyższenie Krzyża Świętego (ś) - wypadnie w niedzielę
+            if ($(this).is(':contains("Podwyższenie Krzyża Świętego (ś)")') && $(this).hasClass('S')) {
+                $(this).next('.dzien').find('.dane .prawe p.kolor').text('cz');
+            }
+
             // św ap Szymona i Judy Tadeusza (ś) - czerwony
             if ($(this).is(':contains("św ap Szymona i Judy Tadeusza (ś)")')) {
                 $(this).find('.dane .prawe p.kolor').text('cz');
             }
             // Wspomnienie Wszystkich Wiernych Zmarłych - fioletowy
-            if ($(this).is(':contains("Wspomnienie Wszystkich Wiernych Zmarłych")')) {
+            if ($(this).is(':contains("Wspomnienie Wszystkich Wiernych Zmarłych")') && !$(this).hasClass('S')) {
                 $(this).find('.dane .prawe p.kolor').text('f');
+            }
+            // Wspomnienie Wszystkich Wiernych Zmarłych - fioletowy - wypadnie w niedzielę
+            if ($(this).is(':contains("Wspomnienie Wszystkich Wiernych Zmarłych")') && $(this).hasClass('S')) {
+                $(this).next('.dzien').find('.dane .prawe p.kolor').text('f');
             }
             // Niepokalanego Serca Najśw Maryi Panny (wo) - biały
             if ($(this).is(':contains("Niepokalanego Serca Najśw Maryi Panny")')) {
@@ -207,8 +216,8 @@ $(document).ready(function () {
     $('article div.dane p.swieto:contains("Świętej Bożej Rodzicielki Maryi (u)")').remove();
     $('article div.dane p.niedziela:contains("Niedziela Wielkanocna Zmartwychwstania Pańskiego")').css('letter-spacing', '-0.03em');
     $('article div.dane p.niedziela:contains("II Niedziela Wielkanocna - Miłosierdzia Bożego (u)")').css('letter-spacing', '0em');
-    $('article div.dane p.niedziela:contains("Zesłanie Ducha Świętego - Pentekoste (u)")').css('letter-spacing', '0.04em');
-    $('article div.dane p.niedziela:contains("Świętej Rodziny: Jezusa, Maryi i Józefa (ś)")').css('letter-spacing', '0.04em');
+    $('article div.dane p.niedziela:contains("Zesłanie Ducha Świętego - Pentekoste (u)")').css('letter-spacing', '0.1em');
+    $('article div.dane p.niedziela:contains("Świętej Rodziny: Jezusa, Maryi i Józefa (ś)")').css('letter-spacing', '0.1em');
     $('article div.dane p.swieto:contains("Najśw Maryi Panny Królowej Polski - głównej patronki Polski (u)")').parent('.dane').find('.prawe .g_czyt').prepend('<br>');
     $('article div.dane p.wspomnienie:contains("św Marty, Mari i Łazarza (wo)")').closest('.dane').find('.sigla').append('<br><span>lub czyt. własne:</span><br>1 J 4,7-16; Ps 34; J 11,19-27 <span>lub</span> Łk 10,38-42');
     $('article div.dane p.swieto:contains("św Teresy Benedykty od Krzyża dz m - patronki Europy (ś)")').closest('.dane').find('.prawe').prepend('<p>&nbsp;</p>');
@@ -246,7 +255,7 @@ $(document).ready(function () {
     JezChrKW_S = Number(values[0]);
     $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').html('Jezusa Chrystusa Króla Wszechświata (u)');
     $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').css('letter-spacing', '0.1em');
-    $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('2 Sm 5, 1-3; Ps 122; Kol 1, 12-20; Łk 23, 35-43');
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('2 Sm 5,1-3; Ps 122; Kol 1,12-20; Łk 23,35-43');
     $('.d_roku_' + (JezChrKW_S + 1)).find('.oznaczenie').remove();
     $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27<br>lub Ap 1,4-6.10.12-18;<br>2,26-28;3,5.12.20-21');
     $('.d_roku_' + (JezChrKW_S + 1)).find('.prawe .kolor').html('b');
