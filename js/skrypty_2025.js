@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var cykl = 'C, I';
 
-    var kolor = "#89764b" // złoty
+    var kolor = "#866e4b" // złoty Panton 873 C
     // var kolor = "#d60057" // Czerwony
     // var kolor = "#40ae49" // Zielony
     // var kolor = "#e71294" // Fioletowy

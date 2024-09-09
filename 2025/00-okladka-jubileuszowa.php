@@ -4,7 +4,7 @@
         <div class="tresc">    
             <h1>Czytania<br>liturgiczne</h1>
             <h2><?php echo $rok_kal?></h2>
-            <img class="carmen" src="../images/carmen_.jpeg" alt="Carmen" />
+            <img class="carmen" src="../images/carmen.jpg" alt="Carmen" />
             <h6>Carmen Hernàndez Barrera</h6>
             <h3>Fundacja Godne Życie<br>KRS 0000083782</h3>
         </div>
