@@ -220,7 +220,6 @@ $(document).ready(function () {
     $('article div.dane p.niedziela:contains("Świętej Rodziny: Jezusa, Maryi i Józefa (ś)")').css('letter-spacing', '0.1em');
     $('article div.dane p.swieto:contains("Najśw Maryi Panny Królowej Polski - głównej patronki Polski (u)")').parent('.dane').find('.prawe .g_czyt').prepend('<br>');
     $('article div.dane p.wspomnienie:contains("św Marty, Mari i Łazarza (wo)")').closest('.dane').find('.sigla').append('<br><span>lub czyt. własne:</span><br>1 J 4,7-16; Ps 34; J 11,19-27 <span>lub</span> Łk 10,38-42');
-    $('article div.dane p.swieto:contains("św Teresy Benedykty od Krzyża dz m - patronki Europy (ś)")').closest('.dane').find('.prawe').prepend('<p>&nbsp;</p>');
     $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').prev('.dzien').find('.dane').append('<p class="odstep">&nbsp;</p><p class="niedziela">Wniebowzięcie Najśw Maryi Panny (u)</p>');
     $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').addClass('nakaz');
     $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').find('.dane p.swieto').empty();
@@ -230,10 +229,16 @@ $(document).ready(function () {
     $('article div.dane p.niedziela').filter(function () {
         return $(this).text() === "XVIII Niedziela Zwykła";
     }).closest('.dzien').next('.dzien').find('.g_czyt').before('<p class="tom">IV tom brew.</p>');
+    // Jeżeli Wszystkich Świętych wypadnie w niedzielę
+    $('section[id^="listopad"] .lewa .tresc .dzien.pierwszy').remove();
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').addClass('nakaz');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').before('<div class="dzien pierwszy" style="padding: 0px; height: 3mm;"><div class="nr_dnia"></div><div class="nazwad"></div><div class="dane"><p class="niedziela">Wszystkich Świętych (u)</p></div></div>');
+    $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').addClass('nakaz');
+    $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dane').find('.sigla').text('Ap 7,2-4.9-14; Ps 24; 1 J 3,1-3; Mt 5,1-12a');
+    $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dane').find('.prawe .oznaczenie').remove();
+    $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dane').find('.prawe .g_czyt').text('Ap 5,1-14');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').remove();
-    $('article div.dane p.swieto:contains("Wspomnienie Wszystkich Wiernych Zmarłych (ś)")').text('*Wspomnienie Wszystkich Wiernych Zmarłych');
+    // $('article div.dane p.swieto:contains("Wspomnienie Wszystkich Wiernych Zmarłych (ś)")').text('*Wspomnienie Wszystkich Wiernych Zmarłych');
     // Święta państwowe
     $('section[id^="maj"] .nr_dnia p').filter(function () {
         return $(this).text() === "1";
@@ -255,14 +260,17 @@ $(document).ready(function () {
     JezChrKW_S = Number(values[0]);
     $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').html('Jezusa Chrystusa Króla Wszechświata (u)');
     $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').css('letter-spacing', '0.1em');
-    $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('2 Sm 5,1-3; Ps 122; Kol 1,12-20; Łk 23,35-43');
+    // W roku I
+    // $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('2 Sm 5,1-3; Ps 122; Kol 1,12-20; Łk 23,35-43');
+    // W roku II
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('Ez 34,11-12.15-17; Ps 23; 1 Kor 15,20-26.28;<br>Mt 25,31-46');
     $('.d_roku_' + (JezChrKW_S + 1)).find('.oznaczenie').remove();
-    $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27<br>lub Ap 1,4-6.10.12-18;<br>2,26-28;3,5.12.20-21');
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27<br>lub Ap 1,4-6.10.12-18;2,26-28;3,5.12.20-21');
     $('.d_roku_' + (JezChrKW_S + 1)).find('.prawe .kolor').html('b');
     $('.d_roku_' + (JezChrKW_S + 2)).find('.g_czyt').before('<p class="oznaczenie">34 OZ II</p>');
     // Nawiedzenie Najśw Maryi Panny (ś) - Czytanie z Sofoniasza jest tylko poza Okresem Wielkanocnym
     $('.dzien').each(function () {
-        if ($(this).is(':contains("Nawiedzenie Najśw Maryi Panny (ś)")') && ($('.dzien').hasClass('okrWielk'))) {
+        if ($(this).is(':contains("Nawiedzenie Najśw Maryi Panny (ś)")') && ($('.dzien').hasClass('okrWielk')) && (!$('.dzien').hasClass('N'))) {
             $(this).find('.dane .sigla').text('Rz 12,9-16b; PS: Iz 12,2-6; Łk 1,39-56');
         }
     });

@@ -18,29 +18,41 @@
         'Iz 29,1-8', // sobota
 
         '3 A III|Iz 29,13-24', // niedziela
-        'Iz 46,1-13', // poniedziałek
-        'Iz 47,1.3B-15', // wtorek
-        'Iz 48,1-11', // środa
-        'Iz 48,12-21;49,9B-13', // czwartek
-        'Iz 49,14-50,1', // piątek
-        'Iz 51,1-11', // sobota
+        'Iz 30,18-26',
+        'Iz 30,27-33;31,4-9',
+        'Iz 45,1-13',
+        'Iz 46,1-13', 
+        'Iz 47,1.3b-15',
+        'Iz 48,1-11', 
 
-        '4 A IV|Iz 51,17-52,2.7-10', // niedziela
-        'GGG', // poniedziałek
-        'GGG', // wtorek
-        'GGG', // środa
-        'GGG', // czwartek
-        'Pnp 1,1-10', // piątek
-        'Pnp 1,11-2,7', // sobota
+        '4 A IV|Iz 48,12-21;49,9b-13',
+        'Iz 49,14-50,1', 
+        'Iz 51,1-11', 
+        '@|Iz 51,17-52,2.7-10', // niedziela
+        'Iz 11,1-10',
+        '???',
+        '???',
+        '???',
+        'Pnp 1,1-10',
+        'Pnp 1,11-2,7',
+        'Pnp 2,8-3,5',
 
-        'GGG', // niedziela
+        // 'GGG', // poniedziałek
+        // 'GGG', // wtorek
+        'Pnp 4,1-5,1', // czwartek
+        'Pnp 5,2-6,3', // piątel
+        'Pnp 6,4-7,9', // sobota
+
+        'Pnp 7,10-8,7', // niedziela II Niedziela po Narodzeniu Pańskiem
         'GGG', // poniedziałek
-        'Pnp 4,1-5,1', // wtorek
-        'Pnp 5,2-6,3', // środa
-        'Pnp 6,4-7,9', // czwartek
-        'Pnp 7,10-8,7', // piątek
-        'GGG', // sobota
-        'GGG', // niedziela
+        'Iz 54,1-17', // wtorek
+        'Iz 55,1-13', // środa
+        'Iz 56,1-8', // czwartek
+        'Iz 59,15-21', // piątek
+        'Ba 4,5-29', // sobota
+
+        'godzina w JS', // Chrzest Pański - pierwsza niedziela po Objawieniu Pańskim czyli po 6 I
+
     // Okres zwykły
         'Rdz 1,1-2,4a', // poniedziałek
         'Rdz 2,4b-25', // wtorek
@@ -67,7 +79,7 @@
         
         '4 OZ IV|Rdz 27,1-29', // niedziela
         'Rdz 27,30-45', // poniedziałek
-        'Rdz 28,10-29,14', // wtorek
+        '@Rdz 28,10-29,14', // wtorek
         'Rdz 31,1-18', // środa
         'Rdz 32,3-30', // czwartek
         'Rdz 35,1-29', // piątek
@@ -209,17 +221,17 @@
         'Dz 28,1-14', // piątek
         'Dz 28,15-31', // sobota
         
-        '8 W IV|GGG', // niedziela
-        'GGG', // poniedziałek
-        '7 OZ III|2 Kor 2,12-3,6', // wtorek
-        '2 Kor 3,7-4,4', // środa
-        'GGG', // czwartek
-        '2 Kor 5,1-21', // piątek
-        '2 Kor 6,1-7,1', // sobota
+        // '8 W IV|GGG', // niedziela
+        // 'GGG', // poniedziałek
+        // '7 OZ III|2 Kor 2,12-3,6', // wtorek
+        // '2 Kor 3,7-4,4', // środa
+        // 'GGG', // czwartek
+        // '2 Kor 5,1-21', // piątek
+        // '2 Kor 6,1-7,1', // sobota
 
         '8 OZ IV|GGG', // niedziela
         '2 Kor 8,1-24', // poniedziałek
-        '2 Kor 9,1-15', // wtorek
+        '8 OZ IV|2 Kor 9,1-15', // wtorek
         '2 Kor 10,1-11,6', // środa
         'GGG', // czwartek
         '2 Kor 11,30-12,13', // piątek
@@ -230,7 +242,7 @@
         'Ga 2,11-3,14', // wtorek
         'Ga 3,15-4,7', // środa
         'Ga 4,8-31', // czwartek
-        'GGG', // piątek
+        'Ga 5,1-25GG', // piątek
         'Ga 5,25-6,18', // sobota
 
         '10 OZ II|Flp 1,1-11', // niedziela
@@ -302,7 +314,7 @@
         'Jl 2,12-27', // wtorek
         'Jl 3,1-4,8', // środa
         'Jl 4,9-21', // czwartek
-        'Ml 1,1-14;2,13-16', // piątek
+        '@Ml 1,1-14;2,13-16', // piątek
         'Ml 3,1-24', // sobota
         
         '19 OZ III|Jon 1,1-2,1.11', // niedziela
@@ -361,10 +373,10 @@
         'Tb 7,1.8-17;8,4-16', // piątek
         'Tb 10,8-11,17', // sobota
         
-        '26 OZ II|Jdt 2,1-6;3,6a;@4,1-2.9-15', // niedziela
+        '26 OZ II|Jdt 2,1-6;3,6a;4,1-2.9-15', // niedziela
         'Jdt 5,1-21', // poniedziałek
         'Jdt 6,1-10.14-16;7,1.4-5', // wtorek
-        'Jdt 8,1a.10-14.28-33;@9,1-6.14', // środa
+        'Jdt 8,1a.10-14.28-33;9,1-6.14', // środa
         'Jdt 10,1-5.11-17;11,1-8.20-23', // czwartek
         'Jdt 12,1-13,3', // piątek
         'Jdt 13,4-20', // sobota
@@ -426,7 +438,7 @@
         'Dn 3,8-12.19-24.91-97', // sobota
         
         '34 OZ II|GGG', // niedziela  // Jezusa Chrystusa Króla Wszechświata (u) - ostatnia niedziela roku liturgicznego (między 20 a 26 listopada)
-        'Dn 5,1-2.5-9.@13-17.25-31', // poniedziałek
+        'Dn 5,1-2.5-9.13-17.25-31', // poniedziałek
         'Dn 6,3-27', // wtorek
         'Dn 8,1-26', // środa
         'Dn 9,1-4a.18-27', // czwartek
@@ -454,6 +466,10 @@
         '3 A III|Rt 4,1-22', // niedziela
         '1 Krn 17,1-15', // poniedziałek
         // Od 17 do 24 grudnia są inne godziny czytań
+        'Mi 4,1-7', // wtorek
+        'Mi 4,14-5,7', // środa
+
+
         'Iz 40,1-11', // 17
         'Iz 40,12-18.21-31', // 18
         'Iz 41,8-20', // 19

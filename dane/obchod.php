@@ -133,7 +133,7 @@
     $maj = array(1 => 
         'św Józefa rzemieślnika (wd)', // 1
         'św Atanazego bp dK (wo)', // 2
-        'Najśw Maryi Panny Królowej Polski - głównej patronki Polski (u)|Ap 11,19a;12,1-6a.10ab;@PS: Jdt 13,18-20; Kol 1,12-16; J 19,25-27~Ap 12,1-9.13-17', // 3
+        'Najśw Maryi Panny Królowej Polski - @głównej patronki Polski (u)|Ap 11,19a;12,1-6a.10ab;@PS: Jdt 13,18-20; Kol 1,12-16; J 19,25-27~Ap 12,1-9.13-17', // 3
         'św Floriana m (wo)', // 4
         'św Stanisława Kazimierczyka pr (wd)', // 5
         'św ap Filipa i Jakuba (ś)|1 Kor 15,1-8a; Ps 19; J 14,6-14~Dz 5,12-32', // 6
@@ -240,7 +240,7 @@
         'Przemienienie Pańskie (święto Pańskie)|Dn 7,9-10.13-14 lub 2 P 1,16-19; Ps 97; ~2 Kor 3,7-4,6', // 6
         'św m Sykstusa II pp i Towarzyszy (wd), św Kajetana pr (wd)', // 7
         'św Dominika pr (wo)', // 8
-        'św Teresy Benedykty od Krzyża dz m - patronki Europy (ś)|Oz 2,16b.17b.21-22; Ps 45; Mt 25,1-13~2 Kor 4,7-5,8', // 9
+        'św Teresy Benedykty od Krzyża dz m - @patronki Europy (ś)|Oz 2,16b.17b.21-22; Ps 45; Mt 25,1-13~2 Kor 4,7-5,8', // 9
         'św Wawrzyńca dn m (ś)|2 Kor 9,6-10; Ps 112; J 12,24-26~Dz 6,1-6;8,1.4-8', // 10
         'św Klary dz (wo)', // 11
         'św Joanny Franciszki de Chantal zk (wd)', // 12
@@ -362,7 +362,7 @@
         '', // 27
         '', // 28
         '', // 29
-        'św Andrzeja ap (ś)|Rz 10,9-18; Ps 19; Mt 4,18-22~1 Kor 1,18-2,5', // 30
+        'św Andrzeja ap (ś)|Iz 49,1-6 lub Rz 10,9-18; Ps 19; Mt 4,18-22~1 Kor 1,18-2,5', // 30
     );
         
     $grudzien = array(1 => 
