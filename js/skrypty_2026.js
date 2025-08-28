@@ -61,9 +61,6 @@ $(document).ready(function () {
     // $('.d_roku_63').find('.dane').append('<p class="niedziela">Ofiarowanie Pańskie (ś)</p>');
     // $('.d_roku_64 .dane .sigla').text('Ml 3,1-4; Ps 24; Hbr 2,14-18; Łk 2,22-40');
     // $('.d_roku_64 .dane .obchod').remove();
-    $('.d_roku_64').find('.dane .prawe .g_czyt').before('<p class="oznaczenie">4 OZ</p>');
-    $('.d_roku_64').find('.dane .prawe .g_czyt').html('gcz: Wj 13,1-3a.11-16');
-    $('.d_roku_65').find('.dane .prawe .g_czyt').before('<p class="oznaczenie">IV ???</p>');
     // św Wojciecha bp m - głównego patrona Polski (u) - jeśli wypada w oktawie, trzeba je przenieść
     // $('.d_roku_144 .dane .swieto').remove();
     // $('.d_roku_144 .dane .sigla').text('Dz 3,1-10; Ps 105; Łk 24,13-35');

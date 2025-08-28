@@ -38,7 +38,7 @@
         'Pnp 2,8-3,5',
 
         // 'GGG', // poniedziałek
-        // 'GGG', // wtorek
+        'GGG', // wtorek
         'Pnp 4,1-5,1', // czwartek
         'Pnp 5,2-6,3', // piątel
         'Pnp 6,4-7,9', // sobota
@@ -49,8 +49,7 @@
         'Iz 55,1-13', // środa
         'Iz 56,1-8', // czwartek
         'Iz 59,15-21', // piątek
-        'Ba 4,5-29', // sobota
-
+        // 'Ba 4,5-29', // sobota
         'godzina w JS', // Chrzest Pański - pierwsza niedziela po Objawieniu Pańskim czyli po 6 I
 
     // Okres zwykły

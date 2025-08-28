@@ -230,7 +230,8 @@ $(document).ready(function () {
         return $(this).text() === "XVIII Niedziela Zwykła";
     }).closest('.dzien').next('.dzien').find('.g_czyt').before('<p class="tom">IV tom brew.</p>');
     // Jeżeli Wszystkich Świętych wypadnie w niedzielę
-    $('section[id^="listopad"] .lewa .tresc .dzien.pierwszy').remove();
+    // $('section[id^="listopad"] .lewa .tresc .dzien.pierwszy').remove();
+    $('section[id*="listopad"]:not([id*="grudzień"]) .lewa .tresc .dzien.pierwszy').remove();
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').addClass('nakaz');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').before('<div class="dzien pierwszy" style="padding: 0px; height: 3mm;"><div class="nr_dnia"></div><div class="nazwad"></div><div class="dane"><p class="niedziela">Wszystkich Świętych (u)</p></div></div>');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dzien').addClass('nakaz');
@@ -246,7 +247,8 @@ $(document).ready(function () {
     $('section[id^="maj"] .nr_dnia p').filter(function () {
         return $(this).text() === "3";
     }).closest('.dzien').addClass('panstwowe');
-    $('section[id^="listopad"] .nr_dnia p:contains("11")').closest('.dzien').addClass('panstwowe');
+    // $('section[id^="listopad"] .nr_dnia p:contains("11")').closest('.dzien').addClass('panstwowe');
+    $('section[id*="listopad"]:not([id*="grudzień"]) .nr_dnia p:contains("11")').closest('.dzien').addClass('panstwowe');
     // Pczątek czasu letniego - ostatnia niedziela marca
     $('section[id^="marzec"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').after('<p class="opis">początek czasu letniego</p>');
     // Rocznica poświęcenia własnego kościoła (u) - ostatnia niedziala października
@@ -310,44 +312,125 @@ $(document).ready(function () {
     // Pion
     $('article.wzor_A > div.tresc.skrocony .zawartosc').append('<img class="linia pionowa" src="../images/linie/skrocony_pion.svg" alt="Linia pionowa" />');
 
+    // $('article .tresc').each(function () {
+    //     const $scope = $(this);
+    //     const $dni = $scope.find('.dzien'); // zamiast .children
+
+    //     console.log('Liczba .dzien w tym .tresc:', $dni.length);
+
+    //     // 1) wylicz i zapisz h_dnia
+    //     $dni.each(function () {
+    //         const $d = $(this);
+    //         const h_lewe = $d.children('.dane').outerHeight() || 0;
+    //         const h_prawe = $d.find('.dane .prawe').outerHeight() || 0;
+    //         const h_dnia = Math.max(h_lewe, h_prawe);
+    //         // zapis przez .data 
+    //         $d.data('h_dnia', h_dnia);
+    //         // jeśli jednak chcesz mieć też atrybut w DOM:
+    //         $d.attr('data-h_dnia', h_dnia);
+    //     });
+
+    //     // 2) suma
+    //     let suma_H = 0;
+    //     let ilosc = $(this).children('.dzien').length;
+
+    //     $dni.each(function () {
+    //         const val = Number($(this).data('h_dnia')) || 0; // spójnie .data
+    //         suma_H += val;
+    //     });
+    //     // Policz ile odstępu zostaje do dyspozycji
+    //     odstep = ((525 - suma_H) / ilosc) / 2;
+    //     console.log('Suma wysokości dni w tym .tresc:', suma_H);
+    //     console.log('Czyli każdy dzień powinien mieć:', odstep);
+    //     $dni.each(function () {
+    //         h_dnia = $(this).data('h_dnia') || 0;
+    //         $(this).not('.pierwszy').css({
+    //             // height: h_dnia + 2 * odstep
+    //         });
+    //         $(this).not('.pierwszy').find('.dane').css({
+    //             height: h_dnia + 2 * odstep,
+    //             paddingTop: odstep,
+    //             paddingBottom: odstep,
+    //         });
+    //         $(this).find('.prawe').css({
+    //             height: h_dnia + 2 * odstep,
+    //             top: odstep / 2,
+    //             // paddingTop: odstep,
+    //             paddingBottom: odstep,
+    //             // marginLeft: 0,
+    //             // marginRight: 0
+    //         });
+    //     });
+    // });
+
     //Ustalanie wysokości    
-    // Policz wysokość - porównaj lewą i prawą i ustaw wysokość dnia na większą z tych dwóch
+    // Pomocniczo: ustaw zmienne CSS dla ::before na podstawie aktualnych h i pad
+    function ustawBeforeZmienne($dzien, h) {
+        if ($dzien.is('.N, .nakaz')) {
+            const pad = parseFloat($dzien.css('padding-top')) || 0; // zakładamy symetryczny padding góra/dół
+            $dzien.children('.dane').css({
+                '--h': `${h}px`,
+                '--pad': `${pad}px`
+            });
+        }
+    }
+
+    // 1) Wyrównanie wysokości w .dzien + setup ::before dla .N / .nakaz
     $('article .tresc .dzien').each(function () {
-        var h_lewe = $(this).children('.dane').outerHeight();
-        var h_prawe = $(this).find('.dane .prawe').outerHeight();
-        var h_dnia = Math.max(h_lewe, h_prawe);
-        // console.log('Wysokość dnia: ' + h_dnia);
-        $(this).find('.dane').css('height', h_dnia + 'px');
-        $(this).find('.prawe').css('height', h_dnia + 'px');
-        $(this).find('.kolor').addClass('pozycja');
+        const $dzien = $(this);
+        const $dane = $dzien.children('.dane');
+        const $prawe = $dane.find('.prawe');
+
+        const h = Math.max($dane.outerHeight(), $prawe.outerHeight());
+
+        // ustaw jednocześnie wysokość na .dane i .prawe
+        $dane.add($prawe).height(h);
+
+        // przygotuj zmienne dla ::before, jeśli .N/.nakaz
+        ustawBeforeZmienne($dzien, h);
+
+        $dzien.find('.kolor').addClass('pozycja');
     });
-    // Policz wysokość - 140mm minus suma wysokości dni
-    $('article .tresc:not(.wielkanoc)').each(function () {
-        var wysokosc = 0;
-        var ilosc = $(this).children('.dzien').length;
-        var wysok = 0;
-        $(this).children('.dzien').each(function () {
-            wysokosc = wysokosc + $(this).outerHeight();
-            // console.log('Wysokość to: ' + wysokosc);
-            // console.log('Ilość to: ' + ilosc);
+
+    // 2) Wspólna funkcja licząca odstępy/padding (bez zmian logicznych)
+    function rozplanujWysokosc($tresc, baza) {
+        const $dni = $tresc.children('.dzien');
+        const ilosc = $dni.length;
+
+        const sumaWys = $dni.toArray()
+            .reduce((acc, el) => acc + $(el).outerHeight(), 0);
+
+        const pad = ((baza - sumaWys) / ilosc) / 2;
+
+        const $pozostale = $tresc.children('.dzien:not(.pierwszy)');
+        $pozostale.css('padding', `${pad}px 0`)
+            .find('.niedziela').css('bottom', `${-pad}px`);
+    }
+
+    // 3) Zastosowanie dla zwykłych treści i dla Wielkanocy
+    [
+        { sel: 'article .tresc:not(.wielkanoc)', baza: 525 },
+        { sel: 'article .tresc.wielkanoc', baza: 290 }
+    ].forEach(({ sel, baza }) => {
+        $(sel).each(function () {
+            const $tresc = $(this);
+
+            // wylicz i ustaw paddingi
+            rozplanujWysokosc($tresc, baza);
+
+            // po zmianie paddingów odśwież zmienne dla ::before,
+            // bo top/height zależą od aktualnego pad.
+            $tresc.find('.dzien.N, .dzien.nakaz').each(function () {
+                const $dzien = $(this);
+                const $dane = $dzien.children('.dane');
+                // użyj wysokości ustawionej w kroku 1
+                const h = $dane.outerHeight();
+                ustawBeforeZmienne($dzien, h);
+            });
         });
-        wysok = ((525 - wysokosc) / ilosc) / 2;
-        $(this).children('.dzien:not(.pierwszy)').find('.niedziela').css('bottom', wysok * -1 + 'px');
-        $(this).children('.dzien:not(.pierwszy)').css('padding', wysok + 'px 0');
-        //        console.log('Obliczenia: ' + wysok);              
     });
-    // Policz wysokość dla Wielkanocy
-    $('article .tresc.wielkanoc').each(function () {
-        var wysokosc = 0;
-        var ilosc = $(this).children('.dzien').length;
-        var wysok = 0;
-        $(this).children('.dzien').each(function () {
-            wysokosc = wysokosc + $(this).outerHeight();
-        });
-        wysok = ((290 - wysokosc) / ilosc) / 2;
-        $(this).children('.dzien:not(.pierwszy)').find('.niedziela').css('bottom', wysok * -1 + 'px');
-        $(this).children('.dzien:not(.pierwszy)').css('padding', wysok + 'px 0');
-    });
+
+
     $('article .tresc.wielkanoc').after('<img class="wielkanoc" src="../images/easter.jpg" alt="Wielkanoc" title="Wielkanoc">');
 
 });
