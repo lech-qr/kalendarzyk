@@ -56,6 +56,16 @@ $(document).ready(function () {
     // $('.d_roku_8').find('.dane .prawe .oznaczenie').remove();
     // $('.d_roku_9').find('.dane .prawe .g_czyt').before('<p class="oznaczenie">2 A II</p>');
 
+    // II Niedziela Wielkanocna - Miłosierdzia Bożego (u)
+    $('.d_roku_135').find('.dane .prawe').prepend('<p class="oznaczenie">II</p>');
+
+    // V Niedziela Wielkanocna
+    $('.d_roku_156').find('.dane .wspomnienie').text('*św Floriana m (wo)');
+    $('.d_roku_156').find('.dane').prepend('<p class="swieto">Najśw Maryi Panny Królowej Polski - głównej patronki Polski (u)</p>');
+    $('.d_roku_156').find('.dane .sigla').text('Ap 11,19a;12,1-6a.10ab; PS: Jdt 13,18-20; @Kol 1,12-16; J 19,25-27');
+    $('.d_roku_156').find('.dane .prawe .g_czyt').text('Ap 12,1-9.13-17');
+
+
     // Ofiarowanie Pańskie (ś) - zawsze 2 lutego
     // $('.d_roku_65').find('.dane p.niedziela').remove();
     // $('.d_roku_63').find('.dane').append('<p class="niedziela">Ofiarowanie Pańskie (ś)</p>');
@@ -198,7 +208,7 @@ $(document).ready(function () {
     // Niedziela Palmowa
     if (cykl[0] === "A") {
         // Rok A
-        $('.d_roku_' + (wielkanoc - 7)).find('.dane .sigla').html('<span>procesja z palmami: </span>Mk 11,1-10 <span>lub </span>J 12,12-16<br><span>msza:</span> Iz 50,4-7; Ps 22; Flp 2,6-11;<br>Mk 14,1-15,47');
+        $('.d_roku_' + (wielkanoc - 7)).find('.dane .sigla').html('<span>procesja z palmami: </span>Mt 21,1-11<br><span>msza:</span> Iz 50,4-7; Ps 22; Flp 2,6-11;<br>Mt 26,14-27,66');
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + (wielkanoc - 7)).find('.dane .sigla').html('<span>procesja z palmami: </span>Mk 11,1-10 <span>lub </span>J 12,12-16<br><span>msza:</span> Iz 50,4-7; Ps 22; Flp 2,6-11;<br>Mk 14,1-15,47');
@@ -221,7 +231,7 @@ $(document).ready(function () {
     // Wielki Piątek
     $('.d_roku_' + (wielkanoc - 2)).find('.dane .sigla').before('<p class="swieto">Wielki Piątek</p>');
     // Wielka Sobota
-    $('.d_roku_' + (wielkanoc - 1)).find('.dane .sigla').before('<p class="swieto">Wielka Sobota<br>&nbsp;</p>');
+    $('.d_roku_' + (wielkanoc - 1)).find('.dane .sigla').before('<p class="swieto">Wielka Sobota&nbsp;</p>');
     $('.d_roku_' + (wielkanoc - 1)).find('.dane .sigla').empty();
     // Wielkanoc
     // Wstawienie ikony na tej samej karcie co Wielkanoc
@@ -283,7 +293,7 @@ $(document).ready(function () {
     $('.d_roku_' + (wielkanoc + 50)).find('.sigla').before('<p class="swieto">Najśw Maryi Panny Matki Kościoła (ś)</p>');
     if (cykl[0] === "A") {
         // Rok A
-        $('.d_roku_' + (wielkanoc + 50)).find('.sigla').html('Rdz 3,9-15.20 <span>lub</span> Dz 1,12-14; Ps 87; J 2,1-11 <span>lub</span> J 19,25-27 <span>lub</span> Łk 1,26-38');
+        $('.d_roku_' + (wielkanoc + 50)).find('.sigla').html('Rdz 3,9-15.20 <span>lub</span> Dz 1,12-14; Ps 87; J 19,25-34');
     } else if (cykl[0] === "B") {
         // Rok B
         $('.d_roku_' + (wielkanoc + 50)).find('.sigla').html('Rdz 3,9-15.20 <span>lub</span> Dz 1,12-14; Ps 87; J 19,25-34');
@@ -362,11 +372,11 @@ $(document).ready(function () {
     if (dniRoku === 365) {
         // Nie przestępny
         // Przemienienie Pańskie (ś) - 6 sierpnia
-        var przemienieniePanskie = 249;
+        var przemienieniePanskie = 250;
     } else {
         // Przestępny
         // Przemienienie Pańskie (ś) - 6 sierpnia
-        var przemienieniePanskie = 250;
+        var przemienieniePanskie = 251;
     }
     // 
     if (cykl[0] === "A") {

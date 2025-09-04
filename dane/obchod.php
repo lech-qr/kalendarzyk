@@ -138,7 +138,7 @@
         'św Stanisława Kazimierczyka pr (wd)', // 5
         'św ap Filipa i Jakuba (ś)|1 Kor 15,1-8a; Ps 19; J 14,6-14~Dz 5,12-32', // 6
         '', // 7
-        'św Stanisława bp m - głównego patrona Polski (u)|Dz 20,17-18a.28-32.36; Ps 100;@Rz 8,31b-39; J 10,11-16~2 Kor 4,1-18', // 8
+        'św Stanisława bp m - głównego patrona Polski (u)|Dz 20,17-18a.28-32.36; Ps 100; Rz 8,31b-39; J 10,11-16~2 Kor 4,1-18', // 8
         '', // 9
         'św Jana z Avili pr dK (wd)', // 10
         '', // 11
@@ -146,7 +146,7 @@
         'Najśw Maryi Panny Fatimskiej (wd)', // 13
         'św Macieja ap (ś)|Dz 1,15-17.20-26; Ps 113; J 15,9-17~Dz 5,12-32', // 14
         '', // 15
-        'św Andrzeja Boboli pr m - patrona Polski (ś)|Ap 12,10-12a lub 1 Kor 1,10-13.17-18; Ps 34;@J 17,20-26~Ef 4,1-7.11-24', // 16
+        'św Andrzeja Boboli pr m - patrona Polski (ś)|Ap 12,10-12a lub 1 Kor 1,10-13.17-18; Ps 34; J 17,20-26~Ef 4,1-7.11-24', // 16
         '', // 17
         'św Jana I pp m (wd)', // 18
         '', // 19
@@ -362,7 +362,7 @@
         '', // 27
         '', // 28
         '', // 29
-        'św Andrzeja ap (ś)|Iz 49,1-6 lub Rz 10,9-18; Ps 19; Mt 4,18-22~1 Kor 1,18-2,5', // 30
+        'św Andrzeja ap (ś)|Rz 10,9-18; Ps 19; Mt 4,18-22~1 Kor 1,18-2,5', // 30 Iz 49,1-6 lub 
     );
         
     $grudzien = array(1 => 

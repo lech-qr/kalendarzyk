@@ -210,6 +210,13 @@ $(document).ready(function () {
         }
     });
 
+    // Najśw Maryi Panny Królowej Polski - głównej patronki Polski (u) - przniesione
+    $('.d_roku_156').find('.dane .prawe .kolor').html('b');
+    // Najśw Serca Pana Jezusa (u)
+    $('.d_roku_195').find('.kolor').html('b');
+    // Wszystkich świętych (u)
+    $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dane').find('.prawe .kolor').text('f');
+
     // Poprawki - wspólne dla wszystkich lat
     $('article div.dane p.swieto:contains("Świętej Bożej Rodzicielki Maryi (u)")').closest('.dzien').addClass('nakaz');
     $('article div.dane p.swieto:contains("Świętej Bożej Rodzicielki Maryi (u)")').closest('.dzien').before('<div class="dzien pierwszy" style="padding: 0px; height: 3mm;"><div class="nr_dnia"></div><div class="nazwad"></div><div class="dane"><p class="niedziela">Świętej Bożej Rodzicielki Maryi (u)</p></div></div>');
@@ -239,7 +246,7 @@ $(document).ready(function () {
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dane').find('.prawe .oznaczenie').remove();
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dane').find('.prawe .g_czyt').text('Ap 5,1-14');
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').remove();
-    // $('article div.dane p.swieto:contains("Wspomnienie Wszystkich Wiernych Zmarłych (ś)")').text('*Wspomnienie Wszystkich Wiernych Zmarłych');
+    $('article div.dane p.swieto:contains("Wspomnienie Wszystkich Wiernych Zmarłych (ś)")').text('Wspomnienie Wszystkich Wiernych Zmarłych');
     // Święta państwowe
     $('section[id^="maj"] .nr_dnia p').filter(function () {
         return $(this).text() === "1";
@@ -253,7 +260,7 @@ $(document).ready(function () {
     $('section[id^="marzec"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').after('<p class="opis">początek czasu letniego</p>');
     // Rocznica poświęcenia własnego kościoła (u) - ostatnia niedziala października
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').before('<p class="swieto">Rocznica poświęcenia własnego kościoła (u)</p>');
-    $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').prepend('<span>(w kościołach poświęconych, w których data poświęcenia<br> jest nieznana - czytania wspólne do wyboru z Lekcjonarza, t. VI) czytania niedzieli:</span> ');
+    $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').prepend('<span>(w kościołach poświęconych, w których data poświęcenia<br> jest nieznana - czytania wspólne do wyboru z Lekcjonarza, t. VI)<br>czytania niedzieli:</span> ');
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').after('<p class="opis">początek czasu zimowego</p>');
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .prawe .kolor').html('b, z');
     // Jezusa Chrystusa Króla Wszechświata (u) - ostatnia niedziela roku liturgicznego (między 20 a 26 listopada).

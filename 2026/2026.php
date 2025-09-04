@@ -97,7 +97,7 @@
     $_12_nr_dnia_roku = $_11_nr_dnia_roku + $_11_ilosc_d;
     $_12_nr_dnia = 1; // Stała poza miesiącem wielkanocnym
     $_12_nazwa_d = 3;
-    $_12_przelam = 15;
+    $_12_przelam = 16;
     $_12_ilosc_d = 31; // Stała
     
 
