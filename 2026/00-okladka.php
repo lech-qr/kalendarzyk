@@ -40,7 +40,7 @@
             <p class="oraz">oraz wiele innych.</p>
 
             <h4>Centrum Liturgiczne</h4>
-            <p>ul. Biernackiego 22, 20-089 Lublin<br>e-mail: sklep@centrumliturgiczne.pl<br>tel.: 609 777 777; 81 748 20 00</p>
+            <p>ul. Biernackiego 22, 20-089 Lublin<br>e-mail: sklep@centrumliturgiczne.pl<br>tel.: 609 777 777</p>
 
             <p classs="www">www.centrumliturgiczne.pl</p>
 

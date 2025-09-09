@@ -3,8 +3,8 @@ $(document).ready(function () {
     var cykl = 'A, II';
 
     // var kolor = "#866e4b" // złoty Panton 873 C
-    var kolor = "#d60057" // Czerwony
-    // var kolor = "#40ae49" // Zielony
+    var kolor = "#d60057" // Czerwony Panton 485 C
+    // var kolor = "#40ae49" // Zielony Panton 361 C
     // var kolor = "#e71294" // Fioletowy
 
     var narodzeniePanskie = 26; // który dzień roku
