@@ -212,8 +212,6 @@ $(document).ready(function () {
 
     // Najśw Maryi Panny Królowej Polski - głównej patronki Polski (u) - przniesione
     $('.d_roku_156').find('.dane .prawe .kolor').html('b');
-    // Najśw Serca Pana Jezusa (u)
-    $('.d_roku_195').find('.kolor').html('b');
     // Wszystkich świętych (u)
     $('article div.dane p.swieto:contains("Wszystkich Świętych (u)")').closest('.dane').find('.prawe .kolor').text('f');
 
@@ -227,10 +225,41 @@ $(document).ready(function () {
     $('article div.dane p.niedziela:contains("Świętej Rodziny: Jezusa, Maryi i Józefa (ś)")').css('letter-spacing', '0.1em');
     $('article div.dane p.swieto:contains("Najśw Maryi Panny Królowej Polski - głównej patronki Polski (u)")').parent('.dane').find('.prawe .g_czyt').prepend('<br>');
     $('article div.dane p.wspomnienie:contains("św Marty, Mari i Łazarza (wo)")').closest('.dane').find('.sigla').append('<br><span>lub czyt. własne:</span><br>1 J 4,7-16; Ps 34; J 11,19-27 <span>lub</span> Łk 10,38-42');
-    $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').prev('.dzien').find('.dane').append('<p class="odstep">&nbsp;</p><p class="niedziela">Wniebowzięcie Najśw Maryi Panny (u)</p>');
-    $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').addClass('nakaz');
-    $('article div.dane p.swieto:contains("Wniebowzięcie Najśw Maryi Panny (u)")').closest('.dzien').find('.dane p.swieto').empty();
-    $('article div.dane p.wspomnienie:contains("męczeństwo św Jana Chrzciciela (wo)")').closest('.dane').find('.sigla').append('<br><span>lub czyt. własne:</span><br>Jr 1,17-19; Ps 71; Mk 6,17-29');
+    // Jeśli Wniebowzięcie Najśw Maryi Panny (u) 15 sierpnia - wypadnie w niedzielę
+    var $wnieboNMP = $('section[id^="sierpień"] .dzien')
+        .filter(function () {
+            return $(this).find('.nr_dnia p').text().trim() === '15';
+        });
+    if ($wnieboNMP.hasClass('N')) {
+        $wnieboNMP.closest('.dzien').find('.sigla').html('<span>msza wigilii:</span> 1 Krn 15,3-4.15-16;16,1-2;<br>Ps 132; 1 Kor 15,54-57; Łk 11,27-28<br><span>msza w dzień:</span> Ap 11,19a;12,1.3-6a.10ab;<br>Ps 45; 1 Kor 15,20-26; Łk 1,39-56');
+        $wnieboNMP.closest('.dzien').find('.prawe .g_czyt').html('gcz: Ef 1,16-2,10');
+        $wnieboNMP.closest('.dzien').find('.prawe .oznaczenie').remove();
+        $wnieboNMP.closest('.dzien').prev('.dzien').find('.odstep').remove();
+        $wnieboNMP.closest('.dzien').prev('.dzien').find('.niedziela').remove();
+        $wnieboNMP.closest('.dzien').prev('.dzien').find('.dane').append('<p class="odstep">&nbsp;</p><p class="niedziela">Wniebowzięcie Najśw Maryi Panny (u)</p>');
+        $wnieboNMP.closest('.dzien').addClass('nakaz');
+        $wnieboNMP.closest('.dzien').find('.dane p.swieto').empty();
+        // Ponieważ 15 i 16 sierpnia będą najprawdopodobniej na dwóch różnych stronach - stąd szukamy 16
+        var $dzien16 = $('article')
+            .filter(function () {
+                return $(this).find('.naglowek .miesiac').text().trim() === 'sierpień';
+            })
+            .find('.dzien')
+            .filter(function () {
+                return $(this).find('.nr_dnia p').text().trim() === '16';
+            });
+
+        $dzien16.find('.dane .prawe').prepend('<p class="oznaczenie">20 OZ IV</p>');
+    }
+    // Jeśli męczeństwo św Jana Chrzciciela (wo) - wypadnie w niedzielę to nie wstawiaj czytań własnych
+    var $mczenstwoJChrz = $('.dzien').filter(function () {
+        var maTekst = $(this).find('.dane .obchod .wspomnienie').text().trim() === 'męczeństwo św Jana Chrzciciela (wo)';
+        var brakKlasyN = !$(this).hasClass('N');
+        return maTekst && brakKlasyN;
+    });
+    $mczenstwoJChrz.find('.dane .sigla')
+        .append('<br><span>lub czyt. własne:</span><br>Jr 1,17-19; Ps 71; Mk 6,17-29');
+
     $('article div.dane p.wspomnienie:contains("św Aniołów Stróżów (wo)")').closest('.dane').find('.sigla').append('<br><span>lub czyt. własne:</span><br>Wj 23,20-23; Ps 91; Mt 18,1-5.10');
     // Znajdź dokładne dopasowanie - inaczej regułą działałby dla XVIII Niedzieli Zwykłej, ale także dla XXVIII Niedzieli Zwykłej czy VIII…
     $('article div.dane p.niedziela').filter(function () {
@@ -264,17 +293,33 @@ $(document).ready(function () {
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').after('<p class="opis">początek czasu zimowego</p>');
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .prawe .kolor').html('b, z');
     // Jezusa Chrystusa Króla Wszechświata (u) - ostatnia niedziela roku liturgicznego (między 20 a 26 listopada).
-    var JezChrKW = $('article .tresc .dzien.S .dane p.niedziela:contains("XXXIV Niedziela Zwykła")').closest('.dzien').attr('class').replace('dzien S d_roku_', '');
-    values = JezChrKW.split(' ');
-    JezChrKW_S = Number(values[0]);
+    // var JezChrKW = $('article .tresc .dzien.S .dane p.niedziela:contains("XXXIV Niedziela Zwykła")').closest('.dzien').attr('class').replace('dzien S d_roku_', '');
+    // values = JezChrKW.split(' ');
+    // JezChrKW_S = Number(values[0]);
+
+    var JezChrKW_S;
+    var $found = $('article .tresc .dzien.S .dane p.niedziela:contains("XXXIV Niedziela Zwykła")')
+        .closest('.dzien');
+
+    if ($found.length > 0) {
+        var JezChrKW = $found.attr('class').replace('dzien S d_roku_', '');
+        var values = JezChrKW.split(' ');
+        JezChrKW_S = Number(values[0]);
+    } else {
+        JezChrKW_S = 500;
+    }
     $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').html('Jezusa Chrystusa Króla Wszechświata (u)');
     $('.d_roku_' + JezChrKW_S).find('.dane .niedziela').css('letter-spacing', '0.1em');
-    // W roku I
+
+    // W roku A
     // $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('2 Sm 5,1-3; Ps 122; Kol 1,12-20; Łk 23,35-43');
-    // W roku II
-    $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('Ez 34,11-12.15-17; Ps 23; 1 Kor 15,20-26.28;<br>Mt 25,31-46');
+    // W roku B
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('Dn 7,13-14; Ps 93; Ap 1,5-8; J 18,33b-376');
+    // W roku C
+    // $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('Ez 34,11-12.15-17; Ps 23; 1 Kor 15,20-26.28;<br>Mt 25,31-46');
+
     $('.d_roku_' + (JezChrKW_S + 1)).find('.oznaczenie').remove();
-    $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('gcz: Dn 7,1-27<br>lub Ap 1,4-6.10.12-18;2,26-28;3,5.12.20-21');
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.g_czyt').html('<br>gcz: Dn 7,1-27<br>lub Ap 1,4-6.10.12-18;2,26-28;3,5.12.20-21');
     $('.d_roku_' + (JezChrKW_S + 1)).find('.prawe .kolor').html('b');
     $('.d_roku_' + (JezChrKW_S + 2)).find('.g_czyt').before('<p class="oznaczenie">34 OZ II</p>');
     // Nawiedzenie Najśw Maryi Panny (ś) - Czytanie z Sofoniasza jest tylko poza Okresem Wielkanocnym

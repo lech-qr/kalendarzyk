@@ -1,7 +1,7 @@
 <?php 
     $styczen = array(1 => 
         'Świętej Bożej Rodzicielki Maryi (u)|Lb 6,22-27; Ps 67; Ga 4,4-7; Łk 2,16-21~Hbr 2,9-17', // 1 
-        'św Bazylego Wielkiego<br>i Grzegorza z Nazjanzu bp dK (wo)', // 2
+        'św Bazylego Wielkiego i Grzegorza z Nazjanzu bp dK (wo)', // 2
         'Najśw Imienia Jezus (wd)', // 3
         '', // 4
         '', // 5
@@ -131,9 +131,9 @@
     );
 
     $maj = array(1 => 
-        'św Józefa rzemieślnika (wd)', // 1
+        'św Józefa rzemieślnika (wd)', // 1 
         'św Atanazego bp dK (wo)', // 2
-        'Najśw Maryi Panny Królowej Polski - @głównej patronki Polski (u)|Ap 11,19a;12,1-6a.10ab;@PS: Jdt 13,18-20; Kol 1,12-16; J 19,25-27~Ap 12,1-9.13-17', // 3
+        'Najśw Maryi Panny Królowej Polski - głównej patronki Polski (u)|Ap 11,19a;12,1-6a.10ab;@PS: Jdt 13,18-20; Kol 1,12-16; J 19,25-27~Ap 12,1-9.13-17', // 3
         'św Floriana m (wo)', // 4
         'św Stanisława Kazimierczyka pr (wd)', // 5
         'św ap Filipa i Jakuba (ś)|1 Kor 15,1-8a; Ps 19; J 14,6-14~Dz 5,12-32', // 6
@@ -156,7 +156,7 @@
         '', // 23
         'Najśw Maryi Panny Wspomożycielki Wiernych (wo)', // 24
         'św Bedy Czcigodnego pr dK (wd), św Grzegorza VII pp (wd), św Marii Magdaleny de Pazzi dz (wd)', // 25
-        'św Filipa Nereusza pr (wo)', // 26
+        'św Filipa Nereusza pr (wo)@@', // 26
         'św Augustyna z Canterbury bp (wd), św Pawła VI pp (wd)', // 27
         'bł Stefana Wyszyńskiego bp (wd)', // 28
         'św Urszuli Ledóchowskiej dz (wo)', // 29
@@ -193,7 +193,7 @@
         'św Zygmunta Gorazdowskiego pr (wd) ', // 26
         'św Cyryla Aleksandryjskiego bp dK (wd)', // 27
         'św Ireneusza bp m (wo)', // 28
-        'św ap Piotra i Pawła (u)|msza wigilii: Dz 3,1-10; Ps 19;@Ga 1,11-20; J 21,15-19@msza w dzień: Dz 12,1-11; Ps 34;@2 Tm 4,6-9.16-18; Mt 16,13-19~Ga 1,15-2,10', // 29
+        'św ap Piotra i Pawła (u)|msza wigilii: Dz 3,1-10; Ps 19; Ga 1,11-20; J 21,15-19@msza w dzień: Dz 12,1-11; Ps 34; 2 Tm 4,6-9.16-18; Mt 16,13-19~Ga 1,15-2,10', // 29
         'św Pierwszych m Świętego Kościoła Rzymskiego (wd)', // 30
     );
 
