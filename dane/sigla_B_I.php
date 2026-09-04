@@ -398,7 +398,7 @@
 
         'XXIX Niedziela Zwykła|Iz 53,10-11; Ps 33; Hbr 4,14-16; Mk 10,35-45', 
         'Rz 4,20-25; PS: Łk 1,69-75; Łk 12,13-21', 
-        'Rz 5,12.15b.17-19.20b-21;@Ps 40; Łk 12,35-38', 
+        'Rz 5,12.15b.17-19.20b-21; Ps 40; Łk 12,35-38', 
         'Rz 6,12-18; Ps 124; Łk 12,39-48', 
         'Rz 6,19-23; Ps 1; Łk 12,49-53', 
         'Rz 7,18-25a; Ps 119; Łk 12,54-59', 
@@ -412,7 +412,7 @@
         'Rz 9,1-5; Ps 147B; Łk 14,1-6', 
         'Rz 11,1-2a.11-12.25-29; Ps 94; Łk 14,1.7-11', 
 
-        'XXXI Niedziela Zwykła|Pwt 6,2-6; Ps 18; Hbr 7,23-28;@Mk 12,28b-34', 
+        'XXXI Niedziela Zwykła|Pwt 6,2-6; Ps 18; Hbr 7,23-28; Mk 12,28b-34', 
         'Rz 11,29-36; Ps 69; Łk 14,12-14', 
         'Rz 12,5-16a; Ps 131; Łk 14,15-24', 
         'Rz 13,8-10; Ps 112; Łk 14,25-33', 
@@ -495,19 +495,19 @@
         'Syr 48,1-4.9-11; Ps 80; Mt 17,10-13', 
 
         'III Niedziela Adwentu|So 3,14-17; PS: Iz 12,2-6; Flp 4,4-7; Łk 3,10-18', 
+        'Lb 24,2-7.15-17a; Ps 25; Mt 21,23-27', 
+        'So 3,1-2.9-13; Ps 34; Mt 21,28-32', 
+        'Iz 45,6b-8.18.21b-25; Ps 85; Łk 7,18b-23', 
+        'Iz 54,1-10; Ps 30; Łk 7,24-30', 
+        'Rdz 49,1a.2.8-10; Ps 72; Mt 1,1-17', 
         'Jr 23,5-8; Ps 72; Mt 1,18-24', 
-        'Sdz 13,2-7.24-25a; Ps 71; Łk 1,5-25', 
-        'Iz 7,10-14; Ps 24; Łk 1,26-38', 
-        'Pnp 2,8-14 <span>lub</span> So 3,14-17; Ps 33; Łk 1,39-45', 
-        '1 Sm 1,24-28; PS: 1 Sm 2,1.4-8; Łk 1,46-56', 
-        'Ml 3,1-4.23-24; Ps 25; Łk 1,57-66', 
 
         'IV Niedziela Adwentu|Mi 5,1-4a; Ps 80; Hbr 10,5-10; Łk 1,39-45', 
         'Iz 7,10-14; Ps 24; Łk 1,26-38', 
         'Pnp 2,8-14 lub So 3,14-17; Ps 33; Łk 1,39-45',
         '1 Sm 1,24-28; PS: 1 Sm 2,1.4-8; Łk 1,46-56', 
         'Ml 3,1-4.23-24; Ps 25; Łk 1,57-66', 
-        '1 J 2,3-11; Ps 96; Łk 2,22-35', 
+        '2 Sm 7,1-5.8b-12.14a.16; Ps 89; Łk 1,67-79', // wigilia - msza rano - wspólna dla wszystkich lat
         '1 J 2,12-17; Ps 96; Łk 2,36-40', 
 
         'Świętej Rodziny: Jezusa, Maryi i Józefa (ś)|Rdz 15,1-6;21,1-3; Ps 105;@Hbr 11,8.11-12.17-19; Łk 2,22-40', //Świętej Rodziny: Jezusa, Maryi i Józefa (ś) - w niedzielę po Bożym Narodzeniu lub 30 stycznia, jeśli pierwszy dzień świąt przypada w niedzielę.

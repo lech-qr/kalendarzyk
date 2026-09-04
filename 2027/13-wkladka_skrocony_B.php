@@ -232,7 +232,7 @@ $(document).ready(function(){
                     Popielec&nbsp;-&nbsp;<span id="popielec_B"></span>; Wielkanoc&nbsp;-&nbsp;<span id="Wielkanoc_B"></span>;<br>
                     Wniebowstąpienie&nbsp;-&nbsp;<span id="Wniebowst_B"></span>;<br>
                     Zesłanie&nbsp;Ducha&nbsp;Świętego&nbsp;-&nbsp;<span id="ZDS_B"></span>;<br>
-                    Boże&nbsp;Ciało&nbsp;-&nbsp;<span id="BC_B"></span>;<br>1&nbsp;niedziela&nbsp;Adwentu&nbsp;-&nbsp;<span id="INA_B"></span>
+                    Boże&nbsp;Ciało&nbsp;-&nbsp;<span id="BC_B"></span>; 1&nbsp;niedziela&nbsp;Adwentu&nbsp;-&nbsp;<span id="INA_B"></span>
                 </h6>
             </div>            
         </div>

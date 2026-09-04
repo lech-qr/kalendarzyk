@@ -231,7 +231,7 @@ $(document).ready(function () {
             return $(this).find('.nr_dnia p').text().trim() === '15';
         });
     if ($wnieboNMP.hasClass('N')) {
-        $wnieboNMP.closest('.dzien').find('.sigla').html('<span>msza wigilii:</span> 1 Krn 15,3-4.15-16;16,1-2;<br>Ps 132; 1 Kor 15,54-57; Łk 11,27-28<br><span>msza w dzień:</span> Ap 11,19a;12,1.3-6a.10ab;<br>Ps 45; 1 Kor 15,20-26; Łk 1,39-56');
+        $wnieboNMP.closest('.dzien').find('.sigla').html('<span>msza wigilii:</span> 1 Krn 15,3-4.15-16;16,1-2;<br>Ps 132; 1 Kor 15,54b-57; Łk 11,27-28<br><span>msza w dzień:</span> Ap 11,19a;12,1-6a.10ab;<br>Ps 45; 1 Kor 15,20-26; Łk 1,39-56');
         $wnieboNMP.closest('.dzien').find('.prawe .g_czyt').html('gcz: Ef 1,16-2,10');
         $wnieboNMP.closest('.dzien').find('.prawe .oznaczenie').remove();
         $wnieboNMP.closest('.dzien').prev('.dzien').find('.odstep').remove();
@@ -289,7 +289,7 @@ $(document).ready(function () {
     $('section[id^="marzec"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').after('<p class="opis">początek czasu letniego</p>');
     // Rocznica poświęcenia własnego kościoła (u) - ostatnia niedziala października
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').before('<p class="swieto">Rocznica poświęcenia własnego kościoła (u)</p>');
-    $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').prepend('<span>(w kościołach poświęconych, w których data poświęcenia<br> jest nieznana - czytania wspólne do wyboru z Lekcjonarza, t. VI)<br>czytania niedzieli:</span> ');
+    $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').prepend('<span>(w kościołach poświęconych, w których data<br>poświęcenia jest nieznana - czytania wspólne<br>do wyboru z Lekcjonarza, t. VI)<br>czytania niedzieli:</span> ');
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .sigla').after('<p class="opis">początek czasu zimowego</p>');
     $('section[id^="pa"] article.prawa.wzor_B > div.tresc .dzien.N:last .prawe .kolor').html('b, z');
     // Jezusa Chrystusa Króla Wszechświata (u) - ostatnia niedziela roku liturgicznego (między 20 a 26 listopada).
@@ -314,7 +314,7 @@ $(document).ready(function () {
     // W roku A
     // $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('2 Sm 5,1-3; Ps 122; Kol 1,12-20; Łk 23,35-43');
     // W roku B
-    $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('Dn 7,13-14; Ps 93; Ap 1,5-8; J 18,33b-376');
+    $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('Dn 7,13-14; Ps 93; Ap 1,5-8; J 18,33b-37');
     // W roku C
     // $('.d_roku_' + (JezChrKW_S + 1)).find('.dane .sigla').html('Ez 34,11-12.15-17; Ps 23; 1 Kor 15,20-26.28;<br>Mt 25,31-46');
 

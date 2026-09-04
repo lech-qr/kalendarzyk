@@ -341,7 +341,7 @@
         '', // 6
         '', // 7
         '', // 8
-        'Rocznica poświęcenia bazyliki laterańskiej (ś)|Ez 47,1-2.8-9.12 lub 1 Kor 3,9b-11.16-17;@Ps 46; J 2,13-22~1 P 2,1-17', // 9
+        'Rocznica poświęcenia bazyliki laterańskiej (ś)|Ez 47,1-2.8-9.12 lub 1 Kor 3,9b-11.16-17; Ps 46; J 2,13-22~1 P 2,1-17', // 9
         'św Leona Wielkiego pp dK (wo)', // 10
         'św Marcina z Tours bp (wo)', // 11
         'św Jozafata bp m (wo)', // 12

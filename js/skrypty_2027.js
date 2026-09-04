@@ -3,9 +3,9 @@ $(document).ready(function () {
     var cykl = 'B, I';
 
     // var kolor = "#866e4b" // złoty Panton 873 C
-    var kolor = "#d60057" // Czerwony Panton 485 C
+    // var kolor = "#d60057" // Czerwony Panton 485 C
     // var kolor = "#40ae49" // Zielony Panton 361 C
-    // var kolor = "#e71294" // Fioletowy
+    var kolor = "#e71294" // Fioletowy
 
     var narodzeniePanskie = 27; // który dzień roku
     var chrzestPanski = 43; // który dzień roku
